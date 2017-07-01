@@ -1,0 +1,34 @@
+{wc:fun:css("user.message")}
+{wc:templates "index.header"}
+<div class="main-content clearfix">
+{wc:templates "user.left"}
+<script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/jquery.Validform.min.js"></script>
+<script type="text/javascript">
+$(function(){       
+    var demo=$(".tel_verification").Validform({
+        tiptype:3,      
+    });
+})
+</script>
+<div class="R-content">
+    <div class="subMenu">
+        <a href="{WEB_PATH}/member/home/modify">个人资料</a>
+        <a href="{WEB_PATH}/member/home/userphoto">修改头像</a>
+        <a href="{WEB_PATH}/member/home/useraddress">收货地址</a>
+        <a href="{WEB_PATH}/member/home/userpassword"> 密码修改</a>
+        <a class="current" href="{WEB_PATH}/member/home/oauth"> 多账户绑定</a>
+    </div>
+        
+    <div class="tel_verification">
+        <div class="prompt orange">请完成您的第三方账户绑定，绑定后可以方便您快速登录！<em></em></div>
+        
+        <style>
+            .oauth-list img{ display: block; margin-top: 20px;}
+        </style>
+        <div class="oauth-list">
+            <script src="{G_WEB_PATH}/?plugin=1&api=Oauth&action=list"></script>
+        </div>
+    </div>
+</div>      
+</div>
+{wc:templates "index.footer"}

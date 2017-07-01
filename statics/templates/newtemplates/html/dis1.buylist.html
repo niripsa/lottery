@@ -1,0 +1,117 @@
+{wc:fun:css("user.message")}
+{wc:templates "index.header"}
+<link rel="stylesheet" href="<?php echo G_PLUGIN_PATH; ?>/calendar/calendar-blue.css" type="text/css">
+<script type="text/javascript" charset="utf-8" src="<?php echo G_PLUGIN_PATH; ?>/calendar/calendar.js"></script>
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+    {wc:templates "user.left"}
+    <!--个人中心中间 开始-->
+    <div class="R-content">
+        <div class="member-t"><h2 style="font-size:14px;font-weight:bold;">管理商订单</h2></div>
+        <div class="get-pro gray02 f12">金额统计 <b class="c_red"> <?php echo $order_amount ? : 0; ?> </b> 元</div>
+        <div class="select">
+        <ul id="ulMoneyList">
+            <!-- <label for="rd10">购买者： </label> -->
+            <input type="text" id="ou_name" class="small-input" placeholder="购买者" value="<?php echo $search['ou_name']; ?>" >
+            添加时间:
+            <input id="start_otime" type="text" class="enter" value="<?php echo $search['start_otime'] ? : ''; ?>" readonly="readonly" />至
+            <input id="end_otime" type="text" class="enter" value="<?php echo $search['end_otime'] ? : ''; ?>" readonly="readonly" />
+            <select id="order_source">
+                <option value="0">所有订单</option>
+                <option value="1" <?php echo $search['order_source'] == 1 ? 'selected' : ''; ?> >我的订单</option>
+                <option value="2" <?php echo $search['order_source'] == 2 ? 'selected' : ''; ?> >二级管理商</option>
+                <option value="3" <?php echo $search['order_source'] == 3 ? 'selected' : ''; ?> >三级管理商</option>
+            </select>
+            <input type="text" id="manage_id" class="small-input" placeholder="管理商ID" value="<?php echo $search['manage_id']; ?>" >
+
+            <input type="submit" onclick="search();" class="bluebut imm" value="搜索" />
+            <input type="submit" onclick="location.href = '<?php echo $search_url; ?>'" class="bluebut imm" value="撤销" />
+        </ul>
+        </div>
+        <div id="GoodsList" class="goods_show">
+            <ul class="gtitle">
+                <li>商品图片</li>
+                <li class="gname">商品名称</li>
+                <li class="yg_status">{wc:fun:L('html.key')}状态</li>
+                <li class="joinInfo">参与人次</li>
+                <li class="joinInfo">购买者</li>
+                <li class="joinInfo">消费</li>
+            </ul>
+            {wc:loop $record $rt}
+            {wc:if $rt['getowin_uid']}
+            <ul class="goods_list"> 
+                <li><a title="" target="_blank" class="pic" href="{WEB_PATH}/cgdataserver/{wc:$rt['ogid']}">
+                <img src="{G_UPLOAD_PATH}/{wc:fun:useri_title($rt['og_title'],'g_thumb')}"></a>
+                </li>
+                <li class="gname"style="margin:10px 0 0 0;">
+                    <a target="_blank" href="{WEB_PATH}/cgdataserver/{wc:$rt['ogid']}" class="blue">第({wc:$rt['oqishu']})期 {wc:fun:useri_title($rt['og_title'],'g_title')}</a>
+                    <p class="gray02">获得者：<a href="{WEB_PATH}/uname/{wc:fun:idjia($rt['getowin_uid'])}" target="_blank" class="blue">{wc:$rt['getowin_uname']}</a></p>
+                    <p class="gray02">揭晓时间：{wc:fun:microt($rt['q_end_time'],'r')}</p>
+                </li>           
+                <li class="yg_status" style="margin:23px 0 0 0;"><span class="c_red">已揭晓</span></li>
+                <li class="joinInfo" style="margin:23px 0 0 0;"><p><em>{wc:$rt['onum']}</em>人次</p></li>
+                <li class="joinInfo" style="margin:23px 0 0 0;"><p><em>{wc:$rt['ou_name']}</em></p></li>
+                <li class="joinInfo" style="margin:23px 0 0 0;"><p><em>{wc:$rt['omoney']}</em></p></li>
+            </ul>
+            {wc:else}
+            <ul class="goods_list"> 
+                <li><a title="" target="_blank" class="pic" href="{WEB_PATH}/cgoods/{wc:$rt['ogid']}"><img src="{G_UPLOAD_PATH}/{wc:fun:useri_title($rt['og_title'],'g_thumb')}"></a></li>
+                <li class="gname" style="margin:15px 0 0 0;">
+                    <a target="_blank" href="{WEB_PATH}/cgoods/{wc:$rt['ogid']}" class="blue">第({wc:$rt['oqishu']})期  {wc:fun:useri_title($rt['og_title'],'g_title')}</a>
+                    <p class="gray02">购买时间：{wc:fun:microt($rt['otime'],'r')}</p>
+                </li>
+                <li class="yg_status" style="margin:23px 0 0 0;"><span class="orange">正在进行...</span></li>
+                <li class="joinInfo" style="margin:23px 0 0 0;"><p><em>{wc:$rt['onum']}</em>人次</p></li>
+                <li class="joinInfo" style="margin:23px 0 0 0;"><p><em>{wc:$rt['ou_name']}</em></p></li>
+                <li class="joinInfo" style="margin:23px 0 0 0;"><p><em>{wc:$rt['omoney']}</em></p></li>
+            </ul>   
+            {wc:if:end}
+            {wc:loop:end}
+        </div>
+    </div>  
+    {wc:if $total>$num}
+        <div class="pagesx">{wc:page:two}</div> 
+    {wc:if:end} 
+    <!--个人中心中间 结束-->
+</div>
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+<script type="text/javascript">
+    date = new Date();
+    Calendar.setup({
+        inputField     :    "start_otime",
+        ifFormat       :    "%Y-%m-%d %H:%M:%S",
+        showsTime      :    true,
+        timeFormat     :    "24"
+    });
+    Calendar.setup({
+        inputField     :    "end_otime",
+        ifFormat       :    "%Y-%m-%d %H:%M:%S",
+        showsTime      :    true,
+        timeFormat     :    "24"
+    });
+</script>
+<script type="text/javascript">
+/* 搜索 */
+function search()
+{
+    var url = "<?php echo $search_url; ?>";
+    var ou_name     = $( '#ou_name' ).val();
+    ou_name = ou_name != '' ? ou_name : '0';
+    var start_otime = $( '#start_otime' ).val();
+    start_otime = start_otime != '' ? start_otime : '0';
+    var end_otime   = $( '#end_otime' ).val();
+    end_otime = end_otime != '' ? end_otime : '0';
+    /* 订单来源 */
+    var order_source = $( '#order_source' ).val();
+    order_source = order_source != '' ? order_source : '0';
+    /* 管理商ID */
+    var manage_id = $( '#manage_id' ).val();
+    manage_id = manage_id != '' ? manage_id : '0';
+
+    url = url + '/' + ou_name + '/' + start_otime + '/' + end_otime + '/' + order_source + '/' + manage_id;
+    location.href = url;
+}
+</script>
+{wc:templates "index.footer"}

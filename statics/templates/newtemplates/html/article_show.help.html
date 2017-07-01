@@ -1,0 +1,34 @@
+{wc:fun:css("user")}
+{wc:templates "index.header"}
+<div class="help-main">
+    <div id="ltlContents" class="help-right-part">
+        <div class="help-right-part">
+            <div class="help-in-rihgt-part">
+                <h2> {wc:$article['title']}</h2>
+                <div class="help-content">
+                    {wc:$article['content']}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="help-left-part">
+        <div class="help-nav">
+            <h3>帮助中心</h3>
+            {wc:loop $data $v}
+            <h4>{wc:$v['name']}</h4>
+            <ul>
+                {wc:fun:help($v['cateid'],$cateid)}
+            </ul>
+            {wc:loop:end}
+        </div>
+        <div class="help-contact">
+            <p>如果不能在帮助内容中找到答案，或者您有其他建议、投诉，您还可以：</p>
+            <ul>
+                <li class="CustomerCon"><a href="http://wpa.qq.com/msgrd?v=3&uin={wc:fun:_cfg('qq')}&site=qq&menu=yes" target="_blank" class="Customer"><b></b>在线客服</a></li>
+                <li>电话客服热线(免长途费)</li>
+                <li class="tel"><span>{wc:fun:_cfg("cell")}</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{wc:templates "index.footer"}

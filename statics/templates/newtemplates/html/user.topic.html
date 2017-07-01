@@ -1,0 +1,84 @@
+{wc:fun:css("user.message")}
+{wc:templates "index.header"}
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+    {wc:templates "user.left"}
+    <!--个人中心中间 开始-->
+    <div class="R-content">
+        <div class="subMenu">
+            <a class="current">发表的话题({wc:fun:Club_userpostnum('tiezi')})</a>
+            <a>发表的回复({wc:fun:Club_userpostnum('huifu')})</a>
+        </div>
+        <!--发表的话题 开始-->
+        <div class="list-tab topic" style="display: block;">
+            {wc:if !$tiezi}
+            <div class="tips-con f12"><i></i>您还未有发表话题哦</div>
+            {wc:else}
+            <ul class="listTitle">
+                <li class="w400">话题</li>
+                <li class="w100">所属圈子</li>
+                <li class="w130">时间</li>
+                <li class="w85">回复/人气</li>
+                <li class="w85 fr">操作</li>
+            </ul>
+            {wc:loop $tiezi $tz}
+            <ul class="listCon">
+                <li class="w400"><a href="{WEB_PATH}/index/club/nei/{wc:$tz['id']}" target="_blank" class="gray01">{wc:$tz['title']}</a></li>
+                <li class="w100"><a href="{WEB_PATH}/index/club/show/{wc:$tz['cid']}" target="_blank" class="blue">{wc:fun:Club_title($tz['cid'])}</a></li>
+                <li class="w130 gray03">{wc:fun:date("Y-m-d H:i:s",$tz['addtime'])}</li>
+                <li class="w85 gray03">{wc:$tz['huifu']}/{wc:$tz['dianji']}</li>
+                <li class="w85 fr">
+                    <a href="{WEB_PATH}/index/club/nei/{wc:$tz['id']}" target="_blank" class="blue">编辑</a>&nbsp;&nbsp;
+                    <a name="delete" href="javascript:;" onclick="tiezi({wc:$tz['id']})" class="blue">删除</a>
+                </li>
+            </ul>
+            {wc:loop:end}
+            {wc:if:end}
+        </div>
+        <!--发表的话题 结束-->
+        <!--发表的回复 开始-->
+        <div class="list-tab topic" style="display: none;">
+            {wc:if !$huifu}
+            <div class="tips-con f12"><i></i>您还没有回复过话题哦</div>
+            {wc:else}
+            <ul class="listTitle">
+                <li class="w630">回复内容</li>
+                <li class="w50 fr">操作</li>
+            </ul>
+            {wc:loop $huifu $hf}
+            <ul class="listCon">
+                <li class="w630"><div class="listConT">{wc:fun:date("Y年m月d日 H:i",$hf['addtime'])}对话题“
+                <a href="{WEB_PATH}/index/club/nei/{wc:$hf['id']}" target="_blank" class="blue">{wc:fun:Club_posttitle($hf['id'])}</a>
+                ”进行了回复：</div>{wc:$hf['content']}</li>
+                <li class="w50 fr"><a name="delete" onclick="huifu({wc:$hf['id']})" href="javascript:;" class="blue">删除</a></li>
+            </ul>
+            {wc:loop:end}
+            {wc:if:end}
+        </div>
+        <!--发表的回复 结束-->
+    </div>  
+    <!--个人中心中间 结束-->
+</div>
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+<script>
+$(function(){
+    $(".subMenu a").click(function(){
+        var id=$(".subMenu a").index(this);
+        $(".subMenu a").removeClass().eq(id).addClass("current");
+        $(".R-content .topic").hide().eq(id).show();
+    });
+})
+function tiezi(id){
+    if(confirm("您确认要删除该条信息吗？")){
+        window.location.href="{WEB_PATH}/member/club/tiezidel/"+id;
+    }
+}
+function huifu(id){
+    if(confirm("您确认要删除该条信息吗？")){
+        window.location.href="{WEB_PATH}/member/club/huifudel/"+id;
+    }
+}
+</script>
+{wc:templates "index.footer"}

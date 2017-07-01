@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Mobile Devices Support @begin -->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="false" name="twcClient" id="twcClient">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<!--允许全屏模式-->
+<meta content="yes" name="apple-mobile-web-app-capable">
+<!--指定sari的样式-->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta content="telephone=no" name="format-detection">
+<title> <?php echo _cfg( 'web_name' ); ?> </title>
+<script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/mobile_index.css">
+<script type="text/javascript" src="{G_TEMPLATES_JS}/mobile_index.js"></script>
+<script type="text/javascript">
+    /* cookie 设置 */
+    var cookie_domain = "<?php echo _cfg( 'cookie_domain' ); ?>";
+    var cookie_path   = "<?php echo _cfg( 'cookie_path' ); ?>";
+    var cookie_pre    = "<?php echo _cfg( 'cookie_pre' ); ?>";
+</script>
+<script type="text/javascript" src="{G_TEMPLATES_JS}/function.js"></script>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/area_style.css">
+<script type="text/javascript" src="{G_TEMPLATES_JS}/mobile_area.js"></script>
+
+<!-- 三级联动选择区  加载前... -->
+<div id="areaSelect" class="area areaSelect" style="display: none">
+    <h3 id="area_title">正在加载您需要的城市……</h3>
+    <ul class="area_list" id="area_list">
+        <li id="0">正在加载，点击取消</li>
+    </ul>
+</div>
+
+{wc:fun:js()}
+</head>
+<body>
+<header class="header-wrapper close">
+<div class="header-wrap">
+    <div class="title"> <?php echo _cfg( 'web_name' ); ?> </div>
+    <!-- 当前地区名称 -->
+    <div id="show_area_name" class="header_province" onclick="province( 0 );"></div>
+</div>
+</header>
+
+<div class="wrap">
+    <div class="top">
+        <section>
+        <div id="index-adv-box" class="index-adv-box">
+            <div class="bd">
+                <div class="tempWrap" style="overflow:hidden; position:relative;">
+                    <ul style="width: 2898px; position: relative; overflow: hidden; padding: 0px; margin: 0px; transition-duration: 750ms; transform: translate(-1656px, 0px) translateZ(0px);">
+                        {wc:loop Getslide(5,2) $slide}
+                        <li style="display: table-cell; vertical-align: top; width: 414px;">
+                            <a href="{wc:$slide['link']}"><img src="{G_UPLOAD_PATH}/{wc:$slide['img']}" alt="" border="0" style="width:100%; height:183px "></a>
+                        </li>
+                        {wc:loop:end}
+                    </ul>
+                </div>
+            </div>
+            <div class="hd">
+                <ul>
+                    <li class="">1</li>
+                    <li class="">2</li>
+                    <li class="">3</li>
+                    <li class="on">4</li>
+                    <li class="">5</li>
+                </ul>
+            </div>
+        </div>
+        </section>
+    </div>
+    <script>
+            TouchSlide({
+                slideCell:"#index-adv-box",
+                titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+                mainCell:".bd ul", 
+                effect:"leftLoop", 
+                autoPage:true,//自动分页
+                autoPlay:true, //自动播放
+                delayTime:750
+            });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var i=1;
+        if (i>1) {
+            TouchSlide({
+            slideCell:"#sort_nav",
+            effect:"leftLoop",
+            mainCell:"#sort_nav ul",
+            autoPlay:false,
+            pnLoop:false,
+            });
+        };
+    });
+    </script>
+    <!--最新揭晓-->
+    <div class="m-index-mod split-line">
+        <div class="m-index-mod-hd split-line">
+            <h3>最新揭晓</h3>
+        </div>
+        <div class="m-index-mod-cont">
+            <ul class="w-goodslist-item">
+            {wc:m=cloud_goods mod=cloud_goodsed(3) return=r_cgoodslisted}
+            {wc:loop $r_cgoodslisted $cgoodslisted}
+                <li class="w-goods-item">
+                <div class="w-goods-pic">
+                    <a href="{WEB_PATH}/cgdataserver/{wc:$cgoodslisted[id]}" style="display: block;">
+                    <img src="{G_UPLOAD_PATH}/{wc:$cgoodslisted['g_thumb']}">
+                    </a>
+                </div>
+                <!--中奖了-->
+                <p onclick="location.href='{WEB_PATH}/cgdataserver/{wc:$cgoodslisted[id]}'" class="w-goods-user f-txtabb">
+                    恭喜<a href="{WEB_PATH}/uname/{wc:fun:idjia($cgoodslisted['q_uid'])}">{wc:fun:Getusername($cgoodslisted['q_uid'])}</a>中奖
+                </p>
+                <p class="w-goods-sn f-txtabb">
+                     幸运号<span>{wc:$cgoodslisted['q_user_code']}</span>
+                </p>
+                <!--end 中奖了-->
+                </li>            
+            {wc:loop:end}
+            </ul>
+        </div>
+    </div>
+    <!--end 最新揭晓-->
+    <!--筛选条件-->
+    <div class="slider-nav split-line-top split-line">
+        <ul style="margin-right: 15px;">
+            <li class="nav-item"><a {wc:if $sort=='2' } class="cur" {wc:if:end} href="{WEB_PATH}/cgoods_list/{wc:$cid}_0_2_1#b">人气</a></li>
+            <!-- <li class="nav-item"><a class="" href="#">推荐</a></li> -->
+            <li class="nav-item"><a {wc:if $sort=='4' } class="cur" {wc:if:end} href="{WEB_PATH}/cgoods_list/{wc:$cid}_0_4_1#b">最新</a></li>
+            <li class="nav-item"><a {wc:if $sort=='8' } class="cur" {wc:if:end} href="{WEB_PATH}/cgoods_list/{wc:$cid}_0_8_1#b">进度</a></li>
+            <li class="nav-item">
+            <a {wc:if $sort=='7' } class="cur" {wc:if:end} href="{WEB_PATH}/cgoods_list/{wc:$cid}_0_7_1#b">总需人次</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <!--在此处改变类名改变样式 tuan-ul-list  tuan-ul-img-->
+        <ul class="tuan-ul tuan-ul-img split-line-top">
+        {wc:loop $cpgoodslist $shop}
+            <li class="tuan_li split-line">
+            <a class="blw" href="{WEB_PATH}/cgoods/{wc:$shop['id']}">
+            <div class="pic">
+                <div class="hundredyen">
+                </div>
+                <img data-src="{G_TEMPLATES_IMAGE}/goods.jpg" src="{G_UPLOAD_PATH}/{wc:$shop['g_thumb']}" isload="true">
+            </div>
+            </a>
+            <div class="info">
+                <div class="info-tit">
+                    {wc:$shop['g_title']}
+                </div>
+                <div class="progress-box">
+                    <div class="left-box">
+                        <div class="progress-info">
+                            已参与<span>{wc:$shop['canyurenshu']}</span>
+                        </div>
+                        <progress max="130" value="7"></progress>
+                    </div>
+                    <a href="{WEB_PATH}/cgoods/{wc:$shop['id']}" class="right-box add_cart_item">立刻购买</a>
+                </div>
+            </div>
+            </li>
+        {wc:loop:end}
+        </ul>
+        <div id="LoadDataA" style=" text-align: center;">
+            <a class="loading" href="javascript:void(0)">点击加载更多</a>
+            <a class="loading" href="javascript:void(0)" style="display:none;">正在加载...</a>
+            <a class="loading" href="javascript:void(0)" style="display:none;">没有数据了</a>
+            <a class="loading" href="javascript:void(0)" style="display:none;">已经到底了</a>
+        </div>
+    </div>
+</div>
+<div class="footer-menu-box">
+    <div class="f_menu split-line-top">
+        <ul class="menu_box">
+            <li class="menu_item cur">
+            <a href="{WEB_PATH}/#a">
+            <img src="{G_TEMPLATES_IMAGE}/mobile_index_icon_on1.png" />
+            <p class="item_txt">
+                首页
+            </p>
+            </a>
+            </li>
+            <li class="menu_item ">
+            <a href="{WEB_PATH}/cgoods_lottery#c">
+            <img src="{G_TEMPLATES_IMAGE}/mobile_index_icon2.png" />
+            <p class="item_txt">
+                最新揭晓
+            </p>
+            </a>
+            </li>
+            <li class="menu_item ">
+            <a href="{WEB_PATH}/index/share/init#d">
+            <img src="{G_TEMPLATES_IMAGE}/mobile_index_icon3.png" />
+            <p class="item_txt">
+                清单
+            </p>
+            </a>
+            </li>
+            <li class="menu_item ">
+            <a href="{WEB_PATH}/member/shop/userbuylist">
+            <img src="{G_TEMPLATES_IMAGE}/mobile_index_icon4.png" />
+            <p class="item_txt">
+                夺宝记录
+            </p>
+            </a>
+            </li>
+            <li class="menu_item ">
+            <a href="{WEB_PATH}/member/home/userindex">
+            <img src="{G_TEMPLATES_IMAGE}/mobile_index_icon5.png" />
+            <p class="item_txt">
+                我
+            </p>
+            </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#LoadDataA a").click(function(){
+            $data = $("#LoadDataA a");
+            $data.data("page",($data.data("page")|0) + 1)
+            $data.data("page",$data.data("page")==1 ?　2 : $data.data("page"))
+
+            if($data.data("maxpage") === undefined){
+                $data.hide().eq(1).show()
+                $.get(APP.WEB_PATH+'/'+APP.G_PARAM_URL+"/p"+$data.data("page"),function($datas){
+                        //$($datas).each(function(index) {  })
+                        if($datas.cpgoodslist.length < 20 ){
+                            $data.data("maxpage",$data.data("page"))
+                        }
+                        $("#goodsList").append(template('goodsListData', {list:$datas.cpgoodslist}))
+                        $data.hide().eq(0).show()
+                },"json")
+            } else {
+                $data.hide().eq(2).show()
+            }
+        });
+
+
+        //商品分类
+        var dl=$("#divGoodsNav dl"),
+                last=$("#divGoodsNav li:last"),
+                first=$("#divGoodsNav dd:first");
+        $("#divGoodsNav li:last a:first").click(function(){
+            if(dl.css("display")=='none'){
+                dl.show();
+                last.addClass("gSort");
+                first.addClass("sOrange");
+            }else{
+                dl.hide();
+                last.removeClass("gSort");
+                first.removeClass("sOrange");
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

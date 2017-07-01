@@ -1,0 +1,379 @@
+{wc:templates "index.header"}
+<div class="clear"></div>
+<div class="wrap w1200">
+    <div class="Current_nav w1200">
+        <a href="{WEB_PATH}">首页</a> &gt; 
+        <a href="{WEB_PATH}/cgoods_list/{wc:$item['g_cateid']}_0_0">{wc:$model_title['cate_name']}</a> &gt;
+        <a href="{WEB_PATH}/cgoods_list/{wc:$item['g_cateid']}_{wc:$item['g_brandid']}_0">{wc:$model_title['brand_name']}</a> &gt;
+        {wc:$model_title['title']}
+    </div>
+    <div class="show_content">
+        <div id="divPeriodList" class="show_Period" style="max-height:99px;">
+            <div class="period_Open bt_gray bb_gray bl_gray">
+                <a class="gray02" href="javascript:;" id="btnOpenPeriod" click="off">展开<i></i></a>
+            </div>
+        <ul class="Period_list bb_gray">
+        <li><a href="{wc:$cgoods_url0}" ><b class="{wc:$style0}">第{wc:$itemlist0['qishu']}期<i></i></b></a></li>
+        {wc:loop $itemlist $qitem} 
+        {wc:if $qitem['key']%9==0}
+        </ul><ul class="Period_list bb_gray">
+        {wc:if:end}
+        <li><a href="{wc:$qitem['cgoods_url']}" class="{wc:$qitem['stylea']}"><b class="{wc:$qitem['style']}">第{wc:$qitem['qishu']}期<i></i></b></a></li>
+        {wc:loop:end}
+        </ul>
+        </div>
+        <div class="Pro_Details">
+            <p style="font-size:24px;padding-bottom: 9px;margin-top: 15px;color:#f00">
+                <span class="f24">(第{wc:$item['qishu']}期)</span>
+                <span class="f24">{wc:$item['g_title']}</span>
+                <span style="{wc:$item['g_title_style']}">{wc:$item['g_description']}</span>
+            </p>
+        <div class="Pro_Detleft">
+            <div class="zoom-small-image">
+                <div id="wrap" style="top:0px;z-index:9999;position:relative;">
+                   <span href="{G_UPLOAD_PATH}/{wc:$item['g_thumb']}" class="cloud-zoom" id="zoom1" rel="adjustX:10, adjustY:-2">
+                       <img width="80px" height="80px" src="{G_UPLOAD_PATH}/{wc:$item['g_thumb']}">
+                 </span>
+                    <div class="mousetrap"></div>
+                </div>
+            </div>
+            <div class="zoom-desc"> 
+                <div class="jcarousel-prev jcarousel-prev-disabled" style="display: none;"></div>
+                <div class="jcarousel-clip" style="height:55px;width:384px;">
+                <p> 
+                {wc:loop $item['g_picarr'] $imgtu}                
+                <label href="{G_UPLOAD_PATH}/{wc:$imgtu}" class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '{G_UPLOAD_PATH}/{wc:$imgtu}'">
+                <img class="zoom-tiny-image" src="{G_UPLOAD_PATH}/{wc:$imgtu}" /></label>
+                {wc:loop:end}           
+                </p>
+                </div>
+            </div>
+            {wc:if $previous_cgoods}
+            <div class="Pro_GetPrize">
+                <h2>上期获得者</h2>
+                <div class="GetPrize">
+                    <dl>
+                        <dt>
+                            <a rel="nofollow" href="{WEB_PATH}/cgoods/{wc:$previous_cgoods['id']}" target="_blank">
+                                <img width="80" height="80" alt="" src="{G_UPLOAD_PATH}/{wc:$previous_cgoods['g_thumb']}">
+                            </a>
+                        </dt>
+                        <dd class="gray02">
+                            <p>恭喜 <a href="{WEB_PATH}/uname/{wc:fun:idjia($previous_cgoods['q_uid'])}" target="_blank" class="blue">{wc:fun:get_user_name($previous_user)}</a>获得了本商品</p>
+                            <p>揭晓时间：{wc:fun:microt($previous_cgoods['q_end_time'],'r')}</p>
+                            <p>{wc:fun:L('html.key')}时间：{wc:fun:microt($preuser_shop_time,'r')}</p>
+                            <p>幸运{wc:fun:L('html.key')}码：<em class="orange Fb">{wc:$previous_cgoods['q_user_code']}</em></p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            {wc:if:end}
+        </div>
+        <div class="Pro_Detright">
+        <p class="Det_money">{wc:fun:L('cgoods.value')}：
+        <!--显示揭晓动画 start-->
+        {wc:if ( $item['q_showtime'] == 'Y' )}
+        <span> {wc:fun:sprintf("%.2f",$item['zongrenshu']*$item['price'])}{wc:fun:L('cgoods.currency')}</span></p>
+            {wc:templates "index.cgitem_countdown"}
+        {wc:else}
+        <span> {wc:$item['g_money']}{wc:fun:L('cgoods.currency')} </span></p>
+            {wc:templates "index.cgitem_contents"}
+        {wc:if:end} 
+        <!--显示揭晓动画 end-->
+
+<script>
+$("#btnOpenPeriod").click(function() {
+    var ui_obj = $("#divPeriodList > ul");
+    if ( $(this).attr("click") == 'off' )
+    {
+        $("#divPeriodList").css("max-height",ui_obj.length*33+"px");    
+        $(this).attr("click","on");
+        $(this).html("收起<s></s>");
+    }
+    else
+    {
+        $("#divPeriodList").css("max-height","99px");   
+        $(this).attr("click","off");
+        $(this).html("展开<i></i>");
+    }
+});
+var syrs     = {wc:$item['zongrenshu']-$item['canyurenshu']};
+var shopinfo = {'shopid':{wc:$item['id']},'money':{wc:$item['price']},'shenyu':syrs};
+var shopnum  = $("#num_dig");
+// 添加购买
+$(function() {
+function baifenshua( aa, n ) {
+    n = n || 2;
+    return ( Math.round( aa * Math.pow( 10, n + 2 ) ) / Math.pow( 10, n ) ).toFixed( n ) + '%';
+}
+shopnum.ready( function() {
+    if ( shopnum.val() > syrs ) {
+        shopnum.val(syrs);
+    }   
+}); 
+shopnum.keyup(function(){
+    if ( isNaN(shopnum.val()) ) {
+        shopnum.val(1);
+    } else {
+        if ( shopnum.val() <= 0 ) {
+            shopnum.val(1);    
+        } 
+        if ( shopnum.val() > syrs ) {
+            shopnum.val(syrs);
+        }
+        var numshop = shopnum.val();
+        if ( numshop == {wc:$item['zongrenshu']} ) {
+            var baifenbi='100%';
+        } else {
+            var showbaifen = numshop/{wc:$item['zongrenshu']};
+            var baifenbi   = baifenshua(showbaifen,2);
+        }
+        $("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");           
+    }
+}); 
+
+$("#shopadd").click( function() {
+    var shopnum     = $("#num_dig");
+    var resshopnump = '';             
+    var num         = parseInt(shopnum.val());      
+    if ( num + 1 > syrs ) {
+        shopnum.val(syrs);
+        resshopnump = syrs;
+    } else {
+        resshopnump = parseInt(shopnum.val())+1;
+        shopnum.val(resshopnump);   
+        if(shopnum.val()>=syrs){
+            resshopnump=shopinfo['shenyu'];
+            shopnum.val(resshopnump);
+        }
+    }
+    if ( resshopnump == {wc:$item['zongrenshu']} )
+    {
+        var baifenbi = '100%';
+    }
+    else
+    {
+        var showbaifen = resshopnump / {wc:$item['zongrenshu']};
+        var baifenbi = baifenshua( showbaifen, 2 );
+    }
+    $("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");           
+});
+        
+$("#shopsub").click( function() {
+    var shopnum = $("#num_dig");
+    var num     = parseInt( shopnum.val() );
+    if ( num < 2 )
+    {
+        shopnum.val(1);         
+    }
+    else
+    {
+        shopnum.val( parseInt(shopnum.val())-1 );
+    }
+    var shopnums = parseInt( shopnum.val() );
+    if ( shopnums == {wc:$item['zongrenshu']} )
+    {
+        var baifenbi='100%';
+    }
+    else
+    {
+        var showbaifen = shopnums / {wc:$item['zongrenshu']};
+        var baifenbi = baifenshua( showbaifen, 2 );
+    }
+    $("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");       
+});
+
+});
+
+$(function(){
+    $(".Det_Cart").click( function() {
+        Cartcookie(false);
+    });
+    $(".Det_Shopbut").click( function() {
+        Cartcookie(true);
+    }); 
+});
+
+
+function Cartcookie(cook) {
+    var info       = {};
+    var shopid     = shopinfo['shopid'];
+    var cookie_pre = "{wc:fun:GetConfig('cookie_pre')}";//cookie配置前缀
+    var Cartlist   = getCookie( 'Cartlist' );
+    if ( ! Cartlist ) {
+        var info = {};
+    } else {
+        var info = eval( '(' + Cartlist + ')' );
+        if( (typeof info) !== 'object') {
+            var info = {};
+        }
+    }       
+    if ( ! info[shopid] ) {
+        var CartTotal=$("#sCartTotal").text();
+        $("#sCartTotal").text(parseInt(CartTotal)+1);
+        $("#btnMyCart em").text(parseInt(CartTotal)+1);
+    }   
+    var number             = parseInt($("#num_dig").val());   
+    info[shopid]           = {};
+    info[shopid]['num']    = number;
+    info[shopid]['shenyu'] = shopinfo['shenyu'];
+    info[shopid]['money']  = shopinfo['money'];
+    info['MoenyCount']     = '0.00';
+    setcookie( 'Cartlist', JSON.stringify( info ), 7 );
+    if ( cook )
+    {
+        window.location.href="{WEB_PATH}/member/cart/cartlist/"+new Date().getTime();//+new Date().getTime()
+    }
+    else
+    {
+        layer.msg( '加入购物车成功！', 2, 1 );
+    }
+}
+</script>                           
+                
+                <div class="Security">
+                    <ul>
+                        <li><a ><i></i>100%公平公正</a></li>
+                        <li><a ><s></s>100%正品保证</a></li>
+                        <li><a ><b></b>全国免费配送</a></li>
+                    </ul>
+                </div>
+                <div class="Pro_Record">
+                    <ul id="ulRecordTab" class="Record_tit">
+                        <li class="NewestRec Record_titCur">最新{wc:fun:L('html.key')}记录</li>
+                        <li class="MytRec">我的{wc:fun:L('html.key')}记录</li>
+                        <li class="Explain c_red">什么是{wc:fun:_cfg("web_name_two")}？</li>
+                    </ul>
+                    <div class="Newest_Con hide" ><!--最新{wc:fun:L('html.key')}记录-->
+                        <ul>
+                        {wc:loop $cgoods_user_record $user}
+                        <li>
+                        <a rel="nofollow" href="{WEB_PATH}/uname/{wc:fun:idjia($user['ouid'])}" target="_blank">
+                {wc:if get_user_key($user['ouid'],'img','3030')=='null'}
+                <img src="{G_UPLOAD_PATH}/photo/member.jpg.3030.jpg" border="0" width="20" height="20"></a>
+                {wc:else}
+                <img src="{G_UPLOAD_PATH}/{wc:fun:Getuserimg($user['ouid'])}.3030.jpg" border="0" width="20" height="20"></a>               
+                {wc:if:end}                 
+                        </a>                    
+                        <a href="{WEB_PATH}/uname/{wc:fun:idjia($user['ouid'])}" target="_blank" class="blue">{wc:fun:get_user_key($user['ouid'],'username')}</a>
+                        {wc:if $user['ur_ip']}
+                        ({wc:fun:get_ip($user['ur_id'],'ipcity')}) 
+                        {wc:if:end}             
+                        {wc:fun:_put_time($user['otime'])}{wc:fun:L('html.key')}了
+                        <em class="Fb gray01">{wc:$user['onum']}</em>人次</li>
+                        {wc:loop:end}
+                        </ul>
+                        <p><a id="btnUserBuyMore" href="javascript:;" class="gray01">查看更多</a></p>
+                    </div>
+                    <div class="Newest_Con hide" style="display:none;"><!--我的{wc:fun:L('html.key')}记录-->
+                    {wc:if $userlogin=login('bool')}                
+                    <ul>                
+                    {wc:m=cloud_goods mod=cloud_user_recordID($userlogin['uid'],$item['id'],9) return=cloud_user_recordinfo}
+                    {wc:if $cloud_user_recordinfo}
+                    {wc:loop $cloud_user_recordinfo $row}                                   
+                    <li>{wc:fun:_put_time($row['otime'])} {wc:fun:L('html.key')}了<em class="Fb gray01">  {wc:$row['onum']}</em>  个{wc:fun:L('html.key')}码</li>                       
+                    {wc:loop:end} 
+                    {wc:else}
+                    <div class="My_RecordReg">
+                        <b class="gray01">看不到？您还没有购买该商品哟，去试试吧！</b>              
+                    </div>                  
+
+                    {wc:if:end}
+                    </ul>
+                    {wc:else}                   
+                    <div class="My_RecordReg">
+                        <b class="gray01">看不到？是不是没登录或是没注册？ 登录后看看</b>
+                        <a href="{WEB_PATH}/member/user/login" class="My_Signbut">登录</a><a href="{WEB_PATH}/member/user/register" class="My_Regbut">注册</a>
+                    </div>
+                    {wc:if:end}                 
+                    </div>
+                    <div class="Newest_Con hide" style="display:none;"><!--什么是一元夺宝？-->
+                        <p class="MsgIntro">{wc:fun:_cfg("web_name_two")}购是指只需一元就有机会买到想要的商品。即每件商品被平分成若干“等份”出售，每份一元，当一件商品所有“等份”售出后，根据夺宝规则产生一名幸运者，该幸运者即可获得此商品。</p>
+                        <p class="MsgIntro1">{wc:fun:_cfg("web_name_two")}以“快乐夺宝，惊喜无限”为宗旨，力求打造一个100%公平公正、100%正品保障、寄娱乐与购物一体化的新型购物网站。<a href="{WEB_PATH}/article-1.html" class="blue" target="_blank">查看详情&gt;&gt;</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<!--商品详情 开始-->
+<div class="ProductTabNav w1200 mt10">
+    <div id="divProductNav" class="DetailsT_Tit">
+        <div class="DetailsT_TitP">
+            <ul>
+                <li class="Product_DetT DetailsTCur"><span class="DetailsTCur">商品详情</span></li>
+                <li id="liUserBuyAll" class="All_RecordT"><span class="">所有参与记录</span></li>
+                <li class="Single_ConT"><span class="">晒单</span></li>
+            </ul>
+        </div>
+    </div>
+    <div id="divContent" class="Product_Content">
+        <!--商品详情 开始-->
+        <div class="Product_Con">{wc:$item['g_content']}</div>
+        <!-- 商品详情 结束 -->
+        <!-- 购买记录20条 -->
+        <div id="bitem" class="AllRecordCon hide" style="display:none;">
+            <iframe id="iframea_bitem" g_src="{WEB_PATH}/index/cloud_goods/go_record_iframe/{wc:$item[id]}/20" style="width:978px; border:none;height:100%" frameborder="0" scrolling="no"></iframe>        
+        </div>  
+       <!-- /购买记录20条 -->
+        
+        <!-- 晒单 -->
+        <div id="divPost" class="Single_Content">
+            <iframe id="iframea_divPost" g_src="{WEB_PATH}/index/share/share_iframe/{wc:$item[id]}" style="width:978px; border:none;height:100%" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <!-- 晒单 -->       
+    </div>
+    </div>
+</div>
+<script type="text/javascript" src="{G_TEMPLATES_JS}/cloud-zoom.min.js"></script>
+<script type="text/javascript">
+
+function set_iframe_height(fid,did,height){ 
+    $("#"+fid).css("height",height);    
+}
+
+$(function(){
+    $("#ulRecordTab li").click(function(){
+        var add=$("#ulRecordTab li").index(this);
+        $("#ulRecordTab li").removeClass("Record_titCur").eq(add).addClass("Record_titCur");
+        $(".Pro_Record .hide").hide().eq(add).show();
+    });
+    
+    var DetailsT_TitP = $(".DetailsT_TitP ul li");
+    var divContent    = $("#divContent div");   
+    DetailsT_TitP.click(function(){
+        var index = $(this).index();
+        DetailsT_TitP.removeClass("DetailsTCur").eq(index).addClass("DetailsTCur");
+
+        var iframe = divContent.hide().eq(index).find("iframe");
+        if (typeof(iframe.attr("g_src")) != "undefined") {
+             iframe.attr("src",iframe.attr("g_src"));
+             iframe.removeAttr("g_src");
+        }
+        divContent.hide().eq(index).show();
+    });
+    
+    
+    $("#btnUserBuyMore").click(function(){
+        DetailsT_TitP.removeClass("DetailsTCur").eq(1).addClass("DetailsTCur");
+        DetailsT_TitP.removeClass("DetailsTCur").eq(1).addClass("DetailsTCur");
+            var iframe = divContent.hide().eq(1).find("iframe");
+            if (typeof(iframe.attr("g_src")) != "undefined") {
+                 iframe.attr("src",iframe.attr("g_src"));
+                 iframe.removeAttr("g_src");
+            }
+        divContent.hide().eq(1).show();
+        $("html,body").animate({scrollTop:930},1500);
+        //$("#divProductNav").addClass("nav-fixed");
+    });
+    $(window).scroll(function(){
+        if($(window).scrollTop()>=941){
+            $("#divProductNav").addClass("nav-fixed");
+        }else if($(window).scrollTop()<941){
+            $("#divProductNav").removeClass("nav-fixed");
+        }
+    });
+})
+</script>
+{wc:templates "index.footer"}

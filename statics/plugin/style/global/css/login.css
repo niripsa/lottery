@@ -1,0 +1,22 @@
+body{ background:#00616F;color:#6B6B6B;}
+a{color:#fff;}
+a:hover{text-decoration: none;color:#FF6633;}
+*{font-family: '微软雅黑 Regular', '微软雅黑';color:#6B6B6B;}
+.login_box{ width: 400px;height: 300px;border: 1px solid #3C8DBC; margin: 15% auto 0 auto;background: #FFF;border-radius: 5px;box-shadow: 0 0 10px #494949;}
+.login_box .login_ibox{margin: 20px;}
+.login_box .login_ibox .input_box{ line-height: 50px;border:1px solid #e2e2e2; margin-top: 20px;}
+.login_box .login_ibox .input_box .input_caption{background: #f2f2f2; width: 50px;border-right:1px solid #e2e2e2;}
+.login_box .login_ibox .input_box .input_value{ padding-left: 2px; line-height: 50px;}
+.login_box .login_ibox .input_box input{ line-height: 22px;border: 0px; z-index: 1000; background: none; padding:0 10px;}
+.login_box .login_ibox .input_box input:hover{border: 0px;}
+.login_box .login_ibox .input_box input:focus{border: 0px;box-shadow:none;}
+.login_box .login_ibox .login_btn{
+    width: 70px; line-height: 50px; margin-left: 18px; margin-top:20px;
+    border: 1px solid #3C8DBC; text-align: center;letter-spacing: 2px;color:white;
+    cursor: pointer;
+}
+.login_box .login_ibox .input_alt{z-index: -1000; position: absolute; padding:0 10px;}
+#checkcode{cursor: pointer;}
+.copyright{ margin: 0 auto; text-align: center; letter-spacing: 1px;color:#fff;}
+
+

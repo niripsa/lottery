@@ -1,0 +1,49 @@
+{wc:fun:css("user.message")}
+{wc:templates "index.header"}
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+{wc:templates "user.left"}
+    <!--个人中心中间 开始-->
+    <div class="R-content">
+        <div class="member-t"><h2>账户明细</h2></div>
+        <div class="last">
+            <ul>
+                <li><h3>您的账户可用余额为：</h3><b class="c_red">{wc:$member_money}</b>{wc:fun:L('cgoods.currency')} <a href="{WEB_PATH}/member/account/userrecharge" class="bluebut" title="充值">充值</a></li>
+            </ul>
+        </div>
+        <div id="divList0" class="list-tab recordList f12">
+            <ul class="listTitle">
+                <li class="leftTitle">充值时间</li>
+                <li class="price">资金渠道</li>
+                <li class="regard">收入/支出</li>
+            </ul>
+    {wc:loop $account $at}          
+            <ul>
+                <li class="leftTitle fontAri">{wc:fun:date("Y-m-d H:i:s",$at['time'])}</li>
+                <li class="price">{wc:$at['content']}</li>
+                <li class="regard">
+                {wc:if $at['type'] == 1}
+                    <font color="#0c0">{wc:$at['money']}{wc:fun:L('cgoods.currency')}</font>
+                {wc:else}    
+                {wc:if $at['type'] == -1}  
+                     <font color="red">{wc:$at['money']}{wc:fun:L('cgoods.currency')}</font>  
+                {wc:else}
+                    <font color="red">{wc:$at['money']}{wc:fun:L('cgoods.currency')}</font>
+                {wc:if:end} 
+                {wc:if:end} 
+                </li>
+            </ul>
+    {wc:loop:end}
+
+        </div>      
+        {wc:if $total>$num}
+            <div class="pagesx">{wc:page:two}</div> 
+        {wc:if:end} 
+
+    </div>  
+    <!--个人中心中间 结束-->
+</div>
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+{wc:templates "index.footer"}

@@ -1,0 +1,28 @@
+<!--商品详情 开始-->
+<div class="ProductTabNav w1200 mt10">
+    <div id="divProductNav" class="DetailsT_Tit">
+        <div class="DetailsT_TitP">
+            <ul>
+                <li class="Product_DetT DetailsTCur"><span class="DetailsTCur">商品详情</span></li>
+                <li id="liUserBuyAll" class="All_RecordT"><span class="">所有参与记录</span></li>
+                <li class="Single_ConT"><span class="">晒单</span></li>
+            </ul>
+        </div>
+    </div>
+    <div id="divContent" class="Product_Content">
+        <!--商品详情 开始-->
+        <div class="Product_Con">{wc:$item['g_content']}</div>
+        <!-- 商品详情 结束 -->
+        <!-- 购买记录20条 -->
+        <div id="bitem" class="AllRecordCon hide" style="display:none;">
+            <iframe id="iframea_bitem" g_src="{WEB_PATH}/index/cloud_goods/go_record_iframe/{wc:$item[id]}/20" style="width:978px; border:none;height:100%" frameborder="0" scrolling="no"></iframe>        
+        </div>  
+       <!-- /购买记录20条 -->
+        
+        <!-- 晒单 -->
+        <div id="divPost" class="Single_Content">
+            <iframe id="iframea_divPost" g_src="{WEB_PATH}/index/share/share_iframe/{wc:$item[id]}" style="width:978px; border:none;height:100%" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <!-- 晒单 -->       
+    </div>
+</div>

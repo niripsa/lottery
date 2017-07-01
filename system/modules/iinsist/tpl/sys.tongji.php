@@ -1,0 +1,15 @@
+<?php
+
+defined("G_IN_ADMIN") || exit("No permission resources.");
+echo "<!DOCTYPE html>\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\r\n<title></title>\r\n<link rel=\"stylesheet\" href=\"";
+echo G_GLOBAL_STYLE;
+echo "/global/css/global.css\" type=\"text/css\">\r\n<link rel=\"stylesheet\" href=\"";
+echo G_GLOBAL_STYLE;
+echo "/global/css/style.css\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<div class=\"header lr10\">\r\n    ";
+echo headerment($ments);
+echo "</div>\r\n<form action=\"\" method=\"post\">\r\n    <div class=\"bk10\"></div>\r\n    <div class=\"f63 ml20 pl20\">如果提交时，出现非法参数的提示，请在 系统设置-》基本设置  里，关闭 360SQL安全（修改完成后，记得开启）。</div>\r\n<div class=\"bk10\"></div>\r\n<div>\r\n\t<div class=\"lf tar wid150\">统计代码：</div>\r\n    <div class=\"lf\">\r\n        <textarea name=\"acc_code\" class=\"wid500 hig80\">";
+echo $acc_code;
+echo "</textarea>\r\n    </div>\r\n    <div class=\"cl\"></div>\r\n</div>\r\n<div class=\"bk10\"></div>\r\n<div class=\"table-list lr10\">\r\n    <div class=\"lf wid140 tar\">常规统计工具：</div>\r\n    <div class=\"lf wid500\">\r\n    <table width=\"100%\" cellspacing=\"0\">\r\n    \t<tr>\r\n        \t<td width=\"120px\" class=\"tar\">百度统计入口：</td>\r\n            <td><a target=\"_blank\" href=\"http://tongji.baidu.com/\">http://tongji.baidu.com/</a></td>\r\n        </tr>\r\n        <tr>\r\n        \t<td width=\"120px\" class=\"tar\">量子统计入口：</td>\r\n             <td><a target=\"_blank\" href=\"http://www.linezing.com/\">http://www.linezing.com/</a></td>\r\n        </tr>\r\n          <tr>\r\n        \t<td width=\"120px\" class=\"tar\">站长统计入口：</td>\r\n             <td><a target=\"_blank\" href=\"http://www.cnzz.com/\">http://www.cnzz.com/</a></td>\r\n        </tr>\r\n          <tr>\r\n        \t<td width=\"120px\" class=\"tar\">51啦统计入口：</td>\r\n             <td><a target=\"_blank\" href=\"http://www.51.la/\">http://www.51.la/</a></td>\r\n        </tr>\r\n    </table>\r\n    </div>\r\n    <div class=\"cl\"></div>\r\n</div>\r\n\r\n<div class=\"bk10\"></div>\r\n<div>\r\n    <div class=\"lf tar wid150\">站长工具验证代码：</div>\r\n    <div class=\"lf\">\r\n        <textarea name=\"verify_code\" class=\"wid500 hig80\">";
+echo $verify_code;
+echo "</textarea>\r\n    </div>\r\n    <div class=\"cl\"></div>\r\n</div>\r\n<div class=\"bk10\"></div>\r\n<div class=\"table-list lr10\">\r\n    <div class=\"lf wid140 tar\">常规站长工具：</div>\r\n    <div class=\"lf wid500\">\r\n    <table width=\"100%\" cellspacing=\"0\">\r\n        <tr>\r\n            <td width=\"120px\" class=\"tar\">百度站长工具：</td>\r\n            <td><a target=\"_blank\" href=\"http://zhanzhang.baidu.com/\">http://zhanzhang.baidu.com/</a></td>\r\n        </tr>\r\n    </table>\r\n    </div>\r\n\r\n</div>\r\n    <div class=\"bk10\"></div>\r\n    <div>\r\n        <div class=\"lf tar wid150\">&nbsp;</div>\r\n        <div class=\"lf\">\r\n            <input type=\"submit\" value=\" 提交 \" name=\"dosubmit\" class=\"button\">\r\n        </div>\r\n        <div class=\"cl\"></div>\r\n    </div>\r\n</form>\r\n</body>\r\n</html> ";
+

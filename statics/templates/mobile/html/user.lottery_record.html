@@ -1,0 +1,84 @@
+{wc:fun:css("goods")}
+{wc:fun:js("jquery.cmsapi")}
+{wc:fun:js("template")}
+{wc:fun:js("template.fun")}
+{wc:fun:js("jquery.cartlist")}
+{wc:fun:css("user.message")}
+{wc:fun:css("lottery.warp")}
+{wc:fun:css("lottery.skin")}
+{wc:fun:css("lottery_new")}
+{wc:fun:js("layer")}
+{wc:templates "index.header_lottery"}
+<!-- 栏目导航 开始-->
+<div class="clear"></div>
+<style type="text/css">
+    .timeBox{
+        margin-top:10px;
+    }
+
+    .dianBox{
+        position: relative;
+        top:2px;
+        left:2px;
+    }
+
+    .timeFormat{
+        display: inline;
+        line-height: 36px;
+    }
+</style>
+<!--商品 wrap 开始-->
+<div style="text-align: center;">
+        <!--剩余时间结束-->
+
+ <!--    <div class="lottery_num left">
+        <div class="lottery_num_box">
+            <ul id="num" style="width: 250px;">
+                <li style="top: 7px;"><span>正</span></li>
+                <li style="top: 7px;"><span>在</span></li>
+                <li style="top: 7px;"><span>开</span></li>
+                <li style="top: 7px;"><span>奖</span></li>
+                <li style="top: 7px;"><span>中</span></li>
+            </ul>
+        </div>
+    </div> -->
+        <!--开奖信息提示 end-->
+
+        <!--上期开奖信息结束-->
+    </div>
+    <!--个人中心中间 结束-->
+    <div class="game">
+        <div class="game-main">
+             <div class="warp lotteryHistory" style="margin-top: 20px;padding-left: 15px;">
+                <div class="lotteryHistoryBody"></div>
+                <div class="line">
+                {wc:loop $buy_lists $v}
+                    <div>单号:{wc:$v['order_sn']}</div>
+                    <div>投注时间:{wc:$v['buy_time']}</div>
+                    <div>期号:{wc:$v['stage_no']}</div>
+                    <div>投注内容:{wc:$v['buy_content']}</div>
+                    <div>金额(元):{wc:$v['buy_money']}</div>
+                    <div>奖励(积分):{wc:$v['award_points']}</div>
+                    <div>操作:
+                        {wc:if $v['status'] == 1}
+                            <a href="javascript:void(0)" orderid="{wc:$v['order_sn']}" onclick="cancelOrder($(this).attr('orderid'));">撤单</a>
+                        {wc:elseif $v['status'] == 2}
+                            已撤单
+                        {wc:else}
+                            已开奖
+                        {wc:if:end}
+                    </div>
+                    <hr>
+                {wc:loop:end}
+                
+                </div>
+        </div>
+    </div>
+</div>
+
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+<script type="text/javascript">
+   
+</script>
+{wc:templates "index.footer"}

@@ -1,0 +1,59 @@
+{wc:fun:js("jquery.cmsapi")}
+{wc:templates "index.header_top"}
+<script type="text/javascript">
+    $.YunCmsApi.SetTopStyle({
+        "Title":"所有购买记录",
+        "Home":true,
+    }); 
+</script>
+<style>
+.codeshow{
+    width:280px;
+    display: block;
+    overflow: hidden;
+}
+.m-round li span{
+    float:left;
+    display: block;
+}
+</style>
+<section class="clearfix g-Record-ct">
+    <a class="fl z-Limg" href="
+        {wc:if $user_record['q_showtime'] == 'Y'}
+        {WEB_PATH}/cgdataserver/{wc:$user_record['ogid']}
+        {wc:else}
+        {WEB_PATH}/cgoods/{wc:$user_record['ogid']}
+        {wc:if:end}
+    "><span class="z-Imgbg z-ImgbgC02"></span><em class="z-Imgtxt">
+    {wc:if $user_record['q_showtime'] == 'Y'}
+    已揭晓...
+    {wc:else}
+    进行中...
+    {wc:if:end}
+    </em>
+    <img src="{G_UPLOAD_PATH}/{wc:$user_record['g_thumb']}">
+    </a>
+    <div class="u-Rcd-r gray9"><p class="z-Rcd-tt">
+        <a target="_blank" href="
+        {wc:if $user_record['q_showtime'] == 'Y'}
+        {WEB_PATH}/cgdataserver/{wc:$user_record['ogid']}
+        {wc:else}
+        {WEB_PATH}/cgoods/{wc:$user_record['ogid']}
+        {wc:if:end}
+        " class="gray6">(第{wc:$user_record['oqishu']}期) {wc:$user_record['g_title']}</a></p>      
+     </div>
+</section>
+<section class="clearfix g-member g-Record-ctlst">
+    <b class="z-arrow"></b>
+    <article class="m-round">
+        <h3>本期商品您总共拥有<em class="orange">{wc:$user_record['onum']}</em>个{wc:fun:L('html.key')}码</h3>
+        <ul>         
+            <li><p class="gray9">{wc:fun:microt($user_record['otime'],'r')}<span>{wc:$user_record['onum']}人次</span></p>
+            <div class="codeshow">
+            <span >{wc:fun:yunma($user_record['ogocode'])}</span>
+            </div>
+            </li>
+         </ul>
+    </article> 
+</section>
+{wc:templates "index.footer"}

@@ -1,0 +1,45 @@
+{wc:fun:css("login")}
+{wc:fun:js("jquery.Validform.min")}
+{wc:fun:js("jquery.pageDialog")}
+{wc:templates "index.header_top"}
+<section>
+    <form action="{WEB_PATH}/member/finduser/findmobilecheck/{wc:$namestr}" method="post" id="registerform">
+        <div class="registerCon">
+            <ul>
+                <p>已向您的手机 <span class="orange">{wc:$enname}</span> 免费发送了一条验证短信，请查看您的手机短信！</p>
+                <li>
+                    <dl>
+                        请输入手机短信收到的验证码：<input id="mobileCode" name="checkcode" class="login_CMobile_Code" type="text">
+                        <input type="hidden" name="ok" value="ok">
+                        <s class="rs3"></s>
+                    </dl>
+                </li>
+                <li><a id="btnLogin" class="nextBtn orgBtn">提交验证</a>
+                   </li>
+                <li >
+                    <h2>没收到验证短信？</h2>
+                    <p>1.请查看手机的垃圾短信，信息有可能被误认为是垃圾信息。</p>
+                    <p>2.如果在2分钟后仍未收到验证短信，请点击 <button id="retrySend" onclick="javascript:sendmobile();" disabled=1 class="login_SendoutbutClick">重新发送</button> </p>
+                    <p>3.如果手机号码不小心输错了或者想换个号码？请点击 <a id="hylinkRegisterPageA" class="blue Fb" href="{WEB_PATH}/register">重新注册</a></p>
+                </li>
+            </ul>
+        </div>
+    </form>
+</section>
+<!-- footer 开始-->
+{wc:templates "index.footer"}
+<script type="text/javascript">
+
+    var i = {wc:$time};
+    var senda=document.getElementById('retrySend');
+    setInterval(function(){if(i>0){
+        senda.innerHTML = '重新发送'+i;i--;}else{senda.innerHTML = '重新发送';senda.disabled=0;}
+    },1000);
+    $("#btnLogin").click(function(){
+        $("#registerform").submit();
+
+    });
+    function sendmobile(){
+        window.location.href="{WEB_PATH}/member/finduser/findsendmobile/{wc:$namestr}"
+    }
+</script>

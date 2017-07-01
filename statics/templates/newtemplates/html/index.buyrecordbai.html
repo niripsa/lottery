@@ -1,0 +1,30 @@
+{wc:fun:css("user")}
+{wc:templates "index.header"}
+<meta name="description" content="最新100条{wc:fun:L('html.key')}记录"><meta name="keywords" content="最新100条{wc:fun:L('html.key')}记录">
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/ygRecord.css">
+   <input name="hidBuyId" type="hidden" id="hidBuyId" value="1948496">
+    <!--记录开始-->
+    <div class="ygRecord">
+        <h3>
+            <span>最新{wc:fun:L('html.key')}记录</span><p>本页显示最新{wc:fun:L('html.key')}记录<strong>100</strong>条 <a href="{WEB_PATH}/buyrecord">查看历史{wc:fun:L('html.key')}记录&gt;&gt;</a></p>
+        </h3>
+        <ul class="Record_title">
+            <li class="time">{wc:fun:L('html.key')}时间</li>
+            <li class="nem">会员账号</li>
+            <li class="name">{wc:fun:L('html.key')}商品名称</li>
+            <li class="much">{wc:fun:L('html.key')}人次</li>
+        </ul>
+        <div id="recordList">
+                {wc:loop $RecordList $Record}  
+                <ul class="{wc:$Record['class']}">
+                    <li class="time">{wc:fun:date("Y-m-d H:i:s",$Record['otime'][0])}.{wc:$Record['otime'][1]}</li>
+                    <li class="nem"><a class="blue" href="{WEB_PATH}/uname/{wc:fun:idjia($Record['ouid'])}" target="_blank">{wc:fun:get_user_key($Record['ouid'],'username')}</a></li>
+                    <li class="name"><a href="{WEB_PATH}/cgoods/{wc:$Record['ogid']}" target="_blank">（第{wc:$Record['oqishu']}期）{wc:fun:_strcut(useri_title($Record['og_title'],'g_title'),60,null)}</a></li>
+                    <li class="much">{wc:$Record['onum']}人次</li>
+                </ul>
+                {wc:loop:end}   
+                    
+        </div>
+        <div class="endpage">本页显示最新夺宝记录<strong>100</strong>条 <a href="{WEB_PATH}/buyrecord" rel="nofollow">查看历史{wc:fun:L('html.key')}记录&gt;&gt;</a></div>
+    </div>
+{wc:templates "index.footer"}

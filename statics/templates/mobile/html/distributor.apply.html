@@ -1,0 +1,19 @@
+{wc:fun:js("jquery.cmsapi")}
+{wc:fun:js("template")}
+{wc:fun:js("template.fun")}
+{wc:templates "index.header_top"}
+<script type="text/javascript">
+    $.YunCmsApi.SetTopStyle({
+        "Title": '申请分销',
+        "Member":true,
+        "Home":true
+    });
+</script>
+
+<section class="clearfix g-member">
+    <article class="clearfix m-round g-userMoney">
+        申请分销资格，获取推广收益！
+        <a href="{WEB_PATH}/member/distributor/apply&apply=1" class="z-Recharge-btn">去申请</a>
+    </article>
+</section>
+{wc:templates "index.footer"}

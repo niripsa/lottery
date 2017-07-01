@@ -1,0 +1,40 @@
+{wc:fun:js("jquery.cmsapi")}
+{wc:templates "index.header_top"}
+<script type="text/javascript">
+    $.YunCmsApi.SetTopStyle({
+        "Title":"商品",
+        "Member":true,
+        "Home":true
+    });
+</script>
+
+{wc:if count($record)==0}
+<section class="clearfix g-Record-lst" style="display:block">
+    <ul class="z-minheight">
+        <div class="haveNot z-minheight"><s></s><p>暂无记录</p></div>
+        <div id="divGoodsLoading" class="loading" style="display:none;"><b></b>正在加载</div>
+        <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;">点击加载更多</a>
+    </ul>
+</section>
+{wc:else}
+<section class="clearfix g-Record-lst" style="display:block">
+<ul class="z-minheight">
+{wc:loop $record $recd}
+    <li>
+        <a class="fl z-Limg" href="{WEB_PATH}/goods/{wc:$recd['otext']['gid']}"><img src="{G_UPLOAD_PATH}/{wc:$recd['otext']['g_thumb']}" border="0" alt=""></a>
+        <div class="u-gds-r gray9">
+            <p class="z-gds-tt"><a href="{WEB_PATH}/goods/{wc:$recd['otext']['gid']}" class="gray6">{wc:$recd['otext']['g_title']}</a></p>
+                <br/><br/>{wc:if Getships($recd['oid'],'id',1)}<span>物流公司:::{wc:fun:Getships($recd['oid'],'eid',1)}</span>快递单号:::{wc:fun:Getships($recd['oid'],'ecode',1)}{wc:if:end}
+            <p>{wc:if GetOrders($recd['oid'],'ofstatus')}
+                    <b >{wc:fun:GetOrders($recd['oid'],'ofstatus')}</b>
+                {wc:else}
+                    <b>等待发货</b>
+                {wc:if:end}</p>
+        </div>
+        <b class="z-arrow"></b>
+    </li>
+{wc:loop:end}
+{wc:if:end}
+</ul>
+</section>
+{wc:templates "index.footer"}

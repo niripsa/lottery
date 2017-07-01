@@ -1,0 +1,205 @@
+{wc:fun:js("koala.min.1.5")}            
+{wc:fun:js("jquery.webox")} 
+{wc:fun:js("jquery.cartlist")}  
+{wc:templates "index.header"}
+<!--商品 wrap 开始-->
+<div class="wrap w1200">
+    <div class="Current_nav w1200"><a href="{WEB_PATH}/cgoods_list/">首页</a> &gt;  {wc:$daohang_title}</div>
+    <div class="list_Curtit b_gray">
+        <a  href="{WEB_PATH}/cgoods_list/{wc:$cid}_0_0" ><h1 class="fl c_red">{wc:$daohang_title}</h1></a>
+        <span id="spTotalCount">(共<em class="c_red">{wc:$total}</em>件相关商品)</span>
+    </div>
+    <div class="list_class b_gray">
+        <dl>
+            <dt>分类一</dt>
+            <dd id="ddBrandList">
+                <ul> 
+                {wc:if isset($daohang['parentid'])}             
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$daohang['parentid']}_0_0" >全部</a></li>
+                {wc:else}
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$cid}_0_0" class="ClassCur bg_red">全部</a></li>
+                {wc:if:end}
+                {wc:loop GetCate('0',50,5) $two_cate}
+                    {wc:if $cid == $two_cate['cateid']||$two_cate['cateid'] == $daohang['parentid']}
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$two_cate['cateid']}_0_0"  class="ClassCur bg_red">{wc:$two_cate['name']}</a></li>
+                    {wc:else}
+                    {wc:if $cateid}
+                    {wc:loop $cateid $cate}
+                    {wc:if $cate == $two_cate['cateid']||$two_cate['cateid'] == $daohang['parentid']}
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$two_cate['cateid']}_0_0"  class="ClassCur bg_red">{wc:$two_cate['name']}</a></li>
+                    {wc:if:end}
+                    {wc:loop:end}
+                    {wc:if:end}
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$two_cate['cateid']}_0_0">{wc:$two_cate['name']}</a></li>
+                    {wc:if:end}
+                {wc:loop:end}               
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    {wc:if $cid}
+    {wc:if !empty($one_cate_list)}
+    <div class="list_class b_gray">
+        <dl>
+            <dt>分类二</dt>
+            <dd id="ddBrandList">
+                <ul> 
+                {wc:if $one_cate_listtag=='N'}              
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$cid}_0_0" class="ClassCur bg_red">全部</a></li>
+                {wc:else}
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$daohang['parentid']}_0_0" >全部</a></li>
+                {wc:if:end}     
+                {wc:loop $one_cate_list $two_cate}
+                    {wc:if $cid == $two_cate['cateid']}
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$two_cate['cateid']}_0_0" class="ClassCur bg_red">{wc:$two_cate['name']}</a></li>
+                    {wc:else}
+                    {wc:if $cateid}
+                    {wc:loop $cateid $cate}
+                    {wc:if $cate == $two_cate['cateid']}
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$two_cate['cateid']}_0_0"  class="ClassCur bg_red">{wc:$two_cate['name']}</a></li>
+                    {wc:if:end}
+                    {wc:loop:end}
+                    {wc:if:end}                 
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$two_cate['cateid']}_0_0">{wc:$two_cate['name']}</a></li>
+                    {wc:if:end}
+                {wc:loop:end}               
+                </ul>
+            </dd>
+        </dl>
+    </div>  
+    {wc:if:end}
+    {wc:if:end}         
+{wc:if  $brand} 
+    <div class="list_class b_gray">
+        <dl>
+            <dt>品牌</dt>
+        {wc:if count($brand)>23}
+        <dd id="ddBrandList_brand" style="height:78px">
+        {wc:else}
+        <dd id="ddBrandList_brand">
+        {wc:if:end}     
+                <ul> 
+                {wc:if !$bid}               
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$cid}_0_{wc:$sort}" class="ClassCur bg_red">全部</a></li>
+                 {wc:else}  
+                     <li><a href="{WEB_PATH}/cgoods_list/{wc:$cid}_0_{wc:$sort}">全部</a></li>
+                {wc:if:end}             
+                {wc:loop $brand $brands}             
+                {wc:if $brands['id'] == $bid}                    
+                    <li><a  href="{WEB_PATH}/cgoods_list/{wc:$cid}_{wc:$brands['id']}_{wc:$sort}" class="ClassCur bg_red">{wc:$brands['name']}</a></li>
+                {wc:else}   
+                    <li><a href="{WEB_PATH}/cgoods_list/{wc:$cid}_{wc:$brands['id']}_{wc:$sort}">{wc:$brands['name']}</a></li>
+                {wc:if:end}
+                {wc:loop:end}
+                </ul>
+            </dd>
+        </dl>
+    {wc:if count($brand)>23}    
+    <a class="list_classMore" href="javascript:;">展开<i></i></a>
+    {wc:if:end}         
+    </div>
+    {wc:if:end} 
+    <div class="list_Sort b_gray">
+        <dl>
+            <dt>排序</dt>
+            <dd>
+                <a href="{WEB_PATH}/cgoods_list/{wc:$cid}_{wc:$bid}_1" {wc:if $sort=='1'} class="SortCur"{wc:if:end}>即将揭晓</a>
+                <a href="{WEB_PATH}/cgoods_list/{wc:$cid}_{wc:$bid}_2" {wc:if $sort=='2'} class="SortCur"{wc:if:end}>人气</a>
+                <a href="{WEB_PATH}/cgoods_list/{wc:$cid}_{wc:$bid}_3" {wc:if $sort=='3'} class="SortCur"{wc:if:end}>剩余人次</a>
+                <a href="{WEB_PATH}/cgoods_list/{wc:$cid}_{wc:$bid}_4" {wc:if $sort=='4'} class="SortCur"{wc:if:end}>最新</a>
+                {wc:if $sort=='5'}
+                 <a href="{WEB_PATH}/cgoods_list/{wc:$cid}_{wc:$bid}_6" class="Price_Sort SortCur">价格<i></i></a>
+                {wc:else}
+                    {wc:if $sort=='6'}  
+                 <a href="{WEB_PATH}/cgoods_list/{wc:$cid}_{wc:$bid}_5" class="Price_Sort SortCur">价格<s></s></a>  
+                 {wc:else}
+                  <a href="{WEB_PATH}/cgoods_list/{wc:$cid}_{wc:$bid}_5" class="Price_Sort">价格</a>    
+                    {wc:if:end}
+                {wc:if:end}               
+            </dd>
+        </dl>
+    </div>
+    {wc:if $cpgoodslist}
+    <!--夺宝商品列表--> 
+    <div class="get_ready w1200">
+        <ul>
+        {wc:loop $cpgoodslist $shop}
+            <li class="list-block">
+                <div class="pic"><a href="{WEB_PATH}/cgoods/{wc:$shop['id']}"  target="_blank" title="{wc:$shop['g_title']} ">
+                <img  alt="{wc:$shop['g_title']}" src="{G_UPLOAD_PATH}/{wc:$shop['g_thumb']}"></a></div>
+                <p class="name"><a  href="{WEB_PATH}/cgoods/{wc:$shop['id']}" target="_blank" title="{wc:$shop['g_title']} ">{wc:$shop['g_title']}</a></p>
+                <p class="money">价值：<span class="rmb">{wc:$shop['g_money']}</span></p>
+                <div class="w-progressBar" title="">
+                    <p class="w-progressBar-wrap cglist_progressbar">
+                        <span class="w-progressBar-bar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],275)}px;"></span>
+                    </p>
+                    <ul class="w-progressBar-txt f-clear">
+                        <li class="w-progressBar-txt-l">
+                            <p><b>{wc:$shop['canyurenshu']}</b></p>
+                            <p>已参与人次</p>
+                        </li>
+                        <li class="w-progressBar-txt-r">
+                            <p><b>{wc:$shop['shenyurenshu']}</b></p>
+                            <p>剩余人次</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--div class="Progress-bar" style="">
+                    <p title="已完成{wc:fun:percent($shop['canyurenshu'],$shop['zongrenshu'])}">
+                    <span style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],275)}px;"></span></p>
+                    <ul class="Pro-bar-li">
+                        <li class="P-bar01"><em class="c_red">{wc:$shop['canyurenshu']}</em>已参与人次</li>
+                        <li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>总需人次</li>
+                        <li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余人次</li>
+                    </ul>
+                </div-->
+                <div class="w-goods-ing">
+                    <div class="shop_buttom bg_red b_red1" style="margin:0 10px;width:115px;height:30px;">
+                        <a href="{WEB_PATH}/cgoods/{wc:$shop['id']}" style="line-height:30px;font-size:14px;"  class="Det_Shopnow" onclick="jwebox.goshopnow({wc:$shop['id']},'{WEB_PATH}')">{wc:fun:L('cgoods.go')}</a>
+                    </div>
+                    <div class="shop_buttom1 bg_pink b_pink c_red" style="margin:0px 10px;width:115px;height:30px;">
+                        <a  href="javascript:;" onclick="gcartlist.gocartlist({wc:$shop['id']},'{WEB_PATH}','{wc:fun:GetConfig('cookie_pre')}')" class="c_red"  style="line-height:30px;font-size:14px;" id="car_{wc:$shop['id']}">{wc:fun:L('cgoods.cartlist')}</a>
+                    </div>
+                </div>
+                <div class="fail" style="display:none">
+                    <div class="main"></div>
+                    <div class="arrow"><em>◆</em><s>◆</s></div>
+                </div>
+                <div class="success" style="display:none">
+                    <div class="main"></div>
+                    <div class="arrow"><em>◆</em><s>◆</s></div>
+                </div>      
+            </li>       
+        {wc:loop:end}       
+        </ul>
+        {wc:if $total>$num}
+        <div class="pagesx">{wc:page:two}</div> 
+        {wc:if:end}         
+        </div>
+    <!--商品列表完-->
+    {wc:else}
+    <!--未找到商品-->
+    <div class="NoConMsg"><span>无相关商品记录哦~！</span></div>
+    <!--未找到商品-->
+    {wc:if:end} 
+</div>
+<!--商品 wrap 结束-->
+<script>
+function showh(){
+var height=$("#ddBrandList_brand").innerHeight();   
+    if(height==78){
+        $("#ddBrandList_brand").css("height","auto");
+        $(".list_classMore").addClass("MoreClick");
+        $(".list_classMore").html("收起<i></i>");
+    }else{
+        $("#ddBrandList_brand").css("height","78px");
+        $(".list_classMore").removeClass("MoreClick");
+        $(".list_classMore").html("展开<i></i>");
+    };
+}
+$(function(){   
+    $(".list_classMore").click(showh);
+});
+</script>
+<div class="clear"></div>
+{wc:templates "index.footer"}

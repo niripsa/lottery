@@ -1,0 +1,44 @@
+{wc:templates "index.header"}
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="links_txt">
+    <h3><b>文字链接</b></h3>
+    <ul>
+        {wc:m=index mod=link_list(1) return=link_size} 
+        {wc:loop $link_size $size}
+        <li><a href="{wc:$size['url']}" target="_blank">{wc:$size['name']}</a></li>            
+        {wc:loop:end}   
+    </ul>
+</div>
+<div class="links_txt">
+    <h3><b>图片链接</b></h3>
+    <ul>
+    {wc:m=index mod=link_list(2) return=link_img} 
+    {wc:loop $link_img $img}    
+        <li><a href="{wc:$img['url']}" target="_blank"><img src="{G_UPLOAD_PATH}/{wc:$img['logo']}"/></a></li>
+    {wc:loop:end}           
+    </ul>
+</div>
+<div class="links_exp">
+    <h3><b>联系方式</b></h3>
+    <p>
+        电话：{wc:fun:_cfg("cell")}<br>
+    </p>                 
+</div>
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+<script>
+$(function(){
+    $("#referDocument li").bind({       
+        mouseover:function(){
+            var number=$("#referDocument li").index(this)+1;
+            $(".S0"+number).removeClass("hidden");
+        },
+        mouseout:function(){
+            var number=$("#referDocument li").index(this)+1;
+            $(".S0"+number).addClass("hidden");
+        }
+    })
+})
+</script>
+{wc:templates "index.footer"}

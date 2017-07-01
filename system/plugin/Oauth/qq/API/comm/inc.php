@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"","appkey":"","callback":"http://www.paotuitu.cn/?plugin=1%26api=Oauth%26action=callback%26data=qq","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}

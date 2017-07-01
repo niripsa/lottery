@@ -1,0 +1,436 @@
+@charset "utf-8";
+.revCon ul {
+  padding: 15px 8px;
+  height: 83px;
+  position: relative;
+  border-top: 1px solid #eee;
+  margin-top: -1px;
+}
+.revCon ul.rNow {
+  border: 2px solid #f60;
+  overflow: hidden;
+  margin-bottom: 1px;
+}
+.revCon ul.rFirst {
+  border-top: 2px solid #f60!important;
+  margin-top: 10px;
+}
+.revCon ul.rNow:nth-child(1n-1) {
+  border-top: 0 none;
+}
+.revCon li {
+  color: #bbb;
+}
+.revCon li.revConL {
+  float: left;
+  position: relative;
+}
+.revCon li.revConL img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #f4f4f4;
+}
+.revCon li.revConR {
+  margin-left: 90px;
+  position: relative;
+}
+.revCon li h4 {
+  color: #666;
+  font-size: 18px;
+  line-height: 18px;
+  display: block;
+  font-size: 14px;
+}
+.revCon ul.rNow h4 {
+  max-height: 35px;
+  overflow: hidden;
+}
+.revCon li h5 {
+  line-height: 25px;
+  display: block;
+  font-weight: normal;
+}
+.revCon li p {
+  padding: 0 12px 0 9px;
+  height: 23px;
+  line-height: 22px;
+  background: #f60;
+  border-radius: 3px;
+  color: #fff;
+  border: 1px solid #f60;
+  display: inline-block;
+}
+.revCon li s {
+  background: url(http://mskin.1yyg.com/DataServer/images/clock.gif?v=130815);
+  background-size: 14px auto;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin: 0 5px;
+}
+.revCon li p strong {
+  margin-left: 10px;
+}
+.revCon li p em {
+  font-size: 16px;
+}
+.revCon li p em {
+  position: relative;
+  top: 1px;
+}
+.z-arrow {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border: solid #BBB;
+  -webkit-transform: rotate(45deg);
+  font-size: 0;
+  line-height: 0;
+}
+.revCon li.revConR b {
+  border-width: 2px 2px 0 0;
+  position: absolute;
+  right: 1px;
+  top: 35px;
+}
+.revCon ul.rNow .rNowTitle {
+  background: #f60;
+  color: #fff;
+  font-size: 12px;
+  width: 90px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  -webkit-transform: rotate(-45deg);
+  position: absolute;
+  left: -27px;
+  top: 7px;
+}
+.revCon li dd {
+  font-size: 14px;
+  line-height: 20px;
+  color: #999;
+}
+.revCon li dd img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+.revCon li dd span {
+  height: 20px;
+  line-height: 20px;
+  word-wrap: break-word;
+  overflow: hidden;
+  display: block;
+}
+.revCon li dd strong {
+  font-weight: normal;
+  color: #bbb;
+}
+.revCon li dd em {
+  margin-right: 2px;
+}
+.revCon li dt {
+  margin-top: 7px;
+  line-height: 18px;
+}
+.loading, a.loading {
+  clear: both;
+  width: 100%;
+  display: block;
+  background: #f4f4f4;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  box-shadow: 0 1px 1px #ddd inset;
+}
+.loading, a.loading {
+  clear: both;
+  width: 100%;
+  display: block;
+  background: #f4f4f4;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  box-shadow: 0 1px 1px #ddd inset;
+}
+.g-snav {
+  width: 100%;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+}
+.m_listNav {
+  border-bottom: 1px solid #D0D0D0;
+  background: #fff;
+}
+.g-snav .g-snav-lst {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+}
+.m_listNav .g-snav-lst {
+  text-align: center;
+  height: 33px;
+  line-height: 33px;
+  position: relative;
+}
+.m_listNav .g-snav-lst a {
+  display: block;
+  margin: 0 5px;
+}
+.m_listNav .z-sgl-crt a {
+  color: #f60;
+  height: 32px;
+  line-height: 33px;
+  display: block;
+  border-bottom: 2px solid #f60;
+}
+.m_listNav .g-snav-lst b {
+  height: 15px;
+  width: 1px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  overflow: hidden;
+  background: #DDD;
+}
+a.gray9, .gray9 {
+  color: #999;
+}
+.cSingleInfo {
+  background: #f4f4f4;
+  padding: 10px 5px 5px 10px;
+  margin-left: 0;
+}
+.cSingleInfo dl {
+  display: inline-block;
+  line-height: 20px;
+  text-align: center;
+  margin-left: -30px;
+}
+.cSingleInfo dl a {
+  display: block;
+  position: relative;
+}
+.cSingleInfo dl img {
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  margin: 2px 0 0 1px;
+}
+.cSingleInfo a b {
+  background-position: 0 -151px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 39px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.m-round {
+  border: 1px solid #DCDCDC;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 1px 1px 1px #e7e7e7;
+}
+.cSingleR {
+  margin-left: 15px;
+  font-size: 12px;
+  position: relative;
+}
+.cSingleR ul {
+  padding: 10px 10px 0;
+}
+.cSingleR li {
+  margin-bottom: 6px;
+  line-height: 18px;
+}
+.cSingleR li em {
+  font-size: 14px;
+  white-space: nowrap;
+}
+.cSingleR li span {
+  color: #666;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+.cSingleR li span strong {
+  font-weight: normal;
+  margin-right: 2px;
+}
+.cSingleR li h5 {
+  display: inline-block;
+  font-weight: normal;
+  margin-left: 3px;
+  color: #bbb;
+  font-size: 10px;
+}
+.cSingleR li p {
+  max-height: 55px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.cSingleR li {
+  margin-bottom: 6px;
+  line-height: 18px;
+}
+.cSingleR li.maxImg {
+  max-height: 82px;
+  overflow: hidden;
+}
+.cSingleR li img {
+  height: 80px;
+  margin-right: 8px;
+  border: 1px solid #e7e7e7;
+}
+.cSingleR li dd {
+  display: inline-block;
+  margin-right: 10px;
+}
+.cSingleR li s, .cSingleR li i {
+  display: inline-block;
+  margin-right: 5px;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 11px;
+}
+.cSingleR li s {
+  background-position: 0 -50px;
+}
+.cSingleR li i {
+  background-position: -15px -50px;
+}
+.z-arrow {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border: solid #BBB;
+  -webkit-transform: rotate(45deg);
+  font-size: 0;
+  line-height: 0;
+}
+.cSingleR b.z-arrow {
+  position: absolute;
+  left: -3px;
+  top: 17px;
+  border: solid #ddd;
+  background: #fff;
+  border-width: 0 0 1px 1px;
+  width: 4px;
+  height: 4px;
+}
+.cSingleCon {
+  width: 100%;
+  color: #999;
+  background: #f4f4f4;
+}
+.cSingleCon2 {
+  border-left: 1px solid #e7e7e7;
+  margin-left: 25px;
+  padding-bottom: 15px;
+  padding-top: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

@@ -1,0 +1,99 @@
+{wc:fun:css("user.message")}
+{wc:fun:css("user")}
+{wc:templates "index.header"}
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+    <div class="sidebar">
+        <div class="head" style="height:140px;">
+        <a href=""><img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:fun:Getuserimg($member['uid'])}.160160.jpg" width="160" height="160" border="0"></a>
+        </div>  
+    </div>  
+    <div class="content clearfix" style="width:799px;">
+        <div class="per-info">
+            <ul>
+                <li class="info-mane gray02">
+                    <b class="gray01">{wc:fun:get_user_name($member,'username')}</b>
+                </li>
+                <!--<li class="info-address"><span><a href="" class="blue"><s></s>{WEB_PATH}/uname/{wc:fun:idjia($member['uid'])}</a></span></li>
+                -->
+                <li class="info-intro gray02">
+                    {wc:if $member['qianming']!=null}
+                    {wc:$member['qianming']}
+                    {wc:else}
+                    这家伙很懒，什么都没留下。
+                    {wc:if:end}
+                </li>
+            </ul>
+        </div>
+        <div class="su_s">
+            <span>总共{wc:fun:L('html.key')}次数：</span><b>{wc:$retotal}</b>
+            <div class="yun_zj"></div>
+            <span>总共中奖次数：</span><b>{wc:$hdtotal}</b>
+        </div>
+    </div>
+    <div class="clear"></div>
+        <div  class="ugoods_show">
+            <ul class="ugtitle">
+                <li>商品图片</li>
+                <li class="gname">商品名称</li>
+                <li class="yg_status">{wc:fun:L('html.key')}状态</li>
+                <li class="joinInfo">参与人次</li>
+                <li class="do">操作</li>
+            </ul>
+            {wc:loop $record $rt}
+            <ul class="ugoods_list">
+                <li><a title="" target="_blank" class="pic" href="{WEB_PATH}/cgoods/{wc:$rt['ogid']}"><img src="{G_UPLOAD_PATH}/{wc:fun:useri_title($rt['og_title'],'g_thumb')}"></a></li>
+                {wc:if $rt['q_uid']}
+                <li class="gname"style="margin:10px 0 0 0;">
+                    <a target="_blank" href="{WEB_PATH}/cgoods/{wc:$rt['ogid']}" class="blue">第({wc:$rt['oqishu']})期 {wc:fun:useri_title($rt['og_title'],'g_title')}</a>
+                    <p class="gray02">获得者：<a href="{WEB_PATH}/uname/{wc:fun:idjia($rt['q_uid'])}" target="_blank" class="blue">{wc:fun:Getusername($rt['q_uid'])}</a></p>
+                    <p class="gray02">揭晓时间：{wc:fun:microt($rt['q_end_time'],'r')} </p>
+                </li>
+                {wc:else}
+                <li class="gname" style="margin:15px 0 0 0;">
+                    <a target="_blank" href="{WEB_PATH}/cgoods/{wc:$rt['ogid']}" class="blue">第({wc:$rt['oqishu']})期 {wc:fun:useri_title($rt['og_title'],'g_title')}</a>
+                    <p class="gray02">购买时间：{wc:fun:microt($rt['otime'],'r')}</p>
+                </li>
+                {wc:if:end}
+                <li class="yg_status" style="margin:23px 0 0 0;"><span class="c_red">{wc:if $rt['q_showtime'] == 'N' and  $rt['q_uid']}已揭晓{wc:else}正在进行...{wc:if:end}</span></li>
+                <li class="joinInfo" style="margin:23px 0 0 0;"><p><em>{wc:$rt['onum']}</em>人次</p></li>
+                {wc:if $user=login('bool')} 
+                {wc:if $rt['q_showtime'] == 'N' and  $rt['q_uid']}
+                <li class="do" style="margin:23px 0 0 0;"><a href="{WEB_PATH}/member/shop/userbuydetail/{wc:$rt['oid']}" class="blue" title="查看{wc:fun:L('html.key')}码">查看{wc:fun:L('html.key')}码</a></li>
+                {wc:else}
+                <li class="do" style="margin:23px 0 0 0;"><a href="{WEB_PATH}/member/shop/userbuydetail/{wc:$rt['oid']}" class="blue" title="详情">详情</a></li>
+                {wc:if:end}
+                {wc:else}
+                {wc:if $rt['q_showtime'] == 'N' and  $rt['q_uid']}
+                <li class="do" style="margin:23px 0 0 0;"><a href="{WEB_PATH}/cgoods/{wc:$rt['ogid']}" class="blue" title="查看{wc:fun:L('html.key')}码">查看{wc:fun:L('html.key')}码</a></li>
+                {wc:else}
+                <li class="do" style="margin:23px 0 0 0;"><a href="{WEB_PATH}/cgoods/{wc:$rt['ogid']}" class="blue" title="详情">详情</a></li>
+                {wc:if:end}
+                {wc:if:end}                
+            </ul>
+            {wc:loop:end}
+        
+        </div>  
+        {wc:if $retotal>$num}
+        <div class="pagesx">{wc:page:two}</div> 
+        {wc:if:end}                 
+</div>
+
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+<script>
+$(function(){
+    $("#referDocument li").bind({       
+        mouseover:function(){
+            var number=$("#referDocument li").index(this)+1;
+            $(".S0"+number).removeClass("hidden");
+        },
+        mouseout:function(){
+            var number=$("#referDocument li").index(this)+1;
+            $(".S0"+number).addClass("hidden");
+        }
+    })
+})
+</script>
+{wc:templates "index.footer"}
+</html>

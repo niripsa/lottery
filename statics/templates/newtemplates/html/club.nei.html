@@ -1,0 +1,149 @@
+{wc:fun:css("user")}
+{wc:templates "index.header"}
+<script type="text/javascript" src="{G_TEMPLATES_JS}/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_JS}/jquery.Validform.min.js"></script>
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980">
+    <div class="groups-left" style="padding:0;width:955px;">
+        <div class="detail-Ltop">
+            <div class="detail-Himg">
+                <a href="{WEB_PATH}/index/club/show/{wc:$quanzi['cid']}" class="fl-img"><img src="{G_UPLOAD_PATH}/{wc:$quanzi['img']}"></a>
+            </div>
+            <div class="detail-HC">
+                <div class="detail-Htit gray03">
+                    <h2><a id="thisGroupName" href="{WEB_PATH}/index/club/show/{wc:$quanzi['cid']}" class="c_red">{wc:$quanzi['title']}</a></h2> 
+                    <span class="return"><a href="{WEB_PATH}/index/club/show/{wc:$quanzi['cid']}" class="gray02">&lt;&lt; 返回圈子</a></span>
+                </div>
+                <p class="detail-Hinfo gray02">成员：
+                    <span class="gray01">{wc:$quanzi['chengyuan']}</span>&nbsp;&nbsp;&nbsp;话题：
+                    <span class="gray01">{wc:$quanzi['tiezi']}</span>&nbsp;&nbsp;&nbsp;创建时间：
+                    <span class="gray01">{wc:fun:date("Y-m-d H:i:s",$quanzi['time'])}</span>
+                </p>
+            </div>
+        </div>
+        <div id="divTopicShow" class="detail-content">
+            <div class="detail-Ctitle">
+                <div class="detail-Ctimg">
+                    <a href="{WEB_PATH}/user/{wc:fun:idjia($tiezi['huiyuan'])}" class="fl-img" type="showCard">
+                        {wc:if userid($tiezi['huiyuan'],'img')==null}
+                        <img id="imgUserPhoto" src="{G_UPLOAD_PATH}/photo/member.jpg" width="50" height="50">
+                        {wc:else}
+                        <img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:fun:userid($tiezi['huiyuan'],'img')}" width="50" height="50">
+                        {wc:if:end}
+                    </a>
+                </div>
+                <div class="detail-Ctl">
+                    <p class="detail-tit gray">{wc:$tiezi['title']}
+                        <i id="JingHua" class="jing" style="display:none;"></i></p>
+                    <div class="detail-Ctit gray03 f12"><a href="{WEB_PATH}/uname/{wc:fun:idjia($tiezi['huiyuan'])}" class="blue" type="showCard">{wc:fun:userid($tiezi['huiyuan'],'username')}</a> 
+                        <span class="class-icon07"></span> 
+                        <span class="time gray02">{wc:fun:date("Y-m-d H:i:s",$tiezi['addtime'])}</span>&nbsp;&nbsp;
+                        <span class="gray03">人气({wc:$tiezi['dianji']})</span>
+                    </div>
+                </div>
+            </div>
+            <div id="divTopicContent" class="detail-Con gray01"><p><strong>{wc:$tiezi['content']}</strong></p></div>
+        </div>
+        <div id="divAdminPower" class="detail-admin" style="display:none;">
+            <a href="javascript:;" id="btnSetGood" class="blue Control01"><s></s>话题加精</a>
+            <a id="btnUnshow" href="javascript:;" class="blue Control02"><s></s>屏蔽该话题</a>
+            <a href="javascript:;" id="btnCancelGood" class="blue Control03" style="display:none;"><s></s>取消加精</a>
+        </div>
+        <div class="Comment_main" id="commentMain" style="display: block;">
+            <div class="Comment-date">
+                <span class="gray02">共 <i id="totalNum" class="c_red">{wc:$total}</i> 条回复</span> 
+                <em><a href="javascript:;" class="blue">回复</a></em>
+            </div>
+            {wc:if $total==0}
+            <div class="tips-con"><i></i>暂无回复，快抢沙发吧！</div>
+            {wc:else}
+            {wc:loop $huifu $hf}
+            <div class="Comment_box_con">
+                <div class="User_head">
+                    <a type="showCard" href="{WEB_PATH}/user/{wc:fun:idjia($hf['huiyuan'])}" class="fl-img">
+                        {wc:if userid($hf['huiyuan'],'img')==null}
+                        <img id="imgUserPhoto" src="{G_UPLOAD_PATH}/photo/member.jpg" width="50" height="50">
+                        {wc:else}
+                        <img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:fun:get_user_key(userid($hf['huiyuan'],'uid'),'img','8080')}" width="50" height="50">
+                        {wc:if:end}
+                    </a>
+                </div>
+                <div class="Comment_con">
+                    <div class="Comment_User"><b></b><a type="showCard" href="{WEB_PATH}/user/{wc:fun:idjia($hf['huiyuan'])}" class="blue">{wc:fun:userid($hf['huiyuan'],'username')}</a></div>
+                    <div class="C_summary gray02 f12">{wc:$hf['content']}<br>
+                        <span class="gray03">{wc:fun:date("Y-m-d H:i:s",$hf['addtime'])}</span>
+                    </div>
+                    <div class="C_detail"><a name="linkReply" href="javascript:;" class="blue"><!-- 回复 --></a></div>
+                    <div name="ReplyList" class="qcomment_reply_list_module"></div>             
+                </div>
+            </div>
+            {wc:loop:end}
+            <div class="page_nav">
+                {wc:if $total>$num}
+                <div class="pagesx">{wc:page:two}</div>
+                {wc:if:end}
+            </div>
+            {wc:if:end}
+        </div>
+        {wc:if $quanzi['huifu']=='Y'}
+        <div class="Comment_Box clearfix">
+            {wc:if $uid}
+            <!-- <div class="Comment-pic"><img id="imgUserPhoto" src="images/member.jpg" width="50" height="50"></div> -->
+            <div class="Comment_form">
+                <div class="Comment_textbox">
+                    <form action="{WEB_PATH}/index/club/ClubPost" method="post" id="registerform">
+                        <textarea id="hueifucontent" class="textarea01" name="huifu" style="display: block;border:1px solid #C2C2C2; height:150px; resize:none;"></textarea>
+                        <input value="{wc:$tiezi['id']}" name="tzid" class="hidden">
+                        <input value="{wc:$quanzi['cid']}" name="qzid" class="hidden">
+                        <div style="line-height:25px;display: inline-block;padding:0px;margin-top:5px;float:left;">
+                            <span style="color:#aaa;float:left">验证码: </span><input type="text" name="group_code" style="width:80px;height:20px;float:left;" ajaxurl="{G_WEB_PATH}/?plugin=1&api=Captcha&action=check" datatype="*4-6" nullmsg="请输入验证码！" errormsg="请输入正确的验证码！" >
+                            <span style="float:left"><img id="checkcode" src="{WEB_PATH}/plugin=true&api=Captcha"/></span><span class="Validform_checktip" style="display:block;float:left;width:100px;height:30px;line-height:34px;"></span>
+                            </div>
+                        <div class="Comment_but"><input type="submit" name="submit" id="btnSubmitMsg" class="reply_unbotton" value="立即发送"></div>
+                    </form>
+                </div>
+            </div>
+            {wc:else}
+            <div class="Comment_login" id="notLogin">
+                请您<a class="blue" href="{WEB_PATH}/login" id="replyLoginBtn">登录</a>或<a class="blue" href="{WEB_PATH}/register">注册</a>后再回复评论
+            </div>
+            {wc:if:end}
+        </div>
+        {wc:else}
+        <div class="tips-con"><i></i>该圈子已设置不可回复!</div>
+        {wc:if:end}
+    </div>
+    {wc:templates "club.right"}
+</div>
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+<script type="text/javascript">
+    $(function(){
+        $("#registerform").Validform({
+            tiptype:function(msg,o,cssctl){
+                var objtip=o.obj.parent().find(".Validform_checktip");
+                cssctl(objtip,o.type);
+                if(o.type==3){
+                    $("#checkcode").click();
+                }
+                objtip.text(msg);
+            },
+            ajaxPost:true,
+            callback:function(data){
+                if(data.status != 1){
+                    $("#checkcode").click();
+                }else{
+                    location.reload();
+                }
+            }
+
+        });
+        $("#checkcode").attr("data",$("#checkcode").attr("src"));
+        $("#checkcode").click(function(){
+            $(this).attr("src",$(this).attr("data")+"&="+new Date().getTime());
+        });
+
+    })
+</script>
+{wc:templates "index.footer"}

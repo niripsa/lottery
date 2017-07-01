@@ -1,0 +1,49 @@
+<script language="javascript">
+    if(!$.PageDialog){
+        window.document.write("<scr"+"ipt  type='text/javascript' src='{G_TEMPLATES_JS}/jquery.pageDialog.js'></sc"+"ript>");
+    }
+    if(!$.YunCmsApi){
+        window.document.write("<scr"+"ipt  type='text/javascript'  src='{G_TEMPLATES_JS}/jquery.cmsapi.js'></sc"+"ript>");
+    }
+</script>
+
+<!-- footer 开始-->
+<footer class="footer">
+    {wc:if $user=login('bool')}
+    <div class="u-ft-nav"><!-- 登录后 -->
+        <span><a href="{WEB_PATH}">首页</a><b></b></span>
+        <!-- <span><a href="{WEB_PATH}/article-1.html">新手指南</a><b></b></span> -->
+        <span><a href="{WEB_PATH}/member/home/userindex" class="Member">{wc:fun:Getusername($user['uid'])}</a>
+        <a href="{WEB_PATH}/member/user/logout" onclick="$.YunCmsApi.ToAjax(this)"  class="Exit">退出</a><b></b></span>
+    </div>
+    {wc:else}
+    <div class="u-ft-nav" ><!-- 登录前 -->
+        <span><a href="{WEB_PATH}">首页</a><b></b></span>
+        <!-- <span><a href="{WEB_PATH}/article-1.html">新手指南</a><b></b></span> -->
+        <span><a href="{WEB_PATH}/login&time=<?php echo time(); ?>">登录</a><b></b></span>
+        <span><a href="{WEB_PATH}/register">注册</a></span>
+    </div>
+    {wc:if:end}
+        <!--p class="m-ftA">
+        <a href="">触屏版</a>
+        <a href="" >电脑版</a>
+        <a href="">下载客户端</a>
+    </p-->
+    <!--p class="grayc">客服热线<span class="orange">{wc:fun:_cfg("cell")}</span></p-->
+    <a class="z-top" style="display:none;"><b class="z-arrow"></b></a>
+</footer>
+<!-- footer 结束-->
+
+<script type="text/javascript" src="{G_TEMPLATES_JS}/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+TouchSlide({
+    slideCell:"#focus",
+    titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+    mainCell:".bd ul",
+    effect:"leftLoop",
+    autoPlay:true,//自动播放
+    autoPage:true //自动分页
+});
+</script>
+</body>
+</html>

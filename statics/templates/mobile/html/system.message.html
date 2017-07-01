@@ -1,0 +1,19 @@
+{wc:fun:js("jquery.cmsapi")}
+{wc:templates "index.header_top"}
+<script type="text/javascript">
+    $.YunCmsApi.SetTopStyle({
+        "Title":"提示",
+        "Home":true
+    }); 
+</script>
+<div class="g-pay-auto">
+    <div class="z-pay-tips"><b><em class="gray6">{wc:$string}</em></b></div>
+</div>
+<script type="text/javascript">
+{wc:if $defurl == ':js:'}
+setTimeout( "window.history.back()", "{wc:$time*1000}" );
+{wc:else}
+setTimeout( "window.location.href='{wc:$defurl}'", "{wc:$time*1000}" );
+{wc:if:end}
+</script>
+{wc:templates "index.footer"}

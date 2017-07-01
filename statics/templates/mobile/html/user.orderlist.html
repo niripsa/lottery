@@ -1,0 +1,37 @@
+{wc:fun:js("jquery.cmsapi")}
+{wc:templates "index.header_top"}
+<script type="text/javascript">
+    $.YunCmsApi.SetTopStyle({
+        "Title":"中奖商品",
+        "Member":true,
+        "Home":true
+    });
+</script>
+
+{wc:if count($record)==0}
+<section class="clearfix g-Record-lst" style="display:block">
+    <ul class="z-minheight">
+        <div class="haveNot z-minheight"><s></s><p>暂无记录</p></div>
+        <div id="divGoodsLoading" class="loading" style="display:none;"><b></b>正在加载</div>
+        <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;">点击加载更多</a>
+    </ul>
+</section>
+{wc:else}
+<section class="clearfix g-Record-lst" style="display:block">
+<ul class="z-minheight">
+
+{wc:loop $record $recd}
+    <li>
+        <a class="fl z-Limg" href="{WEB_PATH}/cgdataserver/{wc:$recd['ogid']}"><img src="{G_UPLOAD_PATH}/{wc:fun:useri_title($recd['og_title'],'g_thumb')}" border="0" alt=""></a>
+        <div class="u-gds-r gray9">
+            <p class="z-gds-tt"><a href="{WEB_PATH}/cgdataserver/{wc:$recd['ogid']}" class="gray6">(第{wc:$recd['oqishu']}期){wc:fun:useri_title($recd['og_title'],'g_title')}</a></p>
+            <p>幸运{wc:fun:L('html.key')}码：<em class="orange">{wc:$recd['owin']}</em></p>
+            <p>购买时间：{wc:fun:microt($recd['otime'])}</p>
+        </div>
+        <b class="z-arrow"></b>
+    </li>
+{wc:loop:end}
+{wc:if:end}
+</ul>
+</section>
+{wc:templates "index.footer"}

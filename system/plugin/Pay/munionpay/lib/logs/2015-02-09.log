@@ -1,0 +1,1492 @@
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >Yqkab6k2vmfFTp/wKmgL9hnHvAdBC8zOd33JCb8TEFY7PIF+J0fctU1JYHT+ZDrGJztILFOBdI1UyQtvQEKri/FRoGrvOAstSmj2EcG2rq7Yno+gL+BarSMY/WV6U0mjyCuPgfEDdfuEvv5Way2lCiQ4eQCpSVgZHlk4NCQnvCV4tUWSTcDNcT9AKxrGx5m/5O5d8G4GhbKonEMR8T0oBmwhYYD7g3eyYdN2PoWj7nWEIo3k88NPR4S7Kq5GEbTuwGX8PqEDBvDf+zv6IVasCaMGQdG3UYC/K43SDBmnIbSbYP4sx98TiF8hDwVP1dTeX/nQ1qKnxxLzRJvhw3sXQg== 
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209143721" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209143721" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="Yqkab6k2vmfFTp/wKmgL9hnHvAdBC8zOd33JCb8TEFY7PIF+J0fctU1JYHT+ZDrGJztILFOBdI1UyQtvQEKri/FRoGrvOAstSmj2EcG2rq7Yno+gL+BarSMY/WV6U0mjyCuPgfEDdfuEvv5Way2lCiQ4eQCpSVgZHlk4NCQnvCV4tUWSTcDNcT9AKxrGx5m/5O5d8G4GhbKonEMR8T0oBmwhYYD7g3eyYdN2PoWj7nWEIo3k88NPR4S7Kq5GEbTuwGX8PqEDBvDf+zv6IVasCaMGQdG3UYC/K43SDBmnIbSbYP4sx98TiF8hDwVP1dTeX/nQ1qKnxxLzRJvhw3sXQg==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:37:21, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >D12DWjTTjyqEDqx8hNwy7GgkXQlDbg3sFlVHQ5G0neyPDaVy+fA+rw1fWaPeWpPl7qGviAy//BhyPjSTI0jiE9NHSXOthX2vhmG6cIo/ly1cxaU+GRBq8uVeUqIYhZMGZKeSJwTzEXSSJcFnqW8gMdizUPkbbfuTQgHrUyKuiIfDJdK+WM6eP+m2jzgyuASHQa3D6aVNV0XKzZcRL9KvX0VxydH0uowrwAPYMgYM/BRrGaOxXMncN3RXJRLu63V61EyHeX5Ksl9aAQQ6QdwksDpnx4lesNi+1znjsqbfEEMvo9eOjCn9aI1Ntj/y6ku6/euOFmUaD9Kcy+lIj8oCrA== 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209143903" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209143903" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="D12DWjTTjyqEDqx8hNwy7GgkXQlDbg3sFlVHQ5G0neyPDaVy+fA+rw1fWaPeWpPl7qGviAy//BhyPjSTI0jiE9NHSXOthX2vhmG6cIo/ly1cxaU+GRBq8uVeUqIYhZMGZKeSJwTzEXSSJcFnqW8gMdizUPkbbfuTQgHrUyKuiIfDJdK+WM6eP+m2jzgyuASHQa3D6aVNV0XKzZcRL9KvX0VxydH0uowrwAPYMgYM/BRrGaOxXMncN3RXJRLu63V61EyHeX5Ksl9aAQQ6QdwksDpnx4lesNi+1znjsqbfEEMvo9eOjCn9aI1Ntj/y6ku6/euOFmUaD9Kcy+lIj8oCrA==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:39:03, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >KHS6QDGlD5rWxR+QBSyJcUCKu94y+/N7e6hyRXFcXa++NmhRgGPnF3HjHKnNwiSCwwgXxR68ZBBj1hefJlby6OavlYAb8TMF8Fn+zBcn6mfRenoM+KPD0nH38P2fuGtqFMvtP9CeZKFsju/8wNKKVE3GvK3rzUFLwR8h5Q+QU7pked1I7akJIwJNH17JbpnzeJ8WOV31RoK/cZvBWXcMAK9Qqrfuiz2cunrhFyfJLjIrrLnkcwu1MhIJVOLT9ifhJh8mfI1wZM0NVRSF0P70wlF2rcYqoRuj1J8QC3UkgNwqkY0AWUWcxGLM/s3MTZu77XfrhCdUcV2LYLbInx0aIA== 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209144337" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209144337" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="KHS6QDGlD5rWxR+QBSyJcUCKu94y+/N7e6hyRXFcXa++NmhRgGPnF3HjHKnNwiSCwwgXxR68ZBBj1hefJlby6OavlYAb8TMF8Fn+zBcn6mfRenoM+KPD0nH38P2fuGtqFMvtP9CeZKFsju/8wNKKVE3GvK3rzUFLwR8h5Q+QU7pked1I7akJIwJNH17JbpnzeJ8WOV31RoK/cZvBWXcMAK9Qqrfuiz2cunrhFyfJLjIrrLnkcwu1MhIJVOLT9ifhJh8mfI1wZM0NVRSF0P70wlF2rcYqoRuj1J8QC3UkgNwqkY0AWUWcxGLM/s3MTZu77XfrhCdUcV2LYLbInx0aIA==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:43:37, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >opYnhuIAp/JijmMzUna5wfX9hY82xh/KbsT880MmgssFFsZxQPQi2QAzq0SyC4Llticvxga1Vt5YfW/EsucJXcn6znYoGiMWsuhgEl5LqDPdEQEDXWYfgFbBnsEr4a2L8GRd5mXYsmSG4S+d/Wu+IxG5bELDRRTQm/wwr2J/3G8= 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209145642" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209145642" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="opYnhuIAp/JijmMzUna5wfX9hY82xh/KbsT880MmgssFFsZxQPQi2QAzq0SyC4Llticvxga1Vt5YfW/EsucJXcn6znYoGiMWsuhgEl5LqDPdEQEDXWYfgFbBnsEr4a2L8GRd5mXYsmSG4S+d/Wu+IxG5bELDRRTQm/wwr2J/3G8=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:56:42, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[36]------ >>>>>绛惧悕澶辫触<<<<<<< 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209145747" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209145747" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:57:47, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >QxQErogvEvhYnMFDif7yJ+UoRL0bmixgpTmtyoHC1ivdvwqwXgsFk3gIsEyFX3r0zu5Gi1mGlLw/cB/K8FoBkIinNXmeqYS9Ms3FDdGEuSHLI/6eN74Hr8uF3DZEDH2vqIt3Ao/TvjGpMN3GBgHeRQ1Hb5RP2QN+ZKl4A0iVNtWBkVmK7LS+ZS1tAQWWDuE23uSrY0UJrTTaokR2i6fPrRCHwvHh0pKLRyAEaMvvq5GP1c4Lha2Wk+FGstZ1HCCjJi3cEqLAuJ6MuwRd8f0mdAuUDuNw5TSRz1n5xFLRSBOc2Y8eqSER45q0s1wlWhg2Romrmf7psrbGlc2X5Y2+FQ== 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209145902" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209145902" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="QxQErogvEvhYnMFDif7yJ+UoRL0bmixgpTmtyoHC1ivdvwqwXgsFk3gIsEyFX3r0zu5Gi1mGlLw/cB/K8FoBkIinNXmeqYS9Ms3FDdGEuSHLI/6eN74Hr8uF3DZEDH2vqIt3Ao/TvjGpMN3GBgHeRQ1Hb5RP2QN+ZKl4A0iVNtWBkVmK7LS+ZS1tAQWWDuE23uSrY0UJrTTaokR2i6fPrRCHwvHh0pKLRyAEaMvvq5GP1c4Lha2Wk+FGstZ1HCCjJi3cEqLAuJ6MuwRd8f0mdAuUDuNw5TSRz1n5xFLRSBOc2Y8eqSER45q0s1wlWhg2Romrmf7psrbGlc2X5Y2+FQ==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 14:59:02, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >RQ9Ix8EK3viWEKNRE38rBtyRioTRyJgAFyk7gDk0I4c9EUx2WoGMAjpEfk2OBua4ERpLTMO/y99ZzFgyL7Pn4cfK/y5DCWZ4qpcTWCj5ITogw/EYaguWCHgI1C+r+dkGo/b+iciW+/FG8dN4EkguMldbaKNtokl9p2rlHJOWmj0= 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="109530407916978905405074910236560609205" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209150052" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209150052" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="RQ9Ix8EK3viWEKNRE38rBtyRioTRyJgAFyk7gDk0I4c9EUx2WoGMAjpEfk2OBua4ERpLTMO/y99ZzFgyL7Pn4cfK/y5DCWZ4qpcTWCj5ITogw/EYaguWCHgI1C+r+dkGo/b+iciW+/FG8dN4EkguMldbaKNtokl9p2rlHJOWmj0=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:00:52, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 15:23:08, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 15:23:08, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 15:23:08, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 15:23:08, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 15:23:09, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >HKtLGdarLVBwpoZXVPQ9w9jaXUnUSxd+bNCZUeSXEkkfL9AUIgznAX0KgLHSJV8z0Yg7d1AbYuc/hkzocOud/xp9riAWemnfAWvoOYWFzaKpN0HnHFSLDwAwaT3zSP7J2vZsD4tTJw0SpEHjYtNuCBeGfvVEJAg8AffCOPFK+01L0I9kxnEjcvUFMI2kzLlu3xJ4DhjT4d6Pdzkqzga8UZgoxQnPfptMn0o9H6L0SqcraSYY+bHp3nr60zfP/g/tNMHRKVCMqJPren/6lWbKInayecA2Cljx742IgaiFEPcbf55k/34hOC8C7o20BEeEQ9DgkeLmRp7uz9Yziadndg== 
+2015-02-09 15:23:09, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 15:23:09, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 15:23:09, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:23:09, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209152308" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209152308" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="50" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="HKtLGdarLVBwpoZXVPQ9w9jaXUnUSxd+bNCZUeSXEkkfL9AUIgznAX0KgLHSJV8z0Yg7d1AbYuc/hkzocOud/xp9riAWemnfAWvoOYWFzaKpN0HnHFSLDwAwaT3zSP7J2vZsD4tTJw0SpEHjYtNuCBeGfvVEJAg8AffCOPFK+01L0I9kxnEjcvUFMI2kzLlu3xJ4DhjT4d6Pdzkqzga8UZgoxQnPfptMn0o9H6L0SqcraSYY+bHp3nr60zfP/g/tNMHRKVCMqJPren/6lWbKInayecA2Cljx742IgaiFEPcbf55k/34hOC8C7o20BEeEQ9DgkeLmRp7uz9Yziadndg==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 15:23:09, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:23:09, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >OSCv7TSv7Cjle3dNogNUZ7QDSkL9nkoDDTX59JqEh+1RHDnD/vrl6m8u7eSj1TZZou3wPGofzpDW+EHGqdw3aT5NtU0BYSOK0wO0SlEepDz1oCZB/HYGc5KrBErn/mk0Gx623Ot/dWB7uNaHd4F/t1B1Ioi8G4EiJrpyNtSFiTdrcyISP3ZRtf6YabBZRq6fc5tiuUIqaVwFyd4KkYeoCX2uQNEf7FXyp2CzORtIeNgvWKlEqVg4Wlv0yZCJMkKvw/8qg4VjjZgnCgezGvk+EC4nsSIq18O8ycATQv0yD1lfZy28lrLYVPBWJp1+9mhobW5F3YynNeMRjjvCiqr/XA== 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209152456" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209152456" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="50" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="OSCv7TSv7Cjle3dNogNUZ7QDSkL9nkoDDTX59JqEh+1RHDnD/vrl6m8u7eSj1TZZou3wPGofzpDW+EHGqdw3aT5NtU0BYSOK0wO0SlEepDz1oCZB/HYGc5KrBErn/mk0Gx623Ot/dWB7uNaHd4F/t1B1Ioi8G4EiJrpyNtSFiTdrcyISP3ZRtf6YabBZRq6fc5tiuUIqaVwFyd4KkYeoCX2uQNEf7FXyp2CzORtIeNgvWKlEqVg4Wlv0yZCJMkKvw/8qg4VjjZgnCgezGvk+EC4nsSIq18O8ycATQv0yD1lfZy28lrLYVPBWJp1+9mhobW5F3YynNeMRjjvCiqr/XA==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:24:56, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >U9legnS9F9okEXMRNF4Bd8yJtoGYyY67G8zfJsv7maHYQK3CxVje82106q6Tm8HoBcKFLgL8SesjLI7DJTepZIwy2xvwrsFDRlDxHuh6ewMX8uibmV+q43U/PqvM/X38mGz9LeHRypKcEuyPkF7QrfnGu31XAgs2NBzkuFSuz0S4ckgsyxRAYXbgj6OvIW3eb/+vFtKebCOMVBEeJfL5mDSU/Xf0ssVyxnvxgJUl8Rpu8yLb2UFYYLJl9TxL9bd5NM/JcZJ03egkWqLdcvnb4kNBkqB+oSVVOeFZHDT6vEHpBrXt/aNw9Allxg3q+0JhHFAgibDdHZxa8JwrDrqmTQ== 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209152457" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209152457" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="50" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="U9legnS9F9okEXMRNF4Bd8yJtoGYyY67G8zfJsv7maHYQK3CxVje82106q6Tm8HoBcKFLgL8SesjLI7DJTepZIwy2xvwrsFDRlDxHuh6ewMX8uibmV+q43U/PqvM/X38mGz9LeHRypKcEuyPkF7QrfnGu31XAgs2NBzkuFSuz0S4ckgsyxRAYXbgj6OvIW3eb/+vFtKebCOMVBEeJfL5mDSU/Xf0ssVyxnvxgJUl8Rpu8yLb2UFYYLJl9TxL9bd5NM/JcZJ03egkWqLdcvnb4kNBkqB+oSVVOeFZHDT6vEHpBrXt/aNw9Allxg3q+0JhHFAgibDdHZxa8JwrDrqmTQ==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:24:57, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >dI6BpffnPbIrU8+0RJ7ZLoqfvHcNAnU2WYQIjWZ9X5BUvpYO+eK7ZequztMrCTdtXfXDmA4ueN06N4cmeCCFzJqSuLxYve3yjI0wvtH0mqA4Hbds46pIg4hr17fGb/tyJi0VHiph5sdEJ9aDgSO/kZahPkzjc4BUTqB3TCpW5kS38/iVEyiw9LEZyzpW6Pu01+yGdYHt+ad7cUszu36ySB+yFrL/R+5RUlrXFP7eI1Jd/RtyJj8pJIm2FDqgFWhOIAkNge9rgF2e9RyZXYFzPS1pZIy2u6hygotfjmILOQeRqYCfJHZ6T/ZEGl/wGbMiIOytpcnJF1NklWfNM0+VxQ== 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209152459" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209152459" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="50" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="dI6BpffnPbIrU8+0RJ7ZLoqfvHcNAnU2WYQIjWZ9X5BUvpYO+eK7ZequztMrCTdtXfXDmA4ueN06N4cmeCCFzJqSuLxYve3yjI0wvtH0mqA4Hbds46pIg4hr17fGb/tyJi0VHiph5sdEJ9aDgSO/kZahPkzjc4BUTqB3TCpW5kS38/iVEyiw9LEZyzpW6Pu01+yGdYHt+ad7cUszu36ySB+yFrL/R+5RUlrXFP7eI1Jd/RtyJj8pJIm2FDqgFWhOIAkNge9rgF2e9RyZXYFzPS1pZIy2u6hygotfjmILOQeRqYCfJHZ6T/ZEGl/wGbMiIOytpcnJF1NklWfNM0+VxQ==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:24:59, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >BP9V7uJVFdy+SqRRqjMzMeU125FUTWToi9z9j0LSP4YJVXbqZfB9TaKMNCQ6q5df2Lr9N0wuY4Ab96FrfVafMC4011CcEfWgsDRC4rgFMYM8kukt0DenimBw6z8EVQzUkBGXiRT5aTixfpjACTopHIuu7mLJxSTst+uqnQ6DgN9NDOgj/4Q14QLxTxDjVn8ByeT7dTVR9CUPIeEVXUdEcrhQj/yI5fNMz/GT1WvNFPKyc/hc1tHkUvFS/ahtUvvDjNOZtzNb0wXQafRizF6aDrSuijWCXql8Ke9V9lSa6jOXcr6rKNymnOl3I5AUl4adOYrxagvqOoWaDIG76JcRkA== 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209152500" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209152500" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="50" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="BP9V7uJVFdy+SqRRqjMzMeU125FUTWToi9z9j0LSP4YJVXbqZfB9TaKMNCQ6q5df2Lr9N0wuY4Ab96FrfVafMC4011CcEfWgsDRC4rgFMYM8kukt0DenimBw6z8EVQzUkBGXiRT5aTixfpjACTopHIuu7mLJxSTst+uqnQ6DgN9NDOgj/4Q14QLxTxDjVn8ByeT7dTVR9CUPIeEVXUdEcrhQj/yI5fNMz/GT1WvNFPKyc/hc1tHkUvFS/ahtUvvDjNOZtzNb0wXQafRizF6aDrSuijWCXql8Ke9V9lSa6jOXcr6rKNymnOl3I5AUl4adOYrxagvqOoWaDIG76JcRkA==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 15:25:00, INFO, 117.136.40.159, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >qnAoVAKL/Aye2kb1JkqozxwgPOMQly7zd2H1/eVfr9KTdFgxEZm5CueIyWbl6vBCEOFZNhEByCtDDEk31LEbdk4zUSgcAKAujl1R9gylSP+1uYFUCnXzIbg81MfPxmoy5XZYxxa6S892w/stG41pFxNpveSCrDuZC4vY2CFij1BAxmbnGX77aKFoIHFghPtc47UpjCRrBoe/jbZsjOSgGJrQ4/03DMpJUP0V7WOuqHIslMGgqHkoKqEopVHt6c6bzsWLcTcO9IqLMyYTItwrNOrPHgLkg7J4MRRggMLXqKGNhN7yFcqu8VBVJffisR9NsOQThEG2hmQvXqAvQuT+eQ== 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209163256" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209163256" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="qnAoVAKL/Aye2kb1JkqozxwgPOMQly7zd2H1/eVfr9KTdFgxEZm5CueIyWbl6vBCEOFZNhEByCtDDEk31LEbdk4zUSgcAKAujl1R9gylSP+1uYFUCnXzIbg81MfPxmoy5XZYxxa6S892w/stG41pFxNpveSCrDuZC4vY2CFij1BAxmbnGX77aKFoIHFghPtc47UpjCRrBoe/jbZsjOSgGJrQ4/03DMpJUP0V7WOuqHIslMGgqHkoKqEopVHt6c6bzsWLcTcO9IqLMyYTItwrNOrPHgLkg7J4MRRggMLXqKGNhN7yFcqu8VBVJffisR9NsOQThEG2hmQvXqAvQuT+eQ==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:32:56, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >l5wL3cZWo2XOLQ/k/k4apRe7y5eIRXaPX4aHjIj4q21qoDOpT0SefwjLlmTKoTjm37ZfeqFA1HdiUZL+kRIPUzOami5huEWY0NLELIGduxncyvFnNVDkSYlJ7aD5sEuagkPgjXqRONdiWg8PtnCUhg2h50DkbUOF8yuiYvCipitM7wII8+7vOnFjTCvb8oWRvnRvzy/9Mo0NXy6JgP/fe2NgyWS8cQPcPKa+kHJSfzvoapmfmgM8UPiKdtExbcJMRH2O7E188Qwq6f59yJaJyrHq68hTDF3w21i1majbiFMRbhmKYGZmM0P7eZ6LZ9B9R/TEypBitJ5yonYdu5FGLQ== 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209163657" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209163657" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="l5wL3cZWo2XOLQ/k/k4apRe7y5eIRXaPX4aHjIj4q21qoDOpT0SefwjLlmTKoTjm37ZfeqFA1HdiUZL+kRIPUzOami5huEWY0NLELIGduxncyvFnNVDkSYlJ7aD5sEuagkPgjXqRONdiWg8PtnCUhg2h50DkbUOF8yuiYvCipitM7wII8+7vOnFjTCvb8oWRvnRvzy/9Mo0NXy6JgP/fe2NgyWS8cQPcPKa+kHJSfzvoapmfmgM8UPiKdtExbcJMRH2O7E188Qwq6f59yJaJyrHq68hTDF3w21i1majbiFMRbhmKYGZmM0P7eZ6LZ9B9R/TEypBitJ5yonYdu5FGLQ==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:36:57, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >gES4c36JqvBQFaymJNF1yzhGmP84fYiXM5+Ohx+tvQJpsiK2NfnVVlTp3LZIWu+lKfPLwm/+stIKZz4SNH4a3mCrHFFALBkZMet59daGmiLSa2Nb/raQYaZpkNA4xGqUl3VoO05a9gWxIQO1tNyOb6ol0GMr47OfCmEWMef0Cz+COh8BcwRVTq4Z7M8iYRoJF+/mxyNYQw7LMp+CvcQCxYCNc5OwwAP3wDtiJks5OBZ6TyLe73t6MKkE6CvoWylXcc/ZXWsRVgMG3mPM5klzWqmPsN4QqmbNtrz2hYtDGk7kucMabiI2tpAeM80VivUc+gmmfsLppSAur/QlkLHJJg== 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209163740" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209163740" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="gES4c36JqvBQFaymJNF1yzhGmP84fYiXM5+Ohx+tvQJpsiK2NfnVVlTp3LZIWu+lKfPLwm/+stIKZz4SNH4a3mCrHFFALBkZMet59daGmiLSa2Nb/raQYaZpkNA4xGqUl3VoO05a9gWxIQO1tNyOb6ol0GMr47OfCmEWMef0Cz+COh8BcwRVTq4Z7M8iYRoJF+/mxyNYQw7LMp+CvcQCxYCNc5OwwAP3wDtiJks5OBZ6TyLe73t6MKkE6CvoWylXcc/ZXWsRVgMG3mPM5klzWqmPsN4QqmbNtrz2hYtDGk7kucMabiI2tpAeM80VivUc+gmmfsLppSAur/QlkLHJJg==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:37:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >HNgwu6cPLWX2LL4RFt3///qL1raLOGpaaN6921WZdnS2k9u/fRQT/qWUWzh8wHotiqUsJLQE/oCciSjw9u9ciz5fTg7m8FF4ZlRDw6Og+9+T8HQNTrSZGtvY+C0/G0o1CsfnH3hFgt8eWhiiKJ9KC1sqD/EjWX/e6TfCUw2NEMdli3Qqg8xcTtGhUobNogt4J/Am4mpIpupOOdDBkHRM+gPamI3j+qgQUsGANI5d20Z9BaviX6mygp8XGl/le51vi7Af7igQRJ8P84cfIO9ognl0gzNHzgLCSDOVmYDEPCkO8L0Vx0jKyMvLy1VUpTBNBUUPo0u0LhK4qFFvCVAcZA== 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209163840" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209163840" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="HNgwu6cPLWX2LL4RFt3///qL1raLOGpaaN6921WZdnS2k9u/fRQT/qWUWzh8wHotiqUsJLQE/oCciSjw9u9ciz5fTg7m8FF4ZlRDw6Og+9+T8HQNTrSZGtvY+C0/G0o1CsfnH3hFgt8eWhiiKJ9KC1sqD/EjWX/e6TfCUw2NEMdli3Qqg8xcTtGhUobNogt4J/Am4mpIpupOOdDBkHRM+gPamI3j+qgQUsGANI5d20Z9BaviX6mygp8XGl/le51vi7Af7igQRJ8P84cfIO9ognl0gzNHzgLCSDOVmYDEPCkO8L0Vx0jKyMvLy1VUpTBNBUUPo0u0LhK4qFFvCVAcZA==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:38:40, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >GuSE5ncfbDaGTu8GjkqQiZGA7qCoDtVdwHOrlOgpnMzbnHJgK/yIAfqgNe/DBHZlHZf3WUt04KUVGCpAH4k5tdx50YtWgbgU6prLQWXsGzmcChnAri3bxKp5xSg17AKineX1vBOTMrS/bAEwyHUs97tcaMUzWnTVHGkMoqdEkdU= 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209163928" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209163928" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="GuSE5ncfbDaGTu8GjkqQiZGA7qCoDtVdwHOrlOgpnMzbnHJgK/yIAfqgNe/DBHZlHZf3WUt04KUVGCpAH4k5tdx50YtWgbgU6prLQWXsGzmcChnAri3bxKp5xSg17AKineX1vBOTMrS/bAEwyHUs97tcaMUzWnTVHGkMoqdEkdU=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:39:28, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >m3GN1orFk0PSsBvjncfJK0z9v61tCgKpAbrmTFu3dFCGv6vOuh80Tsi7vnaXCd3PRKfbfxpnTRAyHPKgEnDYpnPMIQlftVnJxPegiUfMVmFOHu5CJzh78tpcNui8pXftDECVyUkECH3loHrP5uBNWkwjdOAbKsA9ZWKQuA2efcI= 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209164733" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209164733" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="m3GN1orFk0PSsBvjncfJK0z9v61tCgKpAbrmTFu3dFCGv6vOuh80Tsi7vnaXCd3PRKfbfxpnTRAyHPKgEnDYpnPMIQlftVnJxPegiUfMVmFOHu5CJzh78tpcNui8pXftDECVyUkECH3loHrP5uBNWkwjdOAbKsA9ZWKQuA2efcI=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:47:33, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[36]------ >>>>>绛惧悕澶辫触<<<<<<< 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209165003" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209165003" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 16:50:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[36]------ >>>>>绛惧悕澶辫触<<<<<<< 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209170303" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209170303" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:03:03, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[36]------ >>>>>绛惧悕澶辫触<<<<<<< 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209170339" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209170339" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:03:39, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >eknJThdCtuCxJcil4u9Pw9ue5GUQbycK69ddyqR9zACAKrEAorv9QXKHlBl/61EIknL/py+w2cT6mde6I0PdeFZE0Jgpr1gn3NUdCW+U/fe2URKMW8x17HHHVO49SXkKva9Mog7MM26x78ExwF5iqwjNAo2CMdVxjoLtQTh3Omzt6LtKq/wXQD6yH+zx9QaetzhyWXBaL08PfsSwLb0/BTD+EH9FJXyhiS3GjGSjdEnF/IjsBxBRB9J74I1J1SdDVxpRQbBg6y7A0R6jEBcBMvrBnrSBxkgtBQ0Cos/HA+m6+wULYR+cLsnaZfKelxhTrnQZmI4Hv3O5Q8UpkfxXWg== 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209170444" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209170444" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="eknJThdCtuCxJcil4u9Pw9ue5GUQbycK69ddyqR9zACAKrEAorv9QXKHlBl/61EIknL/py+w2cT6mde6I0PdeFZE0Jgpr1gn3NUdCW+U/fe2URKMW8x17HHHVO49SXkKva9Mog7MM26x78ExwF5iqwjNAo2CMdVxjoLtQTh3Omzt6LtKq/wXQD6yH+zx9QaetzhyWXBaL08PfsSwLb0/BTD+EH9FJXyhiS3GjGSjdEnF/IjsBxBRB9J74I1J1SdDVxpRQbBg6y7A0R6jEBcBMvrBnrSBxkgtBQ0Cos/HA+m6+wULYR+cLsnaZfKelxhTrnQZmI4Hv3O5Q8UpkfxXWg==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:04:44, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >hOwJJn2MuwdyrDVA6sicpEQ1gBvtizN21AM41ehXjvZXpazY8MMZwUUUifrY2lie6z6IUCvSGTeq62Qp0rKqlH2lVRX42iQzwVZAEhLyrxGctakMlHTefcSMk+Ndit9vcboUag1IAdfN/Sc4YRCsAmij2pylt8tIsrw8P4gZR4CfY3eKBB49qsvv2A2jmPZQwhNk6jsDys3wwBMJ2LBBEiPCi4l4bVO81n56UMvawSpaG33ae0UuKcy0FqquafZvjqWBNBelZSa2wsTdZHpVgOylTTLbcCTkdswxnqRRqnyCIQZO6RQEjrTKvnBz5rBKuZnl6U2bgt4o+SBkGi1AEg== 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209170908" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209170908" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="10" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="hOwJJn2MuwdyrDVA6sicpEQ1gBvtizN21AM41ehXjvZXpazY8MMZwUUUifrY2lie6z6IUCvSGTeq62Qp0rKqlH2lVRX42iQzwVZAEhLyrxGctakMlHTefcSMk+Ndit9vcboUag1IAdfN/Sc4YRCsAmij2pylt8tIsrw8P4gZR4CfY3eKBB49qsvv2A2jmPZQwhNk6jsDys3wwBMJ2LBBEiPCi4l4bVO81n56UMvawSpaG33ae0UuKcy0FqquafZvjqWBNBelZSa2wsTdZHpVgOylTTLbcCTkdswxnqRRqnyCIQZO6RQEjrTKvnBz5rBKuZnl6U2bgt4o+SBkGi1AEg==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:09:08, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >XjuPmBjmW//6TUssZzO8QGgNFaOTcf2/vadc4zTju18ofxdE96t0CR46JHWwR6igYDRuuSOdGg160yyN2KsNfGX0VPseTkzlBgpVOYm6wkN/3PBob3MYas5Gkz6EqsOzF6ul98dH8DQbTTdOsj8EBj1xt3r9E6X3Do1caFr92L0zqTtge0HYYfylAeMGOqz/+JXEAuQwFtNiwrRHc5bPuUvtQs/k+ufIjzmtz3UUmQYP3ZDansqphzlMdTzCf1nRnTr7IXkvBYJpGezUsUS6USSrFy4a49ticx0zQQJwDI+WIrEAN7dJCSQKkvYWy1hsphgH8e6kx0UNBMbgfVrPUQ== 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209171531" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209171531" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="XjuPmBjmW//6TUssZzO8QGgNFaOTcf2/vadc4zTju18ofxdE96t0CR46JHWwR6igYDRuuSOdGg160yyN2KsNfGX0VPseTkzlBgpVOYm6wkN/3PBob3MYas5Gkz6EqsOzF6ul98dH8DQbTTdOsj8EBj1xt3r9E6X3Do1caFr92L0zqTtge0HYYfylAeMGOqz/+JXEAuQwFtNiwrRHc5bPuUvtQs/k+ufIjzmtz3UUmQYP3ZDansqphzlMdTzCf1nRnTr7IXkvBYJpGezUsUS6USSrFy4a49ticx0zQQJwDI+WIrEAN7dJCSQKkvYWy1hsphgH8e6kx0UNBMbgfVrPUQ==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:15:31, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:17:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:17:05, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:17:05, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:17:05, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:17:05, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:17:05, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:17:05, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:17:26, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:17:26, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:17:26, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:17:26, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:17:26, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:17:26, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >J7+CBsK2ruTn68HlGwIRRwDFeCMzIX56t2Hon2lkTzwCZiwprqfDoNQ5OCukneiD2HrLUQWS1oWY7U8bFmRLodrKaoDmWK1CrC7wIDIzUzIoH0MIRiBuRNzu4Ve62pQyTibimZeyOlzk7xDwHI28TcEfZnRCUoFJkGcinHpAYn56bNOX2psty9YrpoIKaG8PIH8tZ5SSGCltrbiIO2BF/UTywHNZeUp9p7Xlx0ZH4t3+FV33iQ3GcL+ii81q9OwXRjuLi/FC86QP3+YT+Du+ali7T8YxjUntdBkaDLXHlEhqkK0AK/AbDfD5+ZDsk+XhIL4NuElx/Z/ZrmOtow+53g== 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209171857" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209171857" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="J7+CBsK2ruTn68HlGwIRRwDFeCMzIX56t2Hon2lkTzwCZiwprqfDoNQ5OCukneiD2HrLUQWS1oWY7U8bFmRLodrKaoDmWK1CrC7wIDIzUzIoH0MIRiBuRNzu4Ve62pQyTibimZeyOlzk7xDwHI28TcEfZnRCUoFJkGcinHpAYn56bNOX2psty9YrpoIKaG8PIH8tZ5SSGCltrbiIO2BF/UTywHNZeUp9p7Xlx0ZH4t3+FV33iQ3GcL+ii81q9OwXRjuLi/FC86QP3+YT+Du+ali7T8YxjUntdBkaDLXHlEhqkK0AK/AbDfD5+ZDsk+XhIL4NuElx/Z/ZrmOtow+53g==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:18:57, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >eanj8bvv+oCi34XH7HarAGEy8altjasv1SvlER21zRKOfenXM4Y/WMBZBuD7Es/JyQCIH9gIPrYz8YQKsRhgwvn8XVLvCyG4j5HW/a3K2Ao3KnLHLI4TLU8QcPTN3KOgwx7V1NaCO6u4FH/3qnZc6C831v9BT//R9/r47gh2RmXoODELSRAogDTMvj6//dMa7x7xMz6A43xm0PdwJr//ziy5xjARwlgsFEhimIi60knGUU3vxpwD5EIjJo5AM7vgVhhXW0jXanH0OCx6FbkyGWDucqdVAzMFSXtaChH2bCtlXB0iBq3pLqzIOV0GtqPmWBegSZWlSc+TA+VWEc6jAw== 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209172233" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209172233" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="eanj8bvv+oCi34XH7HarAGEy8altjasv1SvlER21zRKOfenXM4Y/WMBZBuD7Es/JyQCIH9gIPrYz8YQKsRhgwvn8XVLvCyG4j5HW/a3K2Ao3KnLHLI4TLU8QcPTN3KOgwx7V1NaCO6u4FH/3qnZc6C831v9BT//R9/r47gh2RmXoODELSRAogDTMvj6//dMa7x7xMz6A43xm0PdwJr//ziy5xjARwlgsFEhimIi60knGUU3vxpwD5EIjJo5AM7vgVhhXW0jXanH0OCx6FbkyGWDucqdVAzMFSXtaChH2bCtlXB0iBq3pLqzIOV0GtqPmWBegSZWlSc+TA+VWEc6jAw==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:22:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >El/H0WV9In5NO9iGgoAE/WWdp3AGkEUI+bkBzI/xJCTcsZoO/1tLoupQRbh2wWcJCcH6iunHAJ92E+XUdcFRG0NpQMVclJSB7ozfuM3DjlH6FlC3P9ZHl5ituppLfnUtSEJlhQd//lK2ZXgGjooSvl6wmtn54kX7yoPXglpRTPcvomhDLZAXZEzs0PXFyQVq5u00TQXTuGXNCjMUl9j7IV04HkIj8dYBATyY6sVquHg0yCS/JPqVS+nOMiHnn5t/vfKg/8Dd13k8UP0hrumolTKAbgSMcHrQd03EuZaLQKc9DMXRtl16QSjEZ4rjaD0+XnlpaRqVXLaTV7qJLWkyqA== 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209172253" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209172253" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="El/H0WV9In5NO9iGgoAE/WWdp3AGkEUI+bkBzI/xJCTcsZoO/1tLoupQRbh2wWcJCcH6iunHAJ92E+XUdcFRG0NpQMVclJSB7ozfuM3DjlH6FlC3P9ZHl5ituppLfnUtSEJlhQd//lK2ZXgGjooSvl6wmtn54kX7yoPXglpRTPcvomhDLZAXZEzs0PXFyQVq5u00TQXTuGXNCjMUl9j7IV04HkIj8dYBATyY6sVquHg0yCS/JPqVS+nOMiHnn5t/vfKg/8Dd13k8UP0hrumolTKAbgSMcHrQd03EuZaLQKc9DMXRtl16QSjEZ4rjaD0+XnlpaRqVXLaTV7qJLWkyqA==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:22:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >Zf1ta8EVgcS5sGXJMbtmIIokPEfziv/33i+MZTwU8b1joGsAtWcgfV99+FPsD/W/ojFCZN79MI0lUUWwvOnlny6yd1esL5FSRVACqlnsRyfUHxyldK+RpcAKSw7th6povIVzwuQxtGflKwVVQW3pv5p8vHHSzy6RV7KiWGn++nrRfvuBXIxKCnj415u6Z4WAWvMwlMh2c9cBWmALR4QAUp/JngCILzJyRwym+cghGT4c7wPHNgMHmhG6UKBvq/BwBxnlkdx+cEttRtLDNpwWZmiLzwHnlDB9Xz9GagIYS7RwIksmDYAaNTVmk7DONlPM727sBhk4rBLsvsL2fRUsYQ== 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209172427" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209172427" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="Zf1ta8EVgcS5sGXJMbtmIIokPEfziv/33i+MZTwU8b1joGsAtWcgfV99+FPsD/W/ojFCZN79MI0lUUWwvOnlny6yd1esL5FSRVACqlnsRyfUHxyldK+RpcAKSw7th6povIVzwuQxtGflKwVVQW3pv5p8vHHSzy6RV7KiWGn++nrRfvuBXIxKCnj415u6Z4WAWvMwlMh2c9cBWmALR4QAUp/JngCILzJyRwym+cghGT4c7wPHNgMHmhG6UKBvq/BwBxnlkdx+cEttRtLDNpwWZmiLzwHnlDB9Xz9GagIYS7RwIksmDYAaNTVmk7DONlPM727sBhk4rBLsvsL2fRUsYQ==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:24:27, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:25:47, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:25:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:25:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:25:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:25:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:25:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:25:53, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:26:28, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:26:28, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:26:28, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:26:28, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:26:28, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:26:28, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >WHgJWSXRoXI8joIcAdHPCnwzkyRewOhVmFLLRxxEBKoq9TDEseTO9veD8B6REW6wih2qtAHkOrYGA7m/r8P+T3yCZ6dF7csDJUiD4ze/VchtLmiqE6mbVIPzWI81gti+Nz7qtr6GLvSADmMAyDHGVEZjw8j/ydK7Ik+GMV0Rr049Mx3l9E5t5dPT448oqn++8jnYU5HBrATbPkmtnVyPN1pUAWdIKUHlU8y8T39xNFoJqbgvVASKQNKYp328FdUYIBmLlHdnjvSqJCdrpw77yuVhKb0gQ8giZTCk3gFgCHGTbow2gEqfRc7pAfjE/K2gx2y3opCQf8cb3mX7HDhiqQ== 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209173315" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209173315" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="WHgJWSXRoXI8joIcAdHPCnwzkyRewOhVmFLLRxxEBKoq9TDEseTO9veD8B6REW6wih2qtAHkOrYGA7m/r8P+T3yCZ6dF7csDJUiD4ze/VchtLmiqE6mbVIPzWI81gti+Nz7qtr6GLvSADmMAyDHGVEZjw8j/ydK7Ik+GMV0Rr049Mx3l9E5t5dPT448oqn++8jnYU5HBrATbPkmtnVyPN1pUAWdIKUHlU8y8T39xNFoJqbgvVASKQNKYp328FdUYIBmLlHdnjvSqJCdrpw77yuVhKb0gQ8giZTCk3gFgCHGTbow2gEqfRc7pAfjE/K2gx2y3opCQf8cb3mX7HDhiqQ==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:33:15, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >I21YnIM/JtqsnkXXZ/0CaPm5UaY1rGTrhhSG+QVdrqEzryu6AZmbrhYwvrpCC2715ruNPdkt93Fv45fFewbvWtcKa2kNTj+rVs+J1ooSb/TPBjmD17N5dU8uey4yMPGtDf98c4367rtZ+bfrRmOPeXFfMS5UfF83b07ut1Cc7FBsS5xj3kKpY9GOS4GqR1oQTh5L350o5Vw4k0ryhLHI2zoAlHbA1Y3LZwimReTKC1OrIZoC/Tg35REUvvwd7qFDnERlYJTV0At7nFw6YL3zc8Sn9LsMSCtEyQaThAsUJVIdQPgwOeXqFViMN8Wwti0cG0wSzki2f9eapXh7J4ULlA== 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209173834" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209173834" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="I21YnIM/JtqsnkXXZ/0CaPm5UaY1rGTrhhSG+QVdrqEzryu6AZmbrhYwvrpCC2715ruNPdkt93Fv45fFewbvWtcKa2kNTj+rVs+J1ooSb/TPBjmD17N5dU8uey4yMPGtDf98c4367rtZ+bfrRmOPeXFfMS5UfF83b07ut1Cc7FBsS5xj3kKpY9GOS4GqR1oQTh5L350o5Vw4k0ryhLHI2zoAlHbA1Y3LZwimReTKC1OrIZoC/Tg35REUvvwd7qFDnERlYJTV0At7nFw6YL3zc8Sn9LsMSCtEyQaThAsUJVIdQPgwOeXqFViMN8Wwti0cG0wSzki2f9eapXh7J4ULlA==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:38:34, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >enXdmBI4+RaCdPIi9y+AYcCt8wAXgf4hGq2dhysCxD9Qm05iDqGkQUEC0l7XVBJZnJmgTFT1q7Pw6ezld53jzt/ecAWtVsIY0V27ysRq1uKCC76cuz6bSLggN12i6sS4zhJFFSgKlR5v3DKFOgyaswhVyCUNmlsSW4AjRSiH//l83p8wamD6bGCwTEK/cXl9Uoh9M1d0/zvDwhJbuk6lH5Zy5Y4yfUfoI9F5BNR8Uene4BjG2bKg71yp1Eddkp6sHOATIMKbU2LzzcYNKA4Aycza97suQ/chV37WPTI1Ng1DTKtPYn29rNQnoOvBU4dWPwvqHanwoFH02NY1UoJh4A== 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209173913" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209173913" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="enXdmBI4+RaCdPIi9y+AYcCt8wAXgf4hGq2dhysCxD9Qm05iDqGkQUEC0l7XVBJZnJmgTFT1q7Pw6ezld53jzt/ecAWtVsIY0V27ysRq1uKCC76cuz6bSLggN12i6sS4zhJFFSgKlR5v3DKFOgyaswhVyCUNmlsSW4AjRSiH//l83p8wamD6bGCwTEK/cXl9Uoh9M1d0/zvDwhJbuk6lH5Zy5Y4yfUfoI9F5BNR8Uene4BjG2bKg71yp1Eddkp6sHOATIMKbU2LzzcYNKA4Aycza97suQ/chV37WPTI1Ng1DTKtPYn29rNQnoOvBU4dWPwvqHanwoFH02NY1UoJh4A==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:39:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:39:20, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:39:25, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:39:25, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:39:25, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:39:25, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:39:25, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:39:25, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >eI2/3UrAmUbeKj2BaJ7+tsYdK00MP58F9xoPq6q3yyZPC854xGRvzYnpcS4Ck1MP45jjtowYiRyX25c2xdtjjMIi2vvXrThjwCPuNcs91fI8p2CZv6qsP7GXok1s/bgA57fIgCpSHqPmsQcz6h/GVBtb7PRlwDuX0DDE1ur1G+ntfcCGAH5ZmhJ4qtQZlgpb3R+i90yf8xcxMfS1Umzyg3EtvEozcoAdd6xK/Yn36dgzHep7uEU1J3jqOJUV3S3IYX+6Fw47RLDWIPJx6NiHHTe/pA/LsIbTbXGqvL7pjNWsdJbw76HXPoPXMmbqnqcKduhpKM6O8xWamTZPBr5yFw== 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209174219" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209174219" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="eI2/3UrAmUbeKj2BaJ7+tsYdK00MP58F9xoPq6q3yyZPC854xGRvzYnpcS4Ck1MP45jjtowYiRyX25c2xdtjjMIi2vvXrThjwCPuNcs91fI8p2CZv6qsP7GXok1s/bgA57fIgCpSHqPmsQcz6h/GVBtb7PRlwDuX0DDE1ur1G+ntfcCGAH5ZmhJ4qtQZlgpb3R+i90yf8xcxMfS1Umzyg3EtvEozcoAdd6xK/Yn36dgzHep7uEU1J3jqOJUV3S3IYX+6Fw47RLDWIPJx6NiHHTe/pA/LsIbTbXGqvL7pjNWsdJbw76HXPoPXMmbqnqcKduhpKM6O8xWamTZPBr5yFw==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:42:19, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >jP8U3rxIEaNkl20vlMeXsB02LYPMaGFaMa5uv+JjomGUO/XZWPB2Z/pUgGfaomhd2yNoB5tyIXdaVpbYA8TTsdCPv0sMDgdyuVbXWm6vQA5P1kuum+4QSNAXlg6WtHnLI2hWDi0Qo1eGSMs9SrwYn0alFUUB6+jB7mStqLZD5brIwd7UOQi3kKndGLRATXYaZec8zd8nLg873zcabCkuNEtE7OJEq/IjUgCmr+GRCiVIeOxy5+pYYxm+oX3AgRD2bYkHR2WXgyajgCwr9rqeczN6g97W8jEQOSsY9LNzpDh20/X8iP1q8YUknrxOgI+YvBuIlFZYEMJGRt/sOXb7GQ== 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209174239" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209174240" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="jP8U3rxIEaNkl20vlMeXsB02LYPMaGFaMa5uv+JjomGUO/XZWPB2Z/pUgGfaomhd2yNoB5tyIXdaVpbYA8TTsdCPv0sMDgdyuVbXWm6vQA5P1kuum+4QSNAXlg6WtHnLI2hWDi0Qo1eGSMs9SrwYn0alFUUB6+jB7mStqLZD5brIwd7UOQi3kKndGLRATXYaZec8zd8nLg873zcabCkuNEtE7OJEq/IjUgCmr+GRCiVIeOxy5+pYYxm+oX3AgRD2bYkHR2WXgyajgCwr9rqeczN6g97W8jEQOSsY9LNzpDh20/X8iP1q8YUknrxOgI+YvBuIlFZYEMJGRt/sOXb7GQ==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:42:40, INFO, 112.96.65.183, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:43:00, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:43:06, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:43:06, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:43:06, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:43:06, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:43:06, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:43:06, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:47:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:47:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:47:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:47:13, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:47:14, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >eZGCVCWR8sK5R+47Ez612seGXR0F0g4vQVVBFVwBgUORs/gIHsesI6olsOrbaK39exGMCwMw2lkCuBMKFqY7MMDXx6ez7KrjeHAnoIe7WcfgP8oqZUFR20rU6naEHMoKN2QKs1lDfWYquyyjLHBIt4FAhosZgVP1jldw/rI4O/mp0viXcaRg0sCoojlWfAy5rTm6fMTQkkQRrOw8ixoxhPvjgFh7onlQIebuWknxo6ViohfsuuzGeCzUZfX4SAuvgMEeUS5dLAFTZf4ZtL9Os2Y4++uA+mb4a326e/hcBHJQ99VbUez+Zkxf8KGTgkpc7LmVMNC/WB6YarkFZuImqw== 
+2015-02-09 17:47:14, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:47:14, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:47:14, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:47:14, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209174713" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209174713" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="eZGCVCWR8sK5R+47Ez612seGXR0F0g4vQVVBFVwBgUORs/gIHsesI6olsOrbaK39exGMCwMw2lkCuBMKFqY7MMDXx6ez7KrjeHAnoIe7WcfgP8oqZUFR20rU6naEHMoKN2QKs1lDfWYquyyjLHBIt4FAhosZgVP1jldw/rI4O/mp0viXcaRg0sCoojlWfAy5rTm6fMTQkkQRrOw8ixoxhPvjgFh7onlQIebuWknxo6ViohfsuuzGeCzUZfX4SAuvgMEeUS5dLAFTZf4ZtL9Os2Y4++uA+mb4a326e/hcBHJQ99VbUez+Zkxf8KGTgkpc7LmVMNC/WB6YarkFZuImqw==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:47:14, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:47:14, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:47:26, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:47:26, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:47:26, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:47:26, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:47:27, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >oz9eWZAyQB60ppQvfsNWrspVRTVlPoc7nGo3alpRfH8KkaFgo60VTlDKKsaVef3As/MEvobL0q7pBazBCt2dnnuXxK2cQv3oLlhunBzeDBdDwMorNBGtj3nweVYfXMNiANixpbfHsbKk6iNkO3sQeYv47WMNZMvo0G8m9GLdgqaBYs8pKSaGOvcq7akRxZo264S2elVA5nYmvwUwbPjma7lyzP5ekiulyGYTX6zZGgp5+e6KJSEV6YFC+yx8QnbzN6J6/SQhEwkvjHQdcKHpzwwAqHexxLD8YmEvt5uAdyy9xlu9rbHiiaND8Kt/umQ8c+lWCR8cj3GAW7GZbWArDg== 
+2015-02-09 17:47:27, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:47:27, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:47:27, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:47:27, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://www.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209174726" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209174726" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="oz9eWZAyQB60ppQvfsNWrspVRTVlPoc7nGo3alpRfH8KkaFgo60VTlDKKsaVef3As/MEvobL0q7pBazBCt2dnnuXxK2cQv3oLlhunBzeDBdDwMorNBGtj3nweVYfXMNiANixpbfHsbKk6iNkO3sQeYv47WMNZMvo0G8m9GLdgqaBYs8pKSaGOvcq7akRxZo264S2elVA5nYmvwUwbPjma7lyzP5ekiulyGYTX6zZGgp5+e6KJSEV6YFC+yx8QnbzN6J6/SQhEwkvjHQdcKHpzwwAqHexxLD8YmEvt5uAdyy9xlu9rbHiiaND8Kt/umQ8c+lWCR8cj3GAW7GZbWArDg==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:47:27, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:47:27, INFO, 125.85.43.127, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >i8YWW1SyHoWCGO9QWJ/yUyDJmcVhcMgzLfERDRfO7Yq/ljnPi1dyPqgaNnBh5R1cgXHaDsDeWS8Fo4DkaPbT4BtxIJpIIM3YIz5ZtH+MMKWlv7X2NZPp223vMZ/Z8DfFG4HiZj9oDI1ehgX6hEKzbpa9xw35j25B2NeQgkZ+wBIYg3pkF8sKIvpo0Hh2IzR2Wl1SmAoJ3X4rUfI09kJvXy0SvSTCWzFwx5f5noPR8NtXz7TEaBpByjNo1WhKFajA26e1DYRS0iL4RFdaQ84v8y76LLfqnGD2/hl4wqxrDA39U3vJ0AAf+2cZDmex3ErYxx9S9MiyVHLvZYA2c1ksrw== 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209174808" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209174808" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="i8YWW1SyHoWCGO9QWJ/yUyDJmcVhcMgzLfERDRfO7Yq/ljnPi1dyPqgaNnBh5R1cgXHaDsDeWS8Fo4DkaPbT4BtxIJpIIM3YIz5ZtH+MMKWlv7X2NZPp223vMZ/Z8DfFG4HiZj9oDI1ehgX6hEKzbpa9xw35j25B2NeQgkZ+wBIYg3pkF8sKIvpo0Hh2IzR2Wl1SmAoJ3X4rUfI09kJvXy0SvSTCWzFwx5f5noPR8NtXz7TEaBpByjNo1WhKFajA26e1DYRS0iL4RFdaQ84v8y76LLfqnGD2/hl4wqxrDA39U3vJ0AAf+2cZDmex3ErYxx9S9MiyVHLvZYA2c1ksrw==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:48:08, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[29]------ ============澶勭悊鍓嶅彴璇锋眰寮 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[16]------ =====绛惧悕鎶ユ枃寮 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[22]------ 绛惧悕key=val&...涓 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[25]------ 鎽樿 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[33]------ 绛惧悕涓蹭负 >cTS/7ztRmgp1PYOSR87T5hROAL/AKVjJ8pLDEmSYyGkVtAv89giOF8gf77Jrc7HUUp9Ad+gkghEF0shliqjx0/V/9Il8g6hfYUs1D58JFJ4++a3/4hOpr2C1iJEzFZe5yoiDFcpEPQeEgm792THLu6nWpJ+LqzLEhpaB415IaIemRhSEHcfjhTWIrndoHNJAsucDl9kC4v4OStp4+7hsmeIAgsqtp2hsYUriPZZO/d3yMfQoVwQcERR7wkrWfiQaeEdKP/Z9miTopW8pak+K3Q9HnJ41ySVvDmeOxlWUYdbZbVju30ULMRAKqYZIEzItYo6AmNgXaZkQu5vSf5JkQA== 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[38]------ =====绛惧悕鎶ユ枃缁撴潫====== 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[62]------ 鍓嶅彴璇锋眰鍦板潃涓 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[66]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[67]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://gateway.95516.com/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="69331265687" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/qiantai/" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://m.yunduobaba.com/?/pay/cupay_url/houtai/" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="301442048990007" />
+    <input type="hidden" name="orderId" id="orderId" value="20150209174845" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150209174845" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="signature" id="signature" value="cTS/7ztRmgp1PYOSR87T5hROAL/AKVjJ8pLDEmSYyGkVtAv89giOF8gf77Jrc7HUUp9Ad+gkghEF0shliqjx0/V/9Il8g6hfYUs1D58JFJ4++a3/4hOpr2C1iJEzFZe5yoiDFcpEPQeEgm792THLu6nWpJ+LqzLEhpaB415IaIemRhSEHcfjhTWIrndoHNJAsucDl9kC4v4OStp4+7hsmeIAgsqtp2hsYUriPZZO/d3yMfQoVwQcERR7wkrWfiQaeEdKP/Z9miTopW8pak+K3Q9HnJ41ySVvDmeOxlWUYdbZbVju30ULMRAKqYZIEzItYo6AmNgXaZkQu5vSf5JkQA==" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[68]------ -------鍓嶅彴浜ゆ槗鑷 
+2015-02-09 17:48:45, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay.class.php ], Line[69]------ ============澶勭悊鍓嶅彴璇锋眰 缁撴潫=========== 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:52:27, INFO, 101.231.141.152, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 
+2015-02-09 17:52:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[74]------ 鎶ユ枃杩斿洖鐨勮瘉涔 
+2015-02-09 17:52:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[77]------ 楠岃瘉绛惧悕璇佷功鐩 
+2015-02-09 17:52:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[87]------ 鍔犺浇楠岀 
+2015-02-09 17:52:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[56]------ 鎶ユ枃鍘籟signature] key=val&涓 
+2015-02-09 17:52:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[60]------ 鎽樿 
+2015-02-09 17:52:33, INFO, 183.32.176.69, File[ D:\wwwroot\yungou\wwwroot\system\modules\pay\lib\cupay\func\secureUtil.php ], Line[62]------ 楠岀 

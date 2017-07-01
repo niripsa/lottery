@@ -1,0 +1,116 @@
+{wc:fun:js("jquery.cmsapi")}
+{wc:fun:js("template")}
+{wc:fun:js("template.fun")}
+{wc:templates "index.header_top"}
+<script type="text/javascript">
+    $.YunCmsApi.SetTopStyle({
+        "Title":"计算结果",
+        "Method":true
+    });
+    var g_result = $("#calResult"); 
+    var no_result= {wc:fun:is_array($item['q_content'])};
+    var b = false;
+    var e = false;  
+    var a = $("#top_btnCalMethod");
+    var derule = '<div class="infoRule"><p><em>01</em>取该商品最后购买时间前网站所有商品的最后100条购买时间记录；</p><p><em>02</em>每个时间记录按时、分、秒、毫秒依次排列取数值；</p><p><em>03</em>将这100个数值之和除以该商品总参与人次后取余数，余数加上10000000 即为“幸运{wc:fun:L('html.key')}码”。</p><b class="z-arrow"></b></div>';
+    var drule = '<div class="infoRule"><p><em>01</em>取该商品最后购买时间前网站所有商品的最后100条购买时间记录；</p><p><em>02</em>每个时间记录按时、分、秒、毫秒依次排列取数值；</p><p><em>03</em>将这100个数值之和除以该商品总参与人次后取余数，余数加上10000000 即为“幸运{wc:fun:L('html.key')}码”。</p><p>由于网站还未满100条购买记录。所以按照 10000001 + (揭晓时间求和结果*100/参与人数) 的余数 即为“幸运{wc:fun:L('html.key')}码”。</p><b class="z-arrow"></b></div>';
+   
+   var f = function(i) {
+        if (i && i.stopPropagation) {
+            i.stopPropagation()
+        } else {
+            window.event.cancelBubble = true
+        }
+    };
+    var h = $('<div class="cMask"></div>');
+    a.click(function(i) {
+        if (!b) {
+            if (!e) {
+            if(no_result){
+                $(this).parent().after(derule);
+            }else{
+                $(this).parent().after(drule);
+            }        
+                g_result.prepend(h);
+            } else {
+                $(this).parent().next("div.infoRule").show()
+            }
+            h.show();
+            e = true;
+            b = true
+        } else {
+            $(this).parent().next("div.infoRule").hide();
+            h.hide();
+            b = false
+        }
+        f(i)
+    });
+</script>
+    <section id="calResult" class="z-minheight"></section>
+<script id="calResult_temp" type="text/html">
+{{if rlist}}
+<div class="infoResult">
+    <ul class="result1"></ul>
+    {{if rlist.q_content}}  
+    <dl>截止揭晓时间【{{rlist.q_end_time | dateFormat:'yyyy-MM-dd hh:mm:ss'}}】最<em>后100条全站购买时间记录</em></dl>
+    <ul class="result2"><li class="iTitle"><span>{wc:fun:L('html.key')}时间</span><span>转换数据</span><span>会员账号</span></li>
+    {{each rlist.q_content as result i}}
+    <li><span>{{result.otime | dateFormat:'yyyy-MM-dd'}}<dd>{{result.otime | dateFormat:'hh:mm:ss.S'}}</dd></span><span>{{result.timecode}}</span><span>{{result.ou_name}}</span><p><b class="z-arrow"></b></p></li>
+    {{/each}}
+    {{/if}}
+    </ul>
+</div>
+<div class="infoCount">
+    <div class="infoCount2">
+    <ul>
+    {{if rlist.q_content}}  
+        <li style="border:0 none;">取以上数值结果得：</li>
+        <li>1、求和：{{rlist.q_counttime}}<em>(上面100条{wc:fun:L('html.key')}记录时间取值相加之和)</em></li>
+        <li><p>2、取余：{{rlist.q_counttime}}<em>(100条时间记录之和)</em><br/>%{{rlist.zongrenshu}}<em>(本商品总需参与人次)</em>={{rlist.shop_fmod}}<em>(余数)</em></p></li>
+        <li>3、计算结果：{{rlist.shop_fmod}}<em>(余数)</em>+10000001=<span>{{rlist.q_user_code}}</span></p></li>    
+    {{else}}
+        <li style="text-align:center;border:0 none;">计算结果算法</li>
+        <li>取以上数值结果得：</li>
+        <li>1、取码：取出所有用户的夺宝码<br /><em>(只要参与了本期奖品，所有夺宝码都会拿到系统中运算)</em></li>
+        <li>2、运算：随机生成夺宝码<br /><em>(系统会用随机算法全部打乱数据，重新洗牌，最后随机抽取一个幸运码)</em></li>
+        <li>3、结果：将随机抽取的幸运码公示出来<span>　{{rlist.q_user_code}}</span></p></li>
+    {{/if}} 
+    </ul>   
+    </div>
+</div>
+{{else}}
+    <div id="divGoodsLoading" class="loading loading2"><b></b>正在加载</div>
+{{/if}}
+</script>   
+    
+<script type="text/javascript">
+
+var $datas = {wc:fun:json_encode($item)};
+$("#calResult").append(template('calResult_temp', {rlist:$datas}))
+$("#LoadDataA a").click(function(){
+
+    $data = $("#LoadDataA a");
+    $data.data("page",($data.data("page")|0) + 1)
+    $data.data("page",$data.data("page")==1 ?　2 : $data.data("page"))
+
+    if($data.data("maxpage") === undefined){
+        $data.hide().eq(1).show()
+
+        $.get(APP.WEB_PATH+'/'+APP.G_PARAM_URL+"/p"+$data.data("page"),function($datas){
+                //$(datas).each(function(index) {   })
+                if($datas.cglotterylist.length < 20 ){
+                    $data.data("maxpage",$data.data("page"))
+                }
+
+                $("#divLottery").append(template('goodListData_list', {list:$datas.cglotterylist}))
+                $data.hide().eq(0).show()
+        },"json")
+    } else {
+        $data.hide().eq(2).show()
+    }
+});
+</script>   
+    
+    
+<!-- footer 开始-->
+{wc:templates "index.footer"}

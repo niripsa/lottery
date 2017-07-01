@@ -1,0 +1,51 @@
+{wc:fun:css("user.message")}
+{wc:templates "index.header"}
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+    {wc:templates "user.left"}
+    <!--个人中心中间 开始-->
+    <div class="R-content">
+        <div class="member-t"><h2>{wc:fun:L('html.key')}记录</h2></div>
+        <div class="yg_record_goods">
+            <a href="" target="_blank" class="fl-img"><img src="{G_UPLOAD_PATH}/{wc:$user_record['g_thumb']}"></a>
+            <div class="yg_record_r">
+                <li><span class="c_red">(第{wc:$user_record['oqishu']}期)</span>
+                <a target="_blank" href="
+                {wc:if $user_record['q_showtime'] == 'Y'}
+                {WEB_PATH}/cgdataserver/{wc:$user_record['ogid']}
+                {wc:else}
+                {WEB_PATH}/cgoods/{wc:$user_record['ogid']}
+                {wc:if:end}
+                " class="blue">{wc:$user_record['g_title']}</a></li>
+                <li><a  target="_blank" href="
+                {wc:if $user_record['q_showtime'] == 'Y'}
+                {WEB_PATH}/cgdataserver/{wc:$user_record['ogid']}
+                {wc:else}
+                {WEB_PATH}/cgoods/{wc:$user_record['ogid']}
+                {wc:if:end}
+                " class="bluebut">查看详情</a></li>
+            </div>
+        </div>
+
+        <div class="goods-tit gray02">
+            <p class="fl">本期商品您总共{wc:fun:L('html.key')}<span>{wc:$user_record['onum']}</span>人次 拥有<span>{wc:$user_record['onum']}</span>个{wc:fun:L('html.key')}码</p><a href="{WEB_PATH}/member/shop/userbuylist" class="blue fr">&lt;&lt; 返回列表</a>
+        </div> 
+        <div class="list-tab goodsList" id="userbuylist">
+            <ul class="listTitle">
+                <li class="leftTitle">{wc:fun:L('html.key')}时间</li>
+                <li>{wc:fun:L('html.key')}人次</li>
+                <li class="Code">{wc:fun:L('html.key')}码</li>
+            </ul>
+            <ul><li class="leftTitle">{wc:fun:microt($user_record['otime'],'r')}</li>
+                <li>{wc:$user_record['onum']}人次</li>
+                <li class="Code"><span>{wc:fun:yunma($user_record['ogocode'])}</span></li>
+            </ul>
+        </div>
+        <div class="goods-tit gray02"><a href="{WEB_PATH}/member/shop/userbuylist" class="blue fr">&lt;&lt; 返回列表</a></div>
+    </div>   
+    <!--个人中心中间 结束-->
+</div>
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+{wc:templates "index.footer"}

@@ -1,0 +1,50 @@
+{wc:fun:css("user.message")}
+{wc:fun:css("lottery.warp")}
+{wc:fun:css("lottery.skin")}
+{wc:fun:css("lottery")}
+{wc:fun:js("layer")}
+{wc:templates "index.header"}
+<script src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+    {wc:templates "user.left"}
+    <div class="game">
+    <div class="game-main" style="margin-left:180px;margin-top:10px;">
+     <div class="warp lotteryHistory" style="margin-top: 10px;">
+        <div class="lotteryHistoryBody"></div>
+        <div class="line">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>期号</th>
+                    <th>开奖号码</th>
+                    <th>本期开始时间</th>
+                    <th>本期结束时间</th>
+                    <th>当前状态</th>
+                </tr>
+            </thead>
+            <tbody id="order-history">
+               {wc:loop $lottery_lists $v}
+                    <tr>
+                        <td>{wc:$v['stage_no']}</td>
+                        <td>{wc:$v['lottery_number']}为{wc:$v['lottery_txt']}</td>
+                        <td>{wc:$v['begin_time']}</td>
+                        <td>{wc:$v['end_time']}</td>
+                     　 <td>已开奖</td>
+                    </tr>
+               {wc:loop:end}
+            </tbody>
+        </table>
+       </div>
+       </div>
+       </div>
+    </div>
+</div>
+
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+<script type="text/javascript">
+   
+</script>
+{wc:templates "index.footer"}

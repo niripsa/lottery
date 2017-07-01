@@ -1,0 +1,104 @@
+{wc:fun:js("jquery.cmsapi")}
+{wc:templates "index.header_top"}
+<script type="text/javascript">
+    $.YunCmsApi.SetTopStyle({
+        "Title":"揭晓结果",
+        "Home":true,
+        "Member":false,
+        "Shop":false
+    }); 
+</script>
+<section class="goodsCon pCon">
+    <!-- 导航 -->
+    <div id="divPeriod" class="pNav">
+        <div class="loading" style="display:none"><b></b>正在加载</div> 
+        <ul class="slides"> 
+        <li class="{wc:$style0}"><a href="{wc:$cgoods_url0}" >第{wc:$itemlist0['qishu']}期<i></i></a><b></b></li>       
+        {wc:loop $itemlist $qitem}      
+        <li class="{wc:$qitem['style']}"><a href="{wc:$qitem['cgoods_url']}" >第{wc:$qitem['qishu']}期</a><b></b></li>
+        {wc:loop:end}               
+        </ul>
+    </div>
+    
+    <!-- 揭晓倒计时 -->
+    <div class="pProcess pProcess2">
+        <div class="pResults">
+            <div class="pResultsL" onclick="location.href='{WEB_PATH}/uname/{wc:fun:idjia($item['q_uid'])}'">
+                <a href="{WEB_PATH}/uname/{wc:fun:idjia($item['q_uid'])}">
+                    {wc:if !$item['q_user']['img']}
+                    <img class="mt10 mb10" src="{G_UPLOAD_PATH}/photo/member.jpg.8080.jpg" ></a>
+                    {wc:else}
+                    <img class="mt10 mb10" src="{G_UPLOAD_PATH}/{wc:$item['q_user']['img']}"  ></a>
+                    {wc:if:end}             
+                    <span>{wc:fun:get_user_name($q_user)}</span>
+                </a>
+                <s></s>
+            </div>
+            <div class="pResultsR">
+                <div class="g-snav">
+                    <div class="g-snav-lst">总共{wc:fun:L('html.key')}<br><dd><b class="orange">{wc:$user_shop_number}</b><br>人次</dd></div>
+                    <div class="g-snav-lst">揭晓时间<br><dd class="gray9"><span>{wc:fun:microt($item['q_end_time'],'Y')}<br>{wc:fun:microt($item['q_end_time'],'H')}</span></dd></div>
+                    <div class="g-snav-lst">{wc:fun:L('html.key')}时间<br><dd class="gray9"><span>{wc:fun:microt($user_shop_time,'Y')}<br>{wc:fun:microt($user_shop_time,'H')}</span></dd></div>
+                </div>
+            </div>
+            <p><a href="{WEB_PATH}/cgoodsresult/{wc:$item['id']}" class="fr">查看计算结果</a>幸运{wc:fun:L('html.key')}码：<b class="orange">{wc:$item['q_user_code']}</b></p>
+        </div>
+    </div>
+    
+    <!-- 产品图 -->
+    <div id="divPic" class="pPic">
+        <div class="pPic2">
+            <div id="sliderBox" class="pImg">
+                <div class="loading" style="display:none"><b></b>正在加载</div>
+                <ul class="slides">
+                {wc:loop $item['g_picarr'] $imgtu} 
+                    <li><img src="{G_UPLOAD_PATH}/{wc:$imgtu}" /></li>
+                {wc:loop:end}   
+                </ul>
+                <ul class="direction-nav">
+                    <li class="prev" style="display: block; width: 205px;"></li>
+                    <li class="next" style="display: block; width: 205px;"></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div> 
+    <!-- 条码信息 -->
+    <div class="pDetails pDetails-end">
+        <b>(第{wc:$item['qishu']}期){wc:$item['g_title']}<span></span></b>
+        <p class="price">价值：<em class="arial gray">{wc:fun:sprintf("%.2f",$item['zongrenshu']*$item['price'])}</em>{wc:fun:L('cgoods.currency')}</p>
+        <div class="pClosed">本期已揭晓</div>
+        {wc:m=cloud_goods mod=cloud_goodslastone($item['gid']) return=lastone} 
+        <div class="pOngoing" codeid="403041">第<em class="arial">{wc:$lastone['qishu']}</em>期 进行中…<a href="{WEB_PATH}/cgoods/{wc:$lastone['id']}"><span class="fr">查看详情</span></a></div>
+    </div>
+
+
+    
+    <!-- 上期获得者 -->
+    <div class="joinAndGet">
+        <dl>
+            <a href="{WEB_PATH}/index/cloud_goods/go_record_iframe/{wc:$item[id]}/20"><b class="fr z-arrow"></b>所有购买记录</a>
+            <a href="{WEB_PATH}/cgoodsdesc/{wc:$item[id]}"><b class="fr z-arrow"></b>图文详情<em>（建议WIFI下使用）</em> </a>           
+            <a href="{WEB_PATH}/index/share/share_iframe/{wc:$item[id]}">
+            {wc:m=temp mod=sharenum($item[id]) return=total}
+            <b class="fr z-arrow"></b>已有<span class="orange arial">{wc:$total['sd_total']}</span>个幸运者晒单
+            <strong class="orange arial">{wc:$total['sd_totalpl']}</strong>条评论</a>
+        </dl>
+        <!--
+        <ul id="prevPeriod" class="m-round" codeid="398781" uweb="1006028413">
+            <li class="fl"><s></s><img src="http://m.yungoucms.cn/statics/uploads/shaidan/20141126/50322014982719.jpg"/></li>
+            <li class="fr"><b class="z-arrow"></b></li>         
+            <li class="getInfo">
+                <dd><em class="blue">大宏表哥感觉萌萌哒</em> (天津市) </dd>
+                <dd>总共{wc:fun:L('html.key')}：<em class="orange arial">527</em>人次</dd>
+                <dd>幸运{wc:fun:L('html.key')}码：<em class="orange arial">100000013</em></dd>
+                <dd>揭晓时间：2015-03-11 10:47:33.491</dd>
+                <dd>{wc:fun:L('html.key')}时间：2015-03-11 10:47:33.491</dd>    
+            </li>
+        </ul>
+      -->  
+    </div>
+</section>
+{wc:templates "index.footer"}
+</body>
+</html>

@@ -1,0 +1,87 @@
+{wc:fun:css("user")}
+{wc:templates "index.header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/ygRecord.css"/>
+<link rel="stylesheet" href="{G_PLUGIN_PATH}/calendar/calendar-blue.css" type="text/css"> 
+<script type="text/javascript" charset="utf-8" src="{G_PLUGIN_PATH}/calendar/calendar.js"></script>
+<div class="ygRecord">
+    <h3><span>历史{wc:fun:L('html.key')}记录</span><p><a href="{WEB_PATH}/buyrecordbai">查看最新100条{wc:fun:L('html.key')}记录&gt;&gt;</a></p></h3>
+    <div class="border"></div>
+    <div class="RecordSearch">
+        <form action="" method="post">
+        <div class="from">
+            <p>起止时间</p>
+           <input value="{wc:fun:date('Y-m-d',$start_time)}" id="txtFirstT1" name="start_time_data" class="time" readonly="readonly" type="text">     
+            <script type="text/javascript">
+                date = new Date();
+                Calendar.setup({
+                    inputField     :    "txtFirstT1",
+                    ifFormat       :    "%Y-%m-%d",
+                    showsTime      :    true,
+                    timeFormat     :    "24"
+                });
+            </script>   
+           <select id="sltFirstT2" name="start_time_h">
+           {wc:loop $selecteds_shi_start $selected_s}
+            <option value="{wc:$selected_s[num]}"  {wc:$selected_s['selected']}>{wc:$selected_s['num']}</option>
+           {wc:loop:end}
+            </select>
+            <p>时</p>
+           <select id="sltFirstT3" name="start_time_i">
+           {wc:loop $selecteds_fen_start $selected_f}
+            <option value="{wc:$selected_f[num]}"   {wc:$selected_f['selected']} >{wc:$selected_f['num']}</option>
+           {wc:loop:end}            
+          </select>
+            <p>分&nbsp;&nbsp;&nbsp;至</p>
+        </div>        
+        <div class="over">
+           <input value="{wc:fun:date("Y-m-d",$end_time)}" id="txtEndT1" name="end_time_data"  class="time" readonly="readonly" type="text">    
+           <script type="text/javascript">
+                date = new Date();
+                Calendar.setup({
+                    inputField     :    "txtEndT1",
+                    ifFormat       :    "%Y-%m-%d",
+                    showsTime      :    true,
+                    timeFormat     :    "24"
+                });
+            </script>   
+                    
+           <select id="sltEndT2" name="end_time_h">
+           {wc:loop $selecteds_shi_end $selected_s}
+            <option value="{wc:$selected_s[num]}" {wc:$selected_s['selected']} >{wc:$selected_s['num']}</option>
+           {wc:loop:end}            
+            </select>
+            <p>时</p>
+            <select id="sltEndT3" name="end_time_i">
+           {wc:loop $selecteds_fen_end $selected_f}
+            <option value="{wc:$selected_f[num]}" {wc:$selected_f['selected']} >{wc:$selected_f['num']}</option>
+           {wc:loop:end}    
+            </select>
+            <p>分</p>
+        </div>
+                <input id="btnQuery" class="Recordcx" value="查询"  name="dosubmit" type="submit">
+                <span id="spanServerTime" style="display:none">2013-10-22 08:52:53</span>
+    </div>
+    <div id="recordList">
+        <ul class="Record_title">
+            <li class="time">{wc:fun:L('html.key')}时间</li>
+            <li class="nem">会员账号</li>
+            <li class="name">{wc:fun:L('html.key')}商品名称</li>
+            <li class="much">{wc:fun:L('html.key')}人次</li>
+        </ul> 
+        {wc:loop $RecordList $Record}       
+        <ul class="{wc:$Record['class']}">
+            <li class="time">{wc:fun:date("Y-m-d H:i:s",$Record['otime'][0])}.{wc:$Record['otime'][1]}</li>
+            <li class="nem"><a class="blue" href="{WEB_PATH}/uname/{wc:fun:idjia($Record['ouid'])}" target="_blank">{wc:fun:get_user_key($Record['ouid'],'username')}</a></li>
+            <li class="name"><a href="{WEB_PATH}/cgoods/{wc:$Record['ogid']}" target="_blank">（第{wc:$Record['oqishu']}期）{wc:fun:_strcut(useri_title($Record['og_title'],'g_title'),60,null)}</a></li>
+            <li class="much">{wc:$Record['onum']}人次</li>
+        </ul>
+        {wc:loop:end}   
+        
+         <div class="page_nav">
+            <ul class="pageULEx">
+            </ul>
+         </div>
+        
+    </div>
+</div>
+{wc:templates "index.footer"}

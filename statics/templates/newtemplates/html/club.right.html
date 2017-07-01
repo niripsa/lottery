@@ -1,0 +1,80 @@
+<div class="groups-right" style="margin-top:10px;">
+    <div class="groups-head">
+        {wc:if User_GetUserInfo()}
+        <div class="grhead-img">
+            <a href="{WEB_PATH}/uname/{wc:fun:idjia(User_GetUserInfo('uid'))}" target="_blank" class="fl-img">
+                {wc:if User_GetUserInfo('img')==null}       
+                <img id="imgUserPhoto" src="{G_TEMPLATES_STYLE}/images/prmimg.jpg" width="50" height="50" border="0">
+                {wc:else}
+                <img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:fun:Getuserimg(User_GetUserInfo('uid'))}.160160.jpg" width="50" height="50" border="0">
+                {wc:if:end}
+            </a>
+        </div>
+        <a href="" class="fl-img"></a>
+        <div class="grhead-info">
+            <a href="" class="fl-img"></a>
+            <p class="grhead-name">
+                <a href="" class="fl-img"></a>
+                <a href="{WEB_PATH}/uname/{wc:fun:idjia(User_GetUserInfo('uid'))}"  target="_blank"  class="gray">{wc:fun:User_GetUserInfo('username')}</a>
+            </p>
+            <p class="grhead-topic gray02">话题{wc:fun:Club_userpostnum('tiezi')}<span class="gray03"> | </span>回复{wc:fun:Club_userpostnum('huifu')}</p>
+            <div id="divJoinGroup">
+                <p id="pJoinGroup" class="grhead-join gray02"> 加入圈子<span id="spJoinGroupNum" class="orange">{wc:fun:Club_addusernum()}</span>个<b></b></p>
+            </div>
+        </div>
+        {wc:else}
+        <div class="groups-login">
+        <p class="grhead-loginc1 gray02">登录查看您的圈子吧！</p>
+        <p class="grhead-login-reg gray02">没账号？ <span><a href="{WEB_PATH}/register" target="_blank" class="gray01">简单注册 快捷方便！</a></span></p>
+        <a id="btnLogin" href="{WEB_PATH}/login" class="button07">立即登录</a>
+    </div>
+        {wc:if:end} 
+    </div>
+    <div class="blank10"></div>
+    <div id="divHotTopic" class="groups-shadow clearfix">
+        <div class="R-grtit"><h3>热门话题</h3>
+            {wc:m=common.club_db mod=GetHotClubPost() return=tiezi}
+            {wc:loop $tiezi $tz}
+            <div class="R-list Topic-list">
+                <div class="groups-Rimg">
+                    <a type="showCard" href="{WEB_PATH}/uname/{wc:fun:idjia($tz['huiyuan'])}" class="fl-img">
+                        {wc:if Club_img($tz['cid'])==null}
+                        <img id="imgUserPhoto" src="{G_UPLOAD_PATH}/photo/member.jpg.3030.jpg" width="30" height="30" border="0">
+                        {wc:else}
+                        <img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:fun:Getuserimg($tz['huiyuan'])}.3030.jpg" width="30" height="30" border="0">
+                        {wc:if:end}
+                    </a>
+                </div>
+                <div class="groups-Rinfo">
+                    <p class="groups-ht"><a href="{WEB_PATH}/index/club/nei/{wc:$tz['id']}" class="gray">{wc:$tz['title']}</a></p>
+                    <p class="groups-c gray02">{wc:fun:_strcut(Club_title($tz['cid']),10)}<span class="gray03"> | </span>{wc:fun:Club_postnum($tz['cid'],$tz['id'])}条回复</p>
+                </div>
+            </div>
+            {wc:loop:end}
+        </div>
+    </div>
+    <div class="blank10"></div>
+    <div class="groups-shadow clearfix">
+        <div class="R-grtit"><h3>活跃成员</h3>
+        {wc:m=common.club_db mod=GetHotClubUser() return=huifu}
+        {wc:loop $huifu $hf}
+        <div class="R-list Topic-list">
+            <div class="groups-Rimg">
+                <a type="showCard" href="{WEB_PATH}/uname/{wc:fun:idjia($hf['huiyuan'])}" class="fl-img">
+                    {wc:if userid($tz['huiyuan'],'img')==null}
+                    <img id="imgUserPhoto" style="float:left;" src="{G_UPLOAD_PATH}/photo/member.jpg.3030.jpg" width="30" height="30" border="0">
+                    {wc:else}
+                    <img id="imgUserPhoto" style="float:left;" src="{G_UPLOAD_PATH}/{wc:fun:Getuserimg($hf['huiyuan'])}.3030.jpg" width="30" height="30" border="0">
+                    {wc:if:end}
+                    <p style="float:right;line-height:28px;margin-left:5px;">{wc:fun:userid($hf['huiyuan'],'username')}</p>
+                </a>
+            </div>
+        </div>
+        {wc:loop:end}
+        </div>
+        <div class="Member-list clearfix">
+            <ul id="ulMember">
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond $1 !^(index.php|robots\.txt|statics|install|webplugin|phpInSHP)
+    #RewriteRule ^(.*)$ index.php/$1 [L]
+    RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
+</IfModule>

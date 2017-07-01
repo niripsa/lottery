@@ -1,0 +1,33 @@
+{wc:fun:css("xxgoods")}
+{wc:fun:js("jquery.cmsapi")}
+{wc:templates "index.header_top"}
+<script type="text/javascript">
+    $.YunCmsApi.SetTopStyle({
+        "Title":"所有购买记录",
+        "Home":true,
+        "Member":true
+    }); 
+</script>
+<!-- 夺宝记录 -->
+<section id="buyRecordPage" class="goodsCon">
+    <div id="divRecordList" class="recordCon z-minheight" style="display:block;">
+       {wc:loop $go_record_list $c} 
+        <ul>
+            <li class="rBg"><a href="{WEB_PATH}/uname/{wc:fun:idjia($c['ouid'])}" >
+                <img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($c['ouid'],'img')}" border="0"/>
+                <s></s></a>
+            </li>
+            <li class="rInfo"><a href="{WEB_PATH}/uname/{wc:fun:idjia($c['ouid'])}" >{wc:fun:userid($c['ouid'],'username')}</a>
+                <strong>
+                    {wc:if $c['oip']}
+                    ({wc:fun:get_ip($c['oip'],'ipcity')})
+                    {wc:if:end} 
+                </strong><br>
+                <span>购买{wc:$c['onum']}人次</span><em class="arial">{wc:fun:date("Y-m-d H:i:s",$c['otime'])}</em>
+            </li><i></i>
+        </ul>
+       {wc:loop:end}
+    </div>
+</section>
+<!-- footer 开始-->
+{wc:templates "index.footer"}

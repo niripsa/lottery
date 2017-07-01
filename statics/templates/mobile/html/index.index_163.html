@@ -1,0 +1,223 @@
+{wc:fun:js("jquery.BusyTime")}
+{wc:fun:js("jquery.cmsapi")}
+{wc:fun:js("template")}
+{wc:fun:js("template.fun")}
+{wc:templates "index.header"}
+<!-- 栏目导航 开始-->
+{wc:templates "index.navs"}
+<script type="text/javascript" src="{G_TEMPLATES_JS}/TouchSlide.1.1.js"></script>
+<!-- 栏目导航 结束-->
+<input name="hidStartAt" type="hidden" id="hidStartAt" value="0">
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div id="content">
+        <div id="focus" class="focus">
+            <div class="hd">
+                <ul></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    {wc:loop Getslide(5,2) $slide}
+                    <li><a href="{wc:$slide['link']}"><img src="{G_UPLOAD_PATH}/{wc:$slide['img']}" /></a></li>
+                    {wc:loop:end}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--限时抢购  开始-->
+<div class="m_countdown">
+	 <div class="m-tt1">
+        <h2 class="fl"><a href="{WEB_PATH}/cgoods_list">限时抢购</a></h2>
+        <div class="fr u-more">
+            <a href="{WEB_PATH}/cgoods_list" class="u-rs-m1 ziti">更多<b class="z-arrow"></b></a>
+        </div>
+    </div>
+    
+    <div class="countdown_pro">
+    	<ul>
+        <?php foreach ( (array)$jinri_shoplist as $k => $v ) { ?>
+        <li>
+            <a href="{WEB_PATH}/cgoods/{wc:$v['id']}"><img src="{G_UPLOAD_PATH}/{wc:$v['g_thumb']}"/>
+                <p class="title_cut" style="padding-bottom:5px"><span>{wc:$v['g_title']}</span></p>
+                <p>倒计时 <span id="hour_<?php echo $k; ?>">00:</span><span id="minute_<?php echo $k; ?>">00:</span><span id="second_<?php echo $k; ?>">00</span></p>
+            </a>
+        </li>
+        <script type="text/javascript"> 
+            $(function() {
+                timer( <?php echo $v['xsjx_time'] - time(); ?>, <?php echo $k; ?>, ':' );
+            });
+        </script>
+        <?php } ?>
+        </ul>
+    </div>
+</div>
+<!--限时抢购  结束-->
+
+
+<!-- 最新揭晓 -->
+<!-- <section class="g-main">
+    <div class="m-tt1">
+        <h2 class="fl"><a href="{WEB_PATH}/cgoods_lottery">最新揭晓</a></h2>
+        <div class="fr u-more">
+            <a href="{WEB_PATH}/cgoods_lottery" class="u-rs-m1"><b class="z-arrow"></b></a>
+        </div>
+    </div>
+    <article class="h5-1yyg-w310 m-round m-lott-li" id="divLottery"> -->
+
+        <!--已经揭晓 开始-->
+      <!--   {wc:m=cloud_goods mod=cloud_goodsed(5) return=r_cgoodslisted}
+        <div id="divLotteryList">
+        {wc:loop $r_cgoodslisted $cgoodslisted}
+        <div class="m-lott-conduct">
+            <p onclick="location.href='{WEB_PATH}/cgdataserver/{wc:$cgoodslisted[id]}'">恭喜
+                <a href="{WEB_PATH}/uname/{wc:fun:idjia($cgoodslisted['q_uid'])}"><span class="z-user blue">{wc:fun:Getusername($cgoodslisted['q_uid'])}</span></a> 获得 (第{wc:$cgoodslisted['qishu']}期){wc:$cgoodslisted['g_title']}
+                <a href="{WEB_PATH}/cgdataserver/{wc:$cgoodslisted['id']}"><b class="z-arrow"></b></a>
+            </p>
+        </div>
+        {wc:loop:end}
+        </div> -->
+        <!--已经揭晓 结束-->
+
+
+        <!-- <ul class="clearfix">
+            {wc:m=cloud_goods mod=cloud_goodsed(4) return=r_cgoodslisted}
+            {wc:loop $r_cgoodslisted $cgoodslisted}
+            <li>
+                <a href="{WEB_PATH}/cgdataserver/{wc:$cgoodslisted['id']}" class="u-lott-pic">
+                    <img src="{G_UPLOAD_PATH}/{wc:$cgoodslisted['g_thumb']}" border="0" alt="" />
+                </a>
+                <span>恭喜<a href="{WEB_PATH}/uname/{wc:fun:idjia($cgoodslisted['q_uid'])}" class="blue z-user">{wc:fun:Getusername($cgoodslisted['q_uid'])}</a>获得</span>
+            </li>
+            {wc:loop:end}
+        </ul>
+    </article>
+</section> -->
+
+<!-- 热门推荐 开始-->
+<section class="g-main">
+    <div class="m-tt1">
+        <h2 class="fl"><a href="{WEB_PATH}/cgoods_list">热门推荐</a></h2>
+        <div class="fr u-more">
+            <!-- <a href="{WEB_PATH}/cgoods_list" class="u-rs-m1 ziti">更多<b class="z-arrow"></b></a> -->
+        </div>
+    </div>
+    <article class="clearfix h5-1yyg-w310 m-round m-tj-li">
+        <ul id="ulRecommend">
+            {wc:m=cloud_goods mod=cloud_goodslist(6,2) return=r_cgoods}
+            {wc:loop $r_cgoods $recommended}
+            <li id="16973">
+                <div class="f_bor_tr">
+                    <div class="m-tj-pic">
+                        <a href="{WEB_PATH}/cgoods/{wc:$recommended['id']}" class="u-lott-pic">
+                            <img src="{G_UPLOAD_PATH}/{wc:$recommended['g_thumb']}" border=0 alt="{wc:$recommended['g_title']}" />
+                        </a>
+                        <ins class="u-promo">价值:{wc:$recommended['g_money']}{wc:fun:L('cgoods.currency')}</ins>
+                    </div>
+                    <div class="Progress-bar">
+                       <p class="title_cut" style="padding-bottom:5px"><span>{wc:$recommended['g_title']}</span></p>
+                        <p class="u-progress" title="已完成">
+                        <span class="pgbar" style="width:{wc:fun:intval(width($recommended['canyurenshu'],$recommended['zongrenshu'],100))}%;">
+                        <span class="pging"></span>
+                        </span>
+                        </p>
+                        <ul class="Pro-bar-li">
+                            <li class="P-bar01"><em>{wc:$recommended['canyurenshu']}</em>已参与</li>
+                            <li class="P-bar02"><em>{wc:$recommended['zongrenshu']}</em>总需人次</li>
+                            <li class="P-bar03"><em>{wc:$recommended['zongrenshu']-$recommended['canyurenshu']}</em>剩余</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            {wc:loop:end}
+        </ul>
+        <span id="nodata"></span>
+    </article>
+    <input type="hidden" id="cur_pages" value="2" name="cur_pages"/>
+</section>
+<!-- 热门推荐 结束   -->
+<script id="index_goods" type="text/html">
+    <p onclick="location.href='{WEB_PATH}/cgdataserver/{{shop.id}}'">恭喜
+        <a href="{WEB_PATH}/uname/{{shop.uid | uid}}"><span class="z-user blue">{{shop.user}}</span></a> 
+        获得 (第{{shop.qishu }}期){{shop.title}}
+        <a href="{WEB_PATH}/cgdataserver/{{shop.id}}"><b class="z-arrow"></b></a>
+    </p>
+</script>
+<script type="text/javascript">
+$(function(){ 
+  var winH = $(window).height(); //页面可视区域高度 
+  var i; //设置当前页数 
+  i = $('#cur_pages').val();
+  $(window).scroll(function () { 
+    var pageH = $(document.body).height(); 
+    var scrollT = $(window).scrollTop(); //滚动条top 
+    var aa = (pageH-winH-scrollT)/winH; 
+    if(aa<0.02){ 
+      $.getJSON("{WEB_PATH}/index/cloud_goods/ajax_cloud_goods_l",{page:i},function(json){ 
+        if(json){ 
+          var str = ""; 
+          $.each(json,function(index,array){ 
+            $('#ulRecommend').append(
+                '<li id="16973">'+
+                '<div class="f_bor_tr">'+
+                    '<div class="m-tj-pic">'+
+                        '<a href="{WEB_PATH}/cgoods/'+array.id+'" class="u-lott-pic">'+
+                            '<img src="{G_UPLOAD_PATH}/'+array.g_thumb+'" border=0 alt="'+array.g_title+'" />'+
+                        '</a>'+
+                        '<ins class="u-promo">价值:'+array.g_money+'购买币</ins>'+
+                    '</div>'+
+                    '<div class="Progress-bar">'+
+                       '<p class="title_cut" style="padding-bottom:5px"><span>'+array.g_title+'</span></p>'+
+                        '<p class="u-progress" title="已完成">'+
+                        '<span class="pgbar" style="width:'+array.canyu_rate+'%;">'+
+                        '<span class="pging"></span>'+
+                        '</span></p>'+
+                        '<ul class="Pro-bar-li">'+
+                            '<li class="P-bar01"><em>'+array.canyurenshu+'</em>已参与</li>'+
+                            '<li class="P-bar02"><em>'+array.zongrenshu+'</em>总需人次</li>'+
+                            '<li class="P-bar03"><em>'+(array.zongrenshu - array.canyurenshu) +'</em>剩余</li>'+
+                        '</ul></div></div></li>'
+                );
+          }); 
+        i++;
+        $('#cur_pages').val( i );
+        }else{ 
+          $("#nodata").show().html("别滚动了，已经到底了。。。"); 
+          return false; 
+        } 
+      }); 
+    } 
+  }); 
+}); 
+</script>
+<script type="text/javascript">
+
+$.YunCmsApi.Loop({
+    "timer"   : 15000,
+    "callback": function(data){
+            //data.times = (new Date().getTime() + (data.times * 1000));
+            $("#divLottery").prepend(
+                '<div class="m-lott-conduct" id="timeloop'+data.id+'">'+
+                '<a href="{WEB_PATH}/cgoods/'+data.id+'">'+
+                '<p class="z-lott-tt">(第' + data.qishu + '期) ' + data.title +
+                '<b class="z-arrow"></b>'+
+                '<span class="z-lott-time">揭晓倒计时'+
+                '<span class="busytime" pattern="hh:mm:ss ms" time="'+(new Date().getTime() + (data.times * 1000)) +'"> '+
+                '99 : 99 : 99</span></span></p></a>'+
+                '</div>'
+            );
+            $("#timeloop"+data.id+" .busytime").busytime({
+                callback:function($dom){
+                    $("#timeloop"+data.id).html(template('index_goods', {shop:data}))           
+                }
+            }).start();
+    }
+});
+
+</script>
+{wc:templates "index.footer"}

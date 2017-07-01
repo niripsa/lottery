@@ -1,0 +1,139 @@
+{wc:templates "index.header"}
+<div class="clear"></div>
+<div class="wrap w1200">
+    <div class="Current_nav w1200">
+        <a href="{WEB_PATH}">首页</a> &gt; 
+        <a href="{WEB_PATH}/cgoods_list/{wc:$item['g_cateid']}_0_0">{wc:$model_title['cate_name']}</a> &gt;
+        <a href="{WEB_PATH}/cgoods_list/{wc:$item['g_cateid']}_{wc:$item['g_brandid']}_0">  {wc:$model_title['brand_name']}</a> &gt;
+        {wc:$model_title['title']}
+    </div>
+    <div class="show_content">
+        <div class="Pro_Details">
+            <p style="font-size:24px;padding-bottom: 9px;margin-top: 15px;color:#f00">              
+                <span class="f24">{wc:$item['g_title']}</span>
+                <span style="{wc:$item['g_title_style']}">{wc:$item['g_description']}</span>                
+            </p>
+        <div class="Pro_Detleft">
+            <div class="zoom-small-image">
+                <div id="wrap" style="top:0px;z-index:9999;position:relative;">
+                   <span href="{G_UPLOAD_PATH}/{wc:$item['g_thumb']}" class="cloud-zoom" id="zoom1" rel="adjustX:10, adjustY:-2">
+                       <img width="80px" height="80px" src="{G_UPLOAD_PATH}/{wc:$item['g_thumb']}">
+                 </span>
+                    <div class="mousetrap"></div>
+                </div>
+             </div>
+            <div class="zoom-desc"> 
+                <div class="jcarousel-prev jcarousel-prev-disabled" style="display: none;"></div>
+                <div class="jcarousel-clip" style="height:55px;width:384px;">
+                <p> 
+                {wc:loop $item['g_picarr'] $imgtu}                
+                <label href="{G_UPLOAD_PATH}/{wc:$imgtu}" class='cloud-zoom-gallery'  rel="useZoom: 'zoom1', smallImage: '{G_UPLOAD_PATH}/{wc:$imgtu}'">
+                <img class="zoom-tiny-image" src="{G_UPLOAD_PATH}/{wc:$imgtu}" /></label>           
+                {wc:loop:end}           
+                </p>
+                </div>
+            </div>      
+        </div>       
+            <div class="Pro_Detright">          
+                <p class="Det_money">{wc:fun:L('cgoods.value')}：<span>{wc:$item['g_money']}{wc:fun:L('cgoods.currency')}</span></p>            
+                <div id="divBuy" class="Det_button">
+                    <a href="javascript:;" class="Det_Shopbut">{wc:fun:L('cgoods.go')}</a>                  
+                </div>              
+                        
+                <div class="Security">
+                    <ul>
+                        <li><a href=""><i></i>100%公平公正</a></li>
+                        <li><a href=""><s></s>100%正品保证</a></li>
+                        <li><a href=""><b></b>全国免费配送</a></li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<!--商品详情 开始-->
+<div class="ProductTabNav w1200 mt10">
+    <div id="divProductNav" class="DetailsT_Tit">
+        <div class="DetailsT_TitP">
+            <ul>
+                <li class="Product_DetT DetailsTCur"><span class="DetailsTCur">商品详情</span></li>
+            </ul>
+        </div>
+    </div>
+    <div id="divContent" class="Product_Content">
+        <!--商品详情 开始-->
+        <div class="Product_Con">{wc:$item['g_content']}</div>
+        <!-- 商品详情 结束 -->
+        
+    </div>
+    </div>
+</div>
+<script type="text/javascript" src="{G_TEMPLATES_JS}/cloud-zoom.min.js"></script>
+<script type="text/javascript">
+<!--补丁3.1.6_b.0.2-->
+function set_iframe_height(fid,did,height){ 
+    $("#"+fid).css("height",height);    
+}
+$(function(){
+    $(".Det_Shopbut").click(function(){ 
+        Cartcookie(true);
+    }); 
+});
+var shopinfo={'shopid':{wc:$item['gid']},'money':{wc:$item['g_money']}};
+//添加购买
+function Cartcookie(cook){
+    var info = {};
+    var shopid=shopinfo['shopid'];
+    var cookie_pre="{wc:fun:GetConfig('cookie_pre')}";//cookie配置前缀  
+    if(!info[shopid]){
+        var CartTotal=$("#sCartTotal").text();
+            $("#sCartTotal").text(parseInt(CartTotal)+1);
+            $("#btnMyCart em").text(parseInt(CartTotal)+1);
+    }       
+    info[shopid]={};
+    info[shopid]['money']=shopinfo['money'];
+    info['MoenyCount']='0.00';
+    $.cookie(cookie_pre+'Cartlista',$.toJSON(info),{expires:7,path:'/'});
+  
+    if(cook){
+        window.location.href="{WEB_PATH}/member/gcart/cartlistgoods/"+new Date().getTime();//+new Date().getTime()
+    }
+}
+$(function(){
+    $("#ulRecordTab li").click(function(){
+        var add=$("#ulRecordTab li").index(this);
+        $("#ulRecordTab li").removeClass("Record_titCur").eq(add).addClass("Record_titCur");
+        $(".Pro_Record .hide").hide().eq(add).show();
+    });
+    
+    var DetailsT_TitP = $(".DetailsT_TitP ul li");
+    var divContent    = $("#divContent div");   
+    DetailsT_TitP.click(function(){
+        var index = $(this).index();
+            DetailsT_TitP.removeClass("DetailsTCur").eq(index).addClass("DetailsTCur");
+    
+            var iframe = divContent.hide().eq(index).find("iframe");
+            if (typeof(iframe.attr("g_src")) != "undefined") {
+                 iframe.attr("src",iframe.attr("g_src"));
+                 iframe.removeAttr("g_src");
+            }
+            divContent.hide().eq(index).show();
+    });
+    <!--补丁3.1.6_b.0.2-->
+        
+    $("#btnUserBuyMore").click(function(){
+        fouli.removeClass("DetailsTCur").eq(1).addClass("DetailsTCur");     
+        $("#divContent .hide").hide().eq(1).show();
+        $("html,body").animate({scrollTop:941},1500);
+        $("#divProductNav").addClass("nav-fixed");
+    });
+    $(window).scroll(function(){
+        if($(window).scrollTop()>=941){
+            $("#divProductNav").addClass("nav-fixed");
+        }else if($(window).scrollTop()<941){
+            $("#divProductNav").removeClass("nav-fixed");
+        }
+    });
+})
+</script>
+{wc:templates "index.footer"}

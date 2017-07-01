@@ -1,0 +1,69 @@
+*{margin:0; padding:0} body {margin:0; padding:0}
+ul
+{
+	padding:0px;
+	margin:0px;
+	list-style:none;
+}
+
+/*三级联动*/
+.area
+{
+	width:100%;
+	height:100%;
+	background:#555;
+	margin: 0px;
+	opacity:0.9;filter:alpha(opacity=90);
+	overflow:hidden;
+	position:fixed;
+	top:0;
+	z-index:9999;
+}
+
+.area_list
+{
+	width:80%;
+	height:75%;
+	margin:0em auto;
+	background:#fff;
+	overflow:scroll;
+}
+.area h3
+{
+	margin:3.5em auto 0em auto;
+	width:80%;
+	color:#fff;
+	background:#000;
+	line-height:2.0em;
+	padding-left:0.5em;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.area_list li
+{
+	width:100%;
+	padding:0em 0.5em;
+	line-height:2.5em;
+	color:#555;
+	font-size:14px;
+	border-bottom:#ddd 1px solid;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	background:url(../images/off.png) no-repeat center right 0.5em;
+}
+.area_on
+{
+	background:url(../images/on.png) no-repeat center right 0.5em !important;
+}
+
+
+
+
+
+
+
+
+
+

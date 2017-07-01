@@ -1,0 +1,71 @@
+{wc:fun:css("user.message")}
+{wc:templates "index.header"}
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+    {wc:templates "user.left"}
+    <!--个人中心中间 开始-->
+    <div class="R-content">
+        <div class="subMenu">
+            <a class="current">已晒单</a>
+            <a>未晒单</a>
+        </div>
+        <!--已晒单 开始-->
+        <div class="list-tab topic" style="display: block;">
+            <ul class="listTitle">
+                <li style="text-align:center;" class="w100">晒单图片</li>
+                <li class="w400">晒单信息</li>
+                <li class="w130">晒单状态</li>
+                <li class="w85 fr">操作</li>
+            </ul>
+            {wc:if !$shareed}
+            <div class="tips-con"><i></i>暂无记录！</div>
+            {wc:else}
+            {wc:loop $shareed $sd}
+            <ul class="listCon">            
+                <li class="w100" style="text-align:center;"><a href="{WEB_PATH}/index/share/detail/{wc:$sd['sd_id']}" target="_blank" class="blue"><img src="{G_UPLOAD_PATH}/{wc:$sd['sd_thumbs']}"width="50"height="50"></a></li>
+                <li class="w400"><a href="{WEB_PATH}/index/share/detail/{wc:$sd['sd_id']}" target="_blank" class="gray01">{wc:$sd['sd_title']}</a></li>
+                <li class="w85 fr">
+                <font color="#666">不可修改</font>
+                </li>
+            </ul>
+            {wc:loop:end}
+            {wc:if:end}
+        </div>
+        <!--已晒单 结束-->
+
+        <!--未晒单 开始-->
+        <div class="list-tab topic" style="display:none">
+            <ul class="listTitle">
+                <li style="text-align:center;" class="w100">商品图片</li>
+                <li class="w630">商品信息</li>
+                <li class="w85 fr">操作</li>
+            </ul>
+            {wc:if !$share}
+            <div class="tips-con"><i></i>暂无记录！</div>
+            {wc:else}
+            {wc:loop $share $sd}
+            <ul class="listCon">
+                <li style="text-align:center;" class="w100"><div class="listConT"><img width="50" src="{G_UPLOAD_PATH}/{wc:fun:shoplisext($sd['ogid'],'g_thumb')}"/></div></li>
+                <li style="text-indent:1em;" class="w400"><a href="{WEB_PATH}/cgoods/{wc:$sd['ogid']}" target="_blank">{wc:fun:shoplisext($sd['ogid'],'g_title')}</a></li>
+                <li class="w50 fr"><a name="delete" href="{WEB_PATH}/member/share/shareinsert/{wc:$sd['oid']}" class="blue">添加晒单</a></li>
+            </ul>                   
+            {wc:loop:end}
+            {wc:if:end}         
+        </div>  
+        <!--未晒单 结束-->
+    </div>
+    <!--个人中心中间 结束-->
+</div>
+<!--商品 wrap 结束-->
+<script>
+$(function(){
+    $(".subMenu a").click(function(){
+        var id=$(".subMenu a").index(this);
+        $(".subMenu a").removeClass().eq(id).addClass("current");
+        $(".R-content .topic").hide().eq(id).show();
+    });
+})
+</script>
+<div class="clear"></div>
+{wc:templates "index.footer"}

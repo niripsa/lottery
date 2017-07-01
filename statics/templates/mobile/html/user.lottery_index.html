@@ -1,0 +1,484 @@
+{wc:fun:css("goods")}
+{wc:fun:js("jquery.cmsapi")}
+{wc:fun:js("template")}
+{wc:fun:js("template.fun")}
+{wc:fun:js("jquery.cartlist")}
+{wc:fun:css("user.message")}
+{wc:fun:css("lottery.warp")}
+{wc:fun:css("lottery.skin")}
+{wc:fun:css("lottery_new")}
+{wc:fun:js("layer")}
+{wc:templates "index.header_lottery"}
+<!-- 栏目导航 开始-->
+<div class="clear"></div>
+<style type="text/css">
+    .timeBox{
+        margin-top:10px;
+    }
+
+    .dianBox{
+        position: relative;
+        top:20px;
+        left:2px;
+    }
+
+    .timeFormat{
+        display: inline;
+        line-height: 36px;
+    }
+</style>
+<!--商品 wrap 开始-->
+<div style="text-align: center;">
+    <div class="tools left">
+        <div class="yu_e">
+            <div class="toggle-money show-money">
+                余额 <span id="refff" class="money">{wc:$user_money}</span>元
+            </div>
+
+            <div class="toggle-money show-money">
+                积分 <span id="refff" class="money">{wc:$user_points}</span>
+            </div>
+        </div>
+        <div class="toolslist">
+            <ul class="ctqc">
+                <li><span class="recharge" style="position: relative; top:28px; left:-20px;"></span><a style="display:inline-block;position: relative;top:13px;left:-10px;" href="/?/member/account/userrecharge" target="_blank">充值</a></li>
+            </ul>
+            <ul style="float:left;">
+                    <li><a href="#" id="exchange" style="margin-top:13px;">积分兑换</a></li>
+                </ul>
+            <ul class="twbb">
+                <li><a class="touzhu" style="margin-top: 15px;" href="/?/member/lottery/lottery_record">开奖记录</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-------------------------------------------->
+    <div class="lottery_timer left">
+        <div class="lottery_issue left">
+                <p>第 <span id="current_issue">{wc:$action_no}</span> 期</p>
+                <p>投注剩余时间</p>
+        </div>
+        <div class="timeBox">
+            <div id="s1x" class="timeFormat">0</div>
+            <div id="s2x" class="timeFormat">0</div>
+        </div>
+        <div class='dianBox'></div>
+        <div class="timeBox" style="left:10px;">
+            <div id="f1x" class="timeFormat">1</div>
+            <div id="f2x" class="timeFormat">0</div>
+        </div>
+        <div class='dianBox'></div>
+        <div class="timeBox" style="left:20px;">
+            <div id="m1x" class="timeFormat">0</div>
+            <div id="m2x" class="timeFormat">0</div>
+        </div>
+    </div>
+        <!--剩余时间结束-->
+        <!--添加0-9数字 和积分规则 开始-->
+    <ul class="add-number">
+        <li> 0</li>
+        <li> 1</li>
+        <li> 2</li>
+        <li> 3</li>
+        <li> 4</li>
+        <li> 5</li>
+        <li> 6</li>
+        <li> 7</li>
+        <li> 8</li>
+        <li> 9</li>
+        <li class="integration-rule"><a href="">积分规则</a></li>
+    </ul>
+    <!--添加0-9数字 和积分规则 结束-->
+
+ <!--    <div class="lottery_num left">
+        <div class="lottery_num_box">
+            <ul id="num" style="width: 250px;">
+                <li style="top: 7px;"><span>正</span></li>
+                <li style="top: 7px;"><span>在</span></li>
+                <li style="top: 7px;"><span>开</span></li>
+                <li style="top: 7px;"><span>奖</span></li>
+                <li style="top: 7px;"><span>中</span></li>
+            </ul>
+        </div>
+    </div> -->
+        <!--开奖信息提示 end-->
+
+        <div class="lottery_num left" style="left:-19px;width: 120px;">
+            <p class="lottery_history_issue">第 <span>{wc:$last_action_no}</span> 期</p>
+            <div class="lottery_num_box">
+                <ul id="num" style="width: 165px;margin-left: 40px;">
+                <li><span style="top: 0px;">{wc:$last_lottery_no}</span></li>
+                </ul>
+            </div>
+        </div>
+        <!--上期开奖信息结束-->
+    </div>
+    <!--个人中心中间 结束-->
+    <div class="game">
+        <div class="game-main" style="margin-top:100px;">
+            <div>
+                <div class="pp pp11" action="tzAllSelect" length="3" random="sscRandom">
+                    <div class="title" style="float:left;">买单双</div>
+                    <input type="button" value="单" number=1 class="code d min" />
+                    <input type="button" value="双" number=2 class="code s min" />
+                </div>
+
+                <div class="pp pp12" action="tzAllSelect" length="3" random="sscRandom">
+                    <div class="title" style="float: left;">买大小</div>
+                    <input type="button" value="大" number=1 class="code d min" />
+                    <input type="button" value="小" number=2 class="code s min" />
+                </div>
+
+                <!--倍数开始Martin liu-->
+                <div  class="pp">
+                        <div class="title">倍数</div>
+                        <a href="javascript:;" class="num_del num_ban" id="shopsub">-</a>
+                        <input style="border: 1px solid rgb(207, 207, 207);" type="text" value="1"  class="num_dig" id="num_dig">
+                        <a href="javascript:;" class="num_add" id="shopadd">+</a>
+                </div>
+                <!--倍数结束Martin liu-->
+            </div>
+
+             <div class="sendChoose" style="margin-top: 30px;padding-left: 80px;">
+             <a href="javascript:void(0);" class="sendBtn" id="btnPostBet">立即投注</a>
+             </div>
+
+             <div class="warp lotteryHistory" style="margin-top: 20px;padding-left: 15px;">
+                <div class="lotteryHistoryBody"></div>
+                <div class="line">
+                {wc:loop $buy_lists $v}
+                    <div>单号:{wc:$v['order_sn']}</div>
+                    <div>投注时间:{wc:$v['buy_time']}</div>
+                    <div>期号:{wc:$v['stage_no']}</div>
+                    <div>投注内容:{wc:$v['buy_content']}</div>
+                    <div>金额(元):{wc:$v['buy_money']}</div>
+                    <div>奖励(积分):{wc:$v['award_points']}</div>
+                    <div>操作:
+                        {wc:if $v['status'] == 1}
+                            <a href="javascript:void(0)" orderid="{wc:$v['order_sn']}" onclick="cancelOrder($(this).attr('orderid'));">撤单</a>
+                        {wc:elseif $v['status'] == 2}
+                            已撤单
+                        {wc:else}
+                            已开奖
+                        {wc:if:end}
+                    </div>
+                    <hr>
+                {wc:loop:end}
+                <div class="getMore">
+                <a class="sqlist" href="/?/member/lottery/buy_record" title="查看更多投注记录">查看更多</a></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+<script type="text/javascript">
+    //在购买大小单双上添加点击事件 
+    function cancelOrder(orderid){
+        if(!/\d+/.test(orderid)){
+            return false;
+        }
+
+        $.ajax({
+            url:'/?/member/lottery/cancel_order',
+            data:{order_sn:orderid},
+            dataType:"json",
+            type:"post",
+            success:function(data){
+                if(data.errno == 0){
+                    layer.alert("撤单成功", {time:2000});
+                    //更新订单显示
+                    $("a[orderid=" + orderid + "]").parent().html("已撤单");
+                }else{
+                    layer.alert("撤单失败", {time:2000});
+                }
+            },
+            error:function(data){
+                layer.alert("撤单失败", {time:2000});
+            }
+        });
+    }
+
+    //  倍数增减 Martin liu
+    $('.num_del').click(function(){
+       var num = parseFloat($('.num_dig').val());
+       $('.num_dig').val(num-1?num-1:1);
+    })
+
+    $('.num_add').click(function(){
+       var num = parseFloat($('.num_dig').val());
+       $('.num_dig').val(num+1);
+    })
+
+    $('#num_dig').keyup(function(){
+        if(parseFloat($('.num_dig').val())<=0){
+            $('.num_dig').val('1');
+        }
+    })
+
+    $('.integration-rule').click(function(){
+        layer.open({
+        title: '积分规则'
+        ,content: '1.1 本购物服务协议由您与1元商城平台共同缔结，本协议对您与1元商城平台均具有合同效力。<br >'+
+'1.2 本网站只接受中华人民共和国法律规定的具有完全民事行为能力的自然人成为网站用户。如您不符合资格，请勿注册，否则本网站保留随时中止或终止您用户资格的权利。如因您向本网站提供虚假的信息或承诺而导致本网站蒙受任何损失，您将承担全部责任并赔偿相关损失。'
+        }); 
+    })
+
+    $('#exchange').click(function(){
+        layer.open({
+        title: '积分兑换'
+        ,content: '1.1 本购物服务协议由您与1元商城平台共同缔结，本协议对您与1元商城平台均具有合同效力。<br >'+
+'1.2 本网站只接受中华人民共和国法律规定的具有完全民事行为能力的自然人成为网站用户。如您不符合资格，请勿注册，否则本网站保留随时中止或终止您用户资格的权利。如因您向本网站提供虚假的信息或承诺而导致本网站蒙受任何损失，您将承担全部责任并赔偿相关损失。'
+        }); 
+    })
+
+    $(".code").click(function(){
+        $(this).siblings().filter('.checked').removeClass("checked");
+        $(this).toggleClass("checked");
+    });
+
+    $("#btnPostBet").click(function(){
+        var buy1 = $(".pp11 > .code").filter('.checked').val();
+        var buy2 = $(".pp12 > .code").filter('.checked').val();
+        //倍数
+        var multiple = parseFloat($('#num_dig').val());
+        
+        if(!buy1 && !buy2){
+            layer.alert("请选择购买大小或者单双!", {time:3000});
+            return;
+        }
+
+        var message;
+        multiple_msg = multiple+"倍";
+        
+        if(!buy1){
+            message = "您确认购买<span style='color:red;font-weight:800;'>" + buy2 + ","+ multiple_msg + "(花费"+2*multiple+"夺宝币)</span>吗？";
+        }else if(!buy2){
+            message = "您确认购买<span style='color:red;font-weight:800;'>" + buy1 + ","+ multiple_msg + "(花费"+2*multiple+"夺宝币)</span>吗？"
+        }else{
+            message = "您确认购买<span style='color:red;font-weight:800;'>" + buy1 + ","+buy2 + ","+ multiple_msg +"(花费"+4*multiple+"夺宝币)</span>吗？"
+        }
+        
+        var index_confirm = layer.confirm(message, {
+            btn:['确认', '取消'],
+        }, function(index, layer1){
+            // var index = layer.load();
+            var num1 = $(".pp11 > .code").filter('.checked').attr("number");
+            var num2 = $(".pp12 > .code").filter('.checked').attr("number");
+            //倍数
+            var multiple = parseFloat($('#num_dig').val());
+            $.ajax({
+                url:"/?/member/lottery/buy_lottery",
+                type:"post",
+                data:{buy1:num1, buy2:num2, multiple:multiple},
+                dataType:"json",
+                success:function(data){
+                    if(data.errno){
+                        layer.close(index);
+                        layer.close(index_confirm);
+                        layer.alert("<strong>" + data.errmsg + "</strong>", {time:2000});
+                        return false;
+                    }
+
+                    var html = combineHtml(data.data);
+                    $("#order-history").prepend(html);
+                    layer.close(index);
+                    layer.close(index_confirm);
+                    window.location.reload(true);
+                },
+                error:function(){
+                    layer.close(index);
+                    layer.close(index_confirm);
+                    layer.alert("<strong>购买彩票失败，请重试!</strong>", {time:2000});
+                }
+            });
+        }, function(index, layer2){
+            /*void do nothing*/
+        });
+    });
+
+    function combineHtml(data){
+        var html = "<tr>";
+        html += "<td>" + data.order_sn + "</td>";
+        html += "<td>" + data.buy_time + "</td>";
+        html += "<td>" + data.stage_no + "</td>";
+        html += "<td>" + data.buy_content + "</td>";
+        html += "<td>" + data.buy_money + "</td>";
+        html += "<td>" + "0积分</td>";
+        html += "<td>" + "<a href='javascript:void(0);' orderid=" + data.order_sn + " onclick=\"cancelOrder($(this).attr('orderid'));\">撤单</a></td>";
+        html += "</tr>";
+        return html;
+    }
+
+    function gameKanJiangDataC(diffTime, actionNo){
+        var thisNo=$('#current_issue').html();
+        TIPS='本期['+thisNo+']已截至投注';
+        console.log(diffTime);
+        if(diffTime<=0){
+            codeplay('正在封单中');
+            $('#btnaddBet').unbind('click');
+            $('#btnaddBet').bind('click', function(){
+                layer.alert(TIPS);
+            });
+            if(S){
+                layer.alert('当期销售已截止，请进入下一期购买。');
+                $("#alert_close_button").val("确定");
+            }
+            S=false;
+            KS=true;
+
+            window.location.reload(true);
+            //if(KT) clearTimeout(KT);
+            //$('.lottery_history_issue span').text($('#current_issue').text());
+            //setKJWaiting(kjTime);
+        }else{
+            if(actionNo){
+               $('#current_issue').html(actionNo);
+            }
+            var m=Math.floor(diffTime % 60), s=(diffTime---m)/60, h=0;
+            if(s<10){
+                s="0"+s;
+            }
+            if(m<10){
+                m="0"+m;
+            }
+            var mx=m, sx=s, hx=h;
+            if(sx>60){
+                hx=Math.floor(sx/60);
+                sx=sx-hx*60;
+                if(hx<10){
+                    $('#s1x').html(0);
+                    $('#s1s').html(0);
+                    $('#s2x').html(hx);
+                    $('#s2s').html(hx);
+                }else{
+                    hx=hx.toString().split('');
+                    $('#s1x').html(hx[0]);
+                    $('#s1s').html(hx[0]);
+                    $('#s2x').html(hx[1]);
+                    $('#s2s').html(hx[1]);
+                }
+                if(sx<10){
+                    $('#f1s').html(0);
+                    $('#f1x').html(0);
+                    $('#f2s').html(sx);
+                    $('#f2x').html(sx);
+                }else{
+                    sx=sx.toString().split('');
+                    $('#f1s').html(sx['0']);
+                    $('#f1x').html(sx['0']);
+                    $('#f2s').html(sx['1']);
+                    $('#f2x').html(sx['1']);
+                }
+                mx=mx.toString().split('');
+                $('#m1s').html(mx['0']);
+                $('#m1x').html(mx['0']);
+                $('#m2s').html(mx['1']);
+                $('#m2x').html(mx['1']);
+            }else{
+                $('#s1s').html(0);
+                $('#s1x').html(0);
+                $('#s2s').html(0);
+                $('#s2x').html(0);
+                sx=sx.toString().split('');
+                $('#f1s').html(sx['0']);
+                $('#f1x').html(sx['0']);
+                $('#f2s').html(sx['1']);
+                $('#f2x').html(sx['1']);
+                mx=mx.toString().split('');
+                $('#m1s').html(mx['0']);
+                $('#m1x').html(mx['0']);
+                $('#m2s').html(mx['1']);
+                $('#m2x').html(mx['1']);
+            }
+            if(S && h==0 && ((m==30 && s==0) || (m==0 && s==4))){
+                getcorrtime();
+            }
+           
+            if(h==0 && m==0 && s==0){
+                loadKjData();
+            }else{
+                if($.browser.msie){
+                    T=setTimeout(function(){
+                        gameKanJiangDataC(diffTime);
+                    }, 1000);
+                }else{
+                    T=setTimeout(gameKanJiangDataC, 1000, diffTime);
+                }
+            }
+        }
+    }
+
+    function getcorrtime(){
+        window.location.reload(true);
+    }
+
+    function loadKjData(){
+        $.ajax('/?/member/lottery/get_lastkj_data',{
+            dataType:'json',
+            cache:false,
+            type:"post",
+            data:{stage_no:$("#current_issue").html().trim()},
+            error:function(){
+                setTimeout(loadKjData, 5000);
+            },
+            success:function(data, textStatus, xhr){
+                if(!data){
+                    if(!KS) codeplay('正在开奖中');
+                    setTimeout(loadKjData, 10000);//动画时间
+                }else{
+                    try{
+                        window.location.reload(true);
+                    }catch(err){
+                        setTimeout(loadKjData, 5000);
+                    }
+                }
+            }
+        });
+    }
+
+    function codeplay(str){
+
+    }
+
+    function setKJWaiting(kjDiffTime){
+        var mm=Math.floor(kjDiffTime % 60), ss=(kjDiffTime---mm)/60;
+        $('#posttime').html('封单剩余时间');
+        if(ss<10){
+            ss="0"+ss;
+        }
+        if(mm<10){
+            mm="0"+mm;
+        }
+        var mmx=mm, ssx=ss, hhx;
+        if(ssx>60){
+            hhx=Math.floor(ssx/60);
+            ssx=ssx-hhx*60;
+            if(hhx<10){$('#s1s').html(0);$('#s1x').html(0);$('#s2s').html(hhx);$('#s2x').html(hhx);}else{hhx=hhx.toString().split('');$('#s1s').html(hhx['0']);$('#s1x').html(hhx['0']);$('#s2s').html(hhx['1']);$('#s2x').html(hhx['1']);}
+            if(ssx<10){$('#f1s').html(0);$('#f1x').html(0);$('#f2s').html(ssx);$('#f2x').html(ssx);}else{ssx=ssx.toString().split('');$('#f1s').html(ssx['0']);$('#f1x').html(ssx['0']);$('#f2s').html(ssx['1']);$('#f2x').html(ssx['1']);}
+            mmx=mmx.toString().split('');$('#m1s').html(mmx['0']);$('#m1x').html(mmx['0']);$('#m2s').html(mmx['1']);$('#m2x').html(mmx['1']);
+        }else{
+            $('#s1s').html(0);$('#s1x').html(0);$('#s2s').html(0);$('#s2x').html(0);
+            ssx=ssx.toString().split('');$('#f1s').html(ssx['0']);$('#f1x').html(ssx['0']);$('#f2s').html(ssx['1']);$('#f2x').html(ssx['1']);
+            mmx=mmx.toString().split('');$('#m1s').html(mmx['0']);$('#m1x').html(mmx['0']);$('#m2s').html(mmx['1']);$('#m2x').html(mmx['1']);
+        }
+        if(Math.floor(mm)==0 && Math.floor(ss)==0){
+            KS=false;
+            getQiHao();
+        }else{
+            if($.browser.msie){
+                KT=setTimeout(function(){
+                    setKJWaiting(kjDiffTime);
+                }, 1000);
+            }else{
+                KT=setTimeout(setKJWaiting, 1000, kjDiffTime);
+            }
+        }
+    }
+
+    $(function(){
+        window.S={wc:$diffTime};
+        gameKanJiangDataC(window.S);
+    });
+</script>
+{wc:templates "index.footer"}

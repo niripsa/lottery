@@ -1,0 +1,234 @@
+2015-02-05 13:04:38, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[17]------ ============处理前台请求开始=============== 
+2015-02-05 13:04:38, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[16]------ =====签名报文开始====== 
+2015-02-05 13:04:38, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[22]------ 签名key=val&...串 >accessType=0&backUrl=http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php&bizType=000000&certId=124876885185794726986301355951670452718&channelType=07&currencyCode=156&defaultPayType=0001&encoding=UTF-8&frontUrl=http://localhost/index.php/pay/cupay_url/qiantai&merId=898340183980105&orderId=20150205130438&signMethod=01&txnAmt=100&txnSubType=01&txnTime=20150205130438&txnType=01&version=5.0.0 
+2015-02-05 13:04:38, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[25]------ 摘要sha1x16 >edf413218ae3658c738c26bd74d74107af88d1f2 
+2015-02-05 13:04:39, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[33]------ 签名串为 >Yqjn9mLV+TBc/ls4d2rByQISfNqHzXK9jMU+giLY8YnE2CXK/9f+0DFXHSvjPogHF9C2emQKhFmk6iSbgjoTJ7BM7Furm7wdU6nG2Yt04u+VUjaKXMjyqI3O3Zd8tAUbCCREX4oBKCI1nd6OvCyR8XJn7jP0l7Ja97y75iXeAQw= 
+2015-02-05 13:04:39, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[38]------ =====签名报文结束====== 
+2015-02-05 13:04:39, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[46]------ 前台请求地址为>https://101.231.204.80:5000/gateway/api/frontTransReq.do 
+2015-02-05 13:04:39, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[50]------ -------前台交易自动提交表单>--begin---- 
+2015-02-05 13:04:39, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[51]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost/index.php/pay/cupay_url/qiantai" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="898340183980105" />
+    <input type="hidden" name="orderId" id="orderId" value="20150205130438" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150205130438" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="Yqjn9mLV+TBc/ls4d2rByQISfNqHzXK9jMU+giLY8YnE2CXK/9f+0DFXHSvjPogHF9C2emQKhFmk6iSbgjoTJ7BM7Furm7wdU6nG2Yt04u+VUjaKXMjyqI3O3Zd8tAUbCCREX4oBKCI1nd6OvCyR8XJn7jP0l7Ja97y75iXeAQw=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-05 13:04:39, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[52]------ -------前台交易自动提交表单>--end------- 
+2015-02-05 13:04:39, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[53]------ ============处理前台请求 结束=========== 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[17]------ ============处理前台请求开始=============== 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[16]------ =====签名报文开始====== 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[22]------ 签名key=val&...串 >accessType=0&backUrl=http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php&bizType=000000&certId=124876885185794726986301355951670452718&channelType=07&currencyCode=156&defaultPayType=0001&encoding=UTF-8&frontUrl=http://127.0.0.1/upacp_sdk_php/demo/response.php&merId=898340183980105&orderId=20150205130657&signMethod=01&txnAmt=100&txnSubType=01&txnTime=20150205130657&txnType=01&version=5.0.0 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[25]------ 摘要sha1x16 >2fb2872758d6e08991e864eb682411f5943fd886 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[33]------ 签名串为 >IY8VF7cKeOaLKk6ULeGUhrYUa5LEBqJewdW3tOroOrRYUjrzEElkQdn/CW/53tnVzEiBFv8baDTl5zTMa5E1O16U/Ht/lNgLxIMdc8hoYuLUYpqQBIj9xl30vTeIn+M6QaRwC72Tbb8NRIcJzdLUD5E38Mb0fWFCF+U/1Rw+xh0= 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[38]------ =====签名报文结束====== 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[46]------ 前台请求地址为>https://101.231.204.80:5000/gateway/api/frontTransReq.do 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[50]------ -------前台交易自动提交表单>--begin---- 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[51]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://127.0.0.1/upacp_sdk_php/demo/response.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="898340183980105" />
+    <input type="hidden" name="orderId" id="orderId" value="20150205130657" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150205130657" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="IY8VF7cKeOaLKk6ULeGUhrYUa5LEBqJewdW3tOroOrRYUjrzEElkQdn/CW/53tnVzEiBFv8baDTl5zTMa5E1O16U/Ht/lNgLxIMdc8hoYuLUYpqQBIj9xl30vTeIn+M6QaRwC72Tbb8NRIcJzdLUD5E38Mb0fWFCF+U/1Rw+xh0=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[52]------ -------前台交易自动提交表单>--end------- 
+2015-02-05 13:06:57, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[53]------ ============处理前台请求 结束=========== 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[17]------ ============处理前台请求开始=============== 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[16]------ =====签名报文开始====== 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[22]------ 签名key=val&...串 >accessType=0&backUrl=http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php&bizType=000000&certId=124876885185794726986301355951670452718&channelType=07&currencyCode=156&defaultPayType=0001&encoding=UTF-8&frontUrl=http://127.0.0.1/upacp_sdk_php/demo/FrontReceive.php&merId=898340183980105&orderId=20150205130859&signMethod=01&txnAmt=100&txnSubType=01&txnTime=20150205130859&txnType=01&version=5.0.0 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[25]------ 摘要sha1x16 >c7d4ed169ab4f3caafcbeb37dfb964ed76cb5ea4 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[33]------ 签名串为 >Dl5LmpLLZMdNRXNbBKfYWNGiFbuPIxRxdKGWd2MmC+CQplU/iweZcTVi4r2MITp/JjJFxZoW66jlDHpsoh4U97thDPwxUo/0u+YeA1ayPdUxVhDV5sDR579gi3yZdIoTxKu+74kvZStLudRi2Ne+AWJrqCGeK1voEflQmhXCnHQ= 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[38]------ =====签名报文结束====== 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[46]------ 前台请求地址为>https://101.231.204.80:5000/gateway/api/frontTransReq.do 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[50]------ -------前台交易自动提交表单>--begin---- 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[51]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://127.0.0.1/upacp_sdk_php/demo/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="898340183980105" />
+    <input type="hidden" name="orderId" id="orderId" value="20150205130859" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150205130859" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="Dl5LmpLLZMdNRXNbBKfYWNGiFbuPIxRxdKGWd2MmC+CQplU/iweZcTVi4r2MITp/JjJFxZoW66jlDHpsoh4U97thDPwxUo/0u+YeA1ayPdUxVhDV5sDR579gi3yZdIoTxKu+74kvZStLudRi2Ne+AWJrqCGeK1voEflQmhXCnHQ=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[52]------ -------前台交易自动提交表单>--end------- 
+2015-02-05 13:08:59, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[53]------ ============处理前台请求 结束=========== 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[17]------ ============处理前台请求开始=============== 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[16]------ =====签名报文开始====== 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[22]------ 签名key=val&...串 >accessType=0&backUrl=http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php&bizType=000000&certId=124876885185794726986301355951670452718&channelType=07&currencyCode=156&defaultPayType=0001&encoding=UTF-8&frontUrl=http://127.0.0.1/upacp_sdk_php/demo/gbk/FrontReceive.php&merId=898340183980105&orderId=20150205131043&signMethod=01&txnAmt=100&txnSubType=01&txnTime=20150205131043&txnType=01&version=5.0.0 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[25]------ 摘要sha1x16 >df7088d7a02f4f600000f8e22d043838b2957965 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[33]------ 签名串为 >a1J65+y4jW3bgs1rUHzBqfQ5gfaPxdYDL8bknEUCZ9TJgmc8iPZqJ5HEuX4+AAy8lrYYBrshtYNEem0mXq8Sf8wrR8id9W7G/74838N0P6Nbwwdp2v1k2nClERz6h19VQK8CEe/KBhw9kxGd90aLIdCnA/bVeGdom/fV3Y9pC+g= 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[38]------ =====签名报文结束====== 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[46]------ 前台请求地址为>https://101.231.204.80:5000/gateway/api/frontTransReq.do 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[50]------ -------前台交易自动提交表单>--begin---- 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[51]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://127.0.0.1/upacp_sdk_php/demo/gbk/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="898340183980105" />
+    <input type="hidden" name="orderId" id="orderId" value="20150205131043" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150205131043" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="a1J65+y4jW3bgs1rUHzBqfQ5gfaPxdYDL8bknEUCZ9TJgmc8iPZqJ5HEuX4+AAy8lrYYBrshtYNEem0mXq8Sf8wrR8id9W7G/74838N0P6Nbwwdp2v1k2nClERz6h19VQK8CEe/KBhw9kxGd90aLIdCnA/bVeGdom/fV3Y9pC+g=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[52]------ -------前台交易自动提交表单>--end------- 
+2015-02-05 13:10:43, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[53]------ ============处理前台请求 结束=========== 
+2015-02-05 13:11:28, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[74]------ 报文返回的证书ID>3474813271258769001041842579301293446 
+2015-02-05 13:11:28, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[77]------ 验证签名证书目录 :>D:wamp/www/system/modules/pay/lib/cupay/cert/ 
+2015-02-05 13:11:28, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[87]------ 加载验签证书成功 
+2015-02-05 13:11:28, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[56]------ 报文去[signature] key=val&串>accNo=6216***********0018&accessType=0&bizType=000000&certId=3474813271258769001041842579301293446&currencyCode=156&encoding=UTF-8&merId=898340183980105&orderId=20150205131043&queryId=201502051310434653848&respCode=00&respMsg=success&settleAmt=100&settleCurrencyCode=156&settleDate=0204&signMethod=01&traceNo=465384&traceTime=0205131043&txnAmt=100&txnSubType=01&txnTime=20150205131043&txnType=01&version=5.0.0 
+2015-02-05 13:11:28, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[60]------ 摘要shax16>4f02236b78074c0d5647d159967f8db533f363f4 
+2015-02-05 13:11:28, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[62]------ 验签成功 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[17]------ ============处理前台请求开始=============== 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[16]------ =====签名报文开始====== 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[22]------ 签名key=val&...串 >accessType=0&backUrl=http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php&bizType=000000&certId=124876885185794726986301355951670452718&channelType=07&currencyCode=156&defaultPayType=0001&encoding=UTF-8&frontUrl=http://127.0.0.1/upacp_sdk_php/demo/gbk/FrontReceive.php&merId=898340183980105&orderId=20150205152005&signMethod=01&txnAmt=100&txnSubType=01&txnTime=20150205152005&txnType=01&version=5.0.0 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[25]------ 摘要sha1x16 >4e11c87dd1d647e11758ad53c0a344e8b75c89f2 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[33]------ 签名串为 >dpSnogX26Ny0Exgx1RUFH+SW3XVCuXnK8qWqh/q8S2e/vW/GDRuGJbvKxUHHvVOVGpEorgNuhv9TBbElsBORAZ90zTIJ/KHEviuzli2Arpkwtd45OhjMN2AZS1wx6fJX3AiXFdd47ewwhsRLCbU1w/uMqLrDtMqW5IiObd3/ooQ= 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[38]------ =====签名报文结束====== 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[46]------ 前台请求地址为>https://101.231.204.80:5000/gateway/api/frontTransReq.do 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[50]------ -------前台交易自动提交表单>--begin---- 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[51]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://127.0.0.1/upacp_sdk_php/demo/gbk/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="898340183980105" />
+    <input type="hidden" name="orderId" id="orderId" value="20150205152005" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150205152005" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="dpSnogX26Ny0Exgx1RUFH+SW3XVCuXnK8qWqh/q8S2e/vW/GDRuGJbvKxUHHvVOVGpEorgNuhv9TBbElsBORAZ90zTIJ/KHEviuzli2Arpkwtd45OhjMN2AZS1wx6fJX3AiXFdd47ewwhsRLCbU1w/uMqLrDtMqW5IiObd3/ooQ=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[52]------ -------前台交易自动提交表单>--end------- 
+2015-02-05 15:20:05, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[53]------ ============处理前台请求 结束=========== 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[17]------ ============处理前台请求开始=============== 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[16]------ =====签名报文开始====== 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[22]------ 签名key=val&...串 >accessType=0&backUrl=http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php&bizType=000000&certId=124876885185794726986301355951670452718&channelType=07&currencyCode=156&defaultPayType=0001&encoding=UTF-8&frontUrl=http://127.0.0.1/upacp_sdk_php/demo/gbk/FrontReceive.php&merId=898340183980105&orderId=20150205152102&signMethod=01&txnAmt=100&txnSubType=01&txnTime=20150205152102&txnType=01&version=5.0.0 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[25]------ 摘要sha1x16 >f07df569f6a5873d64b80ec5f068ccab582bf386 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[33]------ 签名串为 >Fe21Q7WgHHBoJpSZFFTk7CsEj9zaxZcIisco/fPerltZouOPpuQWE5k7SrBbN414JHvoM2ihBQOXcIRjSB0khCuxOPwxZzONLCkkEMX/4WVHkWb31Cip5Yk5hjzm1I09llo3S8MNy2zfgsk/Zn8006U8VTquIHxpJ7+jinXAgc4= 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[38]------ =====签名报文结束====== 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[46]------ 前台请求地址为>https://101.231.204.80:5000/gateway/api/frontTransReq.do 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[50]------ -------前台交易自动提交表单>--begin---- 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[51]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://127.0.0.1/upacp_sdk_php/demo/gbk/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="898340183980105" />
+    <input type="hidden" name="orderId" id="orderId" value="20150205152102" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150205152102" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="Fe21Q7WgHHBoJpSZFFTk7CsEj9zaxZcIisco/fPerltZouOPpuQWE5k7SrBbN414JHvoM2ihBQOXcIRjSB0khCuxOPwxZzONLCkkEMX/4WVHkWb31Cip5Yk5hjzm1I09llo3S8MNy2zfgsk/Zn8006U8VTquIHxpJ7+jinXAgc4=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[52]------ -------前台交易自动提交表单>--end------- 
+2015-02-05 15:21:02, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[53]------ ============处理前台请求 结束=========== 

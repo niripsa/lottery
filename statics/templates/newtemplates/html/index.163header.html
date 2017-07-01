@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="Shortcut Icon" href="{G_WEB_PATH}/favicon.ico">
+{wc:fun:seo()}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/163style.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/163css.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/index.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/Comm.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/color.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/css.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/MyCart.css"/> -->
+{wc:fun:css()}
+<script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_JS}/cloud-zoom.min.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_JS}/jquery.cookie.js"></script>
+{wc:fun:js()}
+{wc:fun:GetConfiga('verify')}
+</head>
+<body>
+<div id="loadingtime"></div>
+<div class="header">
+    <div class="site_top">
+        <div class="head_top w1200">
+            <ul class="collect fr">            
+                {wc:block name="onlinecustomer"}                            
+                <li class="fr"><a href="{WEB_PATH}/single/newbie">帮助</a><span>|</span></li>           
+                <li class="fr"><a href="{WEB_PATH}/member/account/userrecharge">快速充值</a><span>|</span></li>
+                <li class="fr yu_ff">
+                    <a href="">我的{wc:fun:_cfg("web_name_two")}</a><span>|</span>
+                    <div class="h_1yyg_eject">
+                        <dl>
+                            {wc:loop login('list') $title=>$url}    
+                                <dd><a href="{wc:$url}">{wc:$title}</a></dd>
+                            {wc:loop:end}
+                        </dl>
+                    </div>
+                </li>
+                {wc:if $user=login('bool')}             
+                <li class="fr">欢迎您:<a href="{wc:$user['url']}">{wc:$user['name']}</a><span>|</span></li>                              
+                {wc:else}
+                    {wc:loop login('view') $title=>$url}            
+                        <li class="fr"><a href="{wc:$url}">{wc:$title}</a><span>|</span></li>
+                    {wc:loop:end}
+                {wc:if:end}                 
+            </ul>
+            <ul class="collect fl">
+                <li class="fl"><a href="{wc:fun:_cfg( 'web_path' )}">返回主页</a><span>|</span></li>
+                <li class="fl"><a href="javascript:;" onclick=AddFavorite(window.location,document.title)>收藏</a><span>|</span></li>
+                <li class="fl mobile" style="position:relative;"><a href="">手机{wc:fun:_cfg("web_name_two")}</a><s></s><span></span>
+                    <div class="h_mobile">
+                        <dl>
+                            <li class="fl"><a href="">手机{wc:fun:_cfg("web_name_two")}</a><s></s><span></span></li>
+                        </dl>
+                        {wc:if readapp(1)}
+                        {wc:loop  readapp(1) $weixin} 
+                            <img src="{G_UPLOAD_PATH}/{wc:$weixin['img']}" width="75" height="75">
+                            <span>下载客户端</span>
+                        {wc:loop:end}    
+                        {wc:if:end}    
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="head_mid">
+        <div class="head_mid_bg w1200">
+            <h1 class="logo_yungou fl">
+                <a class="logo_1yyg_img" href="{WEB_PATH}" title="一元夺宝—惊喜无限">
+                    <img src="{G_UPLOAD_PATH}/{wc:fun:Getlogo()}" />
+                </a>
+            </h1>
+            <div class="head_search b_red fl">
+                <input type="text" id="txtSearch" class="init" placeholder='输入"海洋丽姿"试一试'/>
+                <a class="search_submit" id="butSearch" href="javascript:;" >
+                    <i class="ico_search"></i>
+                </a>
+            </div>
+                    
+            <div class="m-joinNum r">
+                <a href="{WEB_PATH}/index/index/cloud_gorecord" target="_blank">
+                    <span class="qian text">已有</span>
+                    {wc:loop go_count_renci() $v}
+                    <span class="tnum" id="spBuyCount">{wc:$v}</span>
+                    {wc:loop:end}
+                    <span class="hou text">人次参加</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--导航 header_nav 开始-->
+<div class="head_nav">
+    <div class="nav_center bg_red w1200">
+        <div class="m_menu br_red">
+            <div class="m_menu_all">
+                 <h3><a class="c_red" href="{WEB_PATH}/cgoods_list/">全部商品分类</a></h3>
+             </div>
+             <!--div class="m_all_sort b_gray" id="m_all_sort">
+                <ul>
+                    {wc:loop GetCate('0',8,5) $two_cate}
+                    <li>
+                     <a href="{WEB_PATH}/cgoods_list/{wc:$two_cate['cateid']}_0_0" target="_blank">
+                    {wc:if _unser($two_cate['info'],'thumb')}
+                        <img src="{G_UPLOAD_PATH}/{wc:fun:_unser($two_cate['info'],'thumb')}" width="44"height="49">
+                    {wc:else}    
+                        <img class="mt10 mb10" src="{G_UPLOAD_PATH}/photo/pplm.png" width="44"height="51"></a>
+                    {wc:if:end} 
+                     </a>  
+                        <a href="{WEB_PATH}/cgoods_list/{wc:$two_cate['cateid']}_0_0" target="_blank">{wc:$two_cate['name']}</a></li>
+                    {wc:loop:end}
+
+                </ul>
+                <a class="more" href="{WEB_PATH}/cgoods_list/">查看更多</a>
+             </div-->
+        </div>
+        <ul class="nav_list">
+            <!--<li class="sort-all-shouye" ><a href="{G_WEB_PATH}">首页</a></li>-->
+            {wc:loop Getheader('index','classstyle') $indexnav}
+            <li class="sort-all {wc:$indexnav['focus_urlstyle']}" ><a href="{wc:$indexnav['url']}" target="{wc:$indexnav['url_target']}">{wc:$indexnav['name']}</a></li>
+            {wc:loop:end}       
+        </ul>   
+        <div class="mini_mycart" id="sCart">
+            <a href="{WEB_PATH}/member/cart/cartlist" class="cart c_red"  target="_blank" id="sCartNavi">
+                <s></s>购物车(<span id="sCartTotal" class="c_red">0</span>)
+            </a>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+<!--<input id="Button1" type="button" nctype="tanchu" value="点击弹出层" style="display:none;" onclick="ShowDiv('MyDiv','fade')" />-->
+<!--弹出层时背景层DIV-->
+<div id="fade" class="black_overlay"></div>
+<div id="MyDiv" class="white_content">
+<div style="text-align: right; cursor: pointer; height: 40px;">
+<!--<span style="font-size: 16px;marign-top:20px;" onclick="CloseDiv('MyDiv','fade')"><font color="white">关闭</font></span>-->
+</div>
+  <div  id="version" style=" background:url({G_TEMPLATES_STYLE}/images/low-version/background.png) no-repeat;color:#333;width:435px;height:690px;margin-left:85px;">
+    <div style="line-height:30px;padding:320px 20px 0 20px;">hi，您当前的浏览器版本<font color="red" size="3px"><script>document.write($.browser.version);</script></font>过低，可能存在安全风险，建议升级浏览器：</div>
+      <div style="margin:0 auto;margin:10px 29px;">
+        <a href="http://google.luozhongxu.com/" target="_blank" style="color:#fff;background:#e4393c;line-height:51px;text-align:center;border-radius:10px;float:left;margin:0 10px;width:168px;">谷歌 Chrome</a>
+          <a href="http://se.360.cn/" target="_blank" style="color:#fff;background:#e4393c;line-height:51px;text-align:center;border-radius:10px;float:left;margin:0 10px;width:168px;">360浏览器</a>
+      </div>
+      <span style="height:10px">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <div style="margin:30px 120px;">或直接用 <span style="font-size:20px;color:#e4393c;font-weight:bold;padding-top:20px;">一元夺宝APP</span> 扫码浏览</div>
+      <img style="margin-left:150px;padding:0px 0;" src="{G_TEMPLATES_STYLE}/images/low-version/erweima.png" />
+  </div>
+</div>
+<style>
+.black_overlay{
+display: none;
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+background-color: black;
+z-index:1003;
+-moz-opacity: 0.8;
+opacity:.80;
+filter: alpha(opacity=80);
+}
+.white_content {
+display: none;
+position: absolute;
+top: 3%;
+left: 480px;
+width: 610px;
+height: 98%;
+border: 8px solid gray;
+background-color: #333;
+z-index:2000;
+overflow: auto;
+}
+
+</style>
+<script>
+//弹出隐藏层
+function ShowDiv(show_div,bg_div){
+  document.getElementById(show_div).style.display='block';
+  document.getElementById(bg_div).style.display='block' ;
+  var bgdiv = document.getElementById(bg_div);
+  bgdiv.style.width = document.body.scrollWidth;
+  // bgdiv.style.height = $(document).height();
+  $("#"+bg_div).height($(document).height());
+};
+//关闭弹出层
+function CloseDiv(show_div,bg_div)
+{
+  document.getElementById(show_div).style.display='none';
+  document.getElementById(bg_div).style.display='none';
+};
+$(function(){
+  if ( $.browser.msie && $.browser.version <= 7 ){
+    ShowDiv('MyDiv','fade');
+    //$('input[id="Button1"]').trigger('click');
+  }
+}); 
+</script>
+<style>
+.fixedNav{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    z-index:100000;
+    _position:absolute;
+    _top:expression(eval(document.documentElement.scrollTop));
+}
+</style>
+<!--导航 header_nav 结束-->
+<script>
+
+$(function(){
+  $(window).scroll(function() { 
+    {wc:if !isset($isindex) || $isindex!='Y'}   
+        if($(window).scrollTop()>=130&&$(window).scrollTop()<=560){
+            $(".head_nav").addClass("fixedNav");    
+            $("#m_all_sort").fadeOut();
+        }else if($(window).scrollTop()>560){
+            $(".head_nav").addClass("fixedNav");
+            $("#m_all_sort").fadeOut();
+    } else if($(window).scrollTop()<130){
+            $(".head_nav").removeClass("fixedNav");
+    }
+    {wc:else} 
+        if($(window).scrollTop()>=520){
+            $(".head_nav").addClass("fixedNav");
+            $("#m_all_sort").hide();
+         $(".m_menu_all").mouseenter(function(){
+                $(".m_all_sort").show();
+         })
+         $(".m_menu_all").mouseleave(function(){
+                $(".m_all_sort").hide();
+         })
+         $(".m_all_sort").mouseenter(function(){
+                $(this).show();
+         })
+         $(".m_all_sort").mouseleave(function(){
+                $(this).hide();
+         })
+        }   else if($(window).scrollTop()<520){
+            $(".head_nav").removeClass("fixedNav");
+            $("#m_all_sort").show();
+              $(".m_menu_all").mouseenter(function(){
+                $("#m_all_sort").show();
+              })
+            $(".m_menu_all").mouseleave(function(){
+                $("#m_all_sort").show();
+              })
+            $(".m_all_sort").mouseenter(function(){
+                $(this).show();
+         })
+            $(".m_all_sort").mouseleave(function(){
+                $(this).show();
+         })
+        }   
+    {wc:if:end}
+  });
+});
+
+    $(document).ready(function(){
+        $.get("{WEB_PATH}/member/cart/getnumber/"+new Date().getTime(),function(data){
+            $("#sCartTotal").text(data);
+        });
+    });
+
+document.onkeydown=function(event)
+{ 
+    e = event ? event :(window.event ? window.event : null);
+    ss= document.getElementById('txtSearch').value;
+    if(e.keyCode==13 && ss!=""){
+     window.location.href="{WEB_PATH}/soso="+$("#txtSearch").val();
+    }
+}
+
+$(function(){
+    $("#txtSearch").focus(function(){
+        $("#txtSearch").css({background:"#fff"});
+        $(this).attr("placeholder","");
+    });
+    $("#txtSearch").blur(function(){
+        $("#txtSearch").css({background:"#FFF"});
+        $(this).attr("placeholder","输入'海洋丽姿'试一试"); 
+    });
+    $("#butSearch").click(function(){
+        var val1="海洋丽姿"
+        if($("#txtSearch").val()==""){
+            window.location.href="{WEB_PATH}/soso="+val1;
+        }else
+        if($("#txtSearch").val()==$("#txtSearch").val()){
+            window.location.href="{WEB_PATH}/soso="+$("#txtSearch").val();
+        }
+    });
+});
+
+    $(".yu_ff").mouseover(function(){
+      $(".h_1yyg_eject").show();
+    })
+    $(".yu_ff").mouseout(function(){
+      $(".h_1yyg_eject").hide();
+    })
+
+    {wc:if !isset($isindex) || $isindex!='Y'}
+         $("#m_all_sort").hide();
+         $(".m_menu_all").mouseenter(function(){
+                $(".m_all_sort").show();
+         })
+         $(".m_menu_all").mouseleave(function(){
+                $(".m_all_sort").hide();
+         })
+         $(".m_all_sort").mouseenter(function(){
+                $(this).show();
+         })
+         $(".m_all_sort").mouseleave(function(){
+                $(this).hide();
+         })
+    {wc:if:end}
+    
+    //收藏
+    function AddFavorite(sURL, sTitle){
+        try
+        {
+            window.external.addFavorite(sURL, sTitle);
+        }
+        catch (e)
+        {
+            try
+            {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            }
+            catch (e)
+            {
+                alert("您可以通过快捷键Ctrl+D进行添加");
+            }
+        }
+    }
+    
+    $(".mobile").mouseover(function(){
+        $(".h_mobile").show();
+        $(".h_mobile  s").css("background","../images/headbg11.png").css("background-position","5px -64px");
+    })
+    $(".h_mobile").mouseout(function(){
+        $(".h_mobile").hide();
+    })
+</script>

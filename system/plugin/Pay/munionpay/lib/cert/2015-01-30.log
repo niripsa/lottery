@@ -1,0 +1,38 @@
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[17]------ ============处理前台请求开始=============== 
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[16]------ =====签名报文开始====== 
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[22]------ 签名key=val&...串 >accessType=0&backUrl=http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php&bizType=000000&certId=124876885185794726986301355951670452718&channelType=07&currencyCode=156&defaultPayType=0001&encoding=UTF-8&frontUrl=http://localhost/index.php/pay/cupay_url/qiantai&merId=898340183980105&orderId=20150130104324&signMethod=01&txnAmt=100&txnSubType=01&txnTime=20150130104324&txnType=01&version=5.0.0 
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[25]------ 摘要sha1x16 >c949ba07f1d15d9295fd3cfe17a754a449b7bfd5 
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[33]------ 签名串为 >BDy2/GKeSqPxDiCzqdrSEZfGt1ufm0ix72lxehg2dKauwOCTUSmylts8kLACLKzNuqR5l3hplRFU4Gg2tsGsOy+S8Gu3WTqpVXIRCOriGdF+BEsRYFFr7GfHD1jMQjSomML38oqYZH/GBnc/odMyrbmwlUzvlEAlUD1WqFrtVg4= 
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\gbk\func\secureUtil.php ], Line[38]------ =====签名报文结束====== 
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[46]------ 前台请求地址为>https://101.231.204.80:5000/gateway/api/frontTransReq.do 
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[50]------ -------前台交易自动提交表单>--begin---- 
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[51]------ <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body  onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+        <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="UTF-8" />
+    <input type="hidden" name="certId" id="certId" value="124876885185794726986301355951670452718" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000000" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost/index.php/pay/cupay_url/qiantai" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://114.82.43.123/upacp_sdk_php/demo/gbk/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="07" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="merId" id="merId" value="898340183980105" />
+    <input type="hidden" name="orderId" id="orderId" value="20150130104324" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20150130104324" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="100" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="defaultPayType" id="defaultPayType" value="0001" />
+    <input type="hidden" name="signature" id="signature" value="BDy2/GKeSqPxDiCzqdrSEZfGt1ufm0ix72lxehg2dKauwOCTUSmylts8kLACLKzNuqR5l3hplRFU4Gg2tsGsOy+S8Gu3WTqpVXIRCOriGdF+BEsRYFFr7GfHD1jMQjSomML38oqYZH/GBnc/odMyrbmwlUzvlEAlUD1WqFrtVg4=" />
+    <input type="submit" type="hidden">
+    </form>
+</body>
+</html> 
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[52]------ -------前台交易自动提交表单>--end------- 
+2015-01-30 10:43:24, INFO, 127.0.0.1, File[ D:\wamp\www\upacp_sdk_php\demo\gbk\Form_6_2_FrontConsume.php ], Line[53]------ ============处理前台请求 结束=========== 

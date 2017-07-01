@@ -1,0 +1,54 @@
+{wc:fun:css("goods")}
+{wc:fun:js("jquery.cmsapi")}
+{wc:fun:js("template")}
+{wc:fun:js("template.fun")}
+{wc:fun:js("jquery.cartlist")}
+{wc:fun:css("user.message")}
+{wc:fun:css("lottery.warp")}
+{wc:fun:css("lottery.skin")}
+{wc:fun:css("lottery_new")}
+{wc:fun:js("layer")}
+{wc:templates "index.header_lottery"}
+<!-- 栏目导航 开始-->
+<div class="clear"></div>
+<style type="text/css">
+    .timeBox{
+        margin-top:10px;
+    }
+
+    .dianBox{
+        position: relative;
+        top:2px;
+        left:2px;
+    }
+
+    .timeFormat{
+        display: inline;
+        line-height: 36px;
+    }
+</style>
+    <div class="game">
+        <div class="game-main" style="margin-top:0px;">
+             <div class="warp lotteryHistory" style="margin-top: 20px;padding-left: 15px;">
+                <div class="lotteryHistoryBody"></div>
+                <div class="line">
+                {wc:loop $lottery_lists $v}
+                    <div>期号:{wc:$v['stage_no']}</div>
+                    <div>开奖号码:{wc:$v['lottery_number']}</div>
+                    <div>本期开始时间:{wc:$v['begin_time']}</div>
+                    <div>本期结束时间:{wc:$v['end_time']}</div>
+                    <div>当前状态:已开奖</div>
+                    <hr>
+                {wc:loop:end}
+                
+                </div>
+        </div>
+    </div>
+</div>
+
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+<script type="text/javascript">
+   
+</script>
+{wc:templates "index.footer"}

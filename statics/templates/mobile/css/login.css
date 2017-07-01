@@ -1,0 +1,200 @@
+@charset "utf-8";
+.registerCon {
+  width: 100%;
+  background: #f4f4f4;
+  text-align: center;
+  padding-bottom: 30px;
+  min-height: 190px;
+  overflow: hidden;
+}
+.registerCon ul {
+  padding: 20px;
+  position: relative;
+}
+.registerCon li {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 14px;
+  color: #999;
+  text-align: left;
+  line-height: 22px;
+}
+.registerCon li.accAndPwd {
+  height: 150px;
+}
+.registerCon li.accAndPwd dl {
+  position: relative;
+}
+.registerCon li input {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #ccc;
+  border-radius: 5px;
+  padding: 0 5px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  position: relative;
+  font-size: 16px;
+}
+.registerCon li.accAndPwd input {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #ccc;
+  padding: 9px 5px 8px 30px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  position: relative;
+  font-size: 16px;
+}
+.registerCon li.accAndPwd input.lEmail {
+  border-radius: 5px 5px 0 0;
+}
+.registerCon li s {
+  background: url(../images/loginSet.png);
+  background-size: 20px auto;
+}
+.registerCon li s {
+  float: left;
+  background-repeat: no-repeat;
+  height: 19px;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+}
+.registerCon li s.rs4 {
+  background-position: 0 -76px;
+  width: 20px;
+  top: 10px;
+}
+.registerCon li.accAndPwd input.lPwd {
+  border-radius: 0 0 5px 5px;
+  border-top: 0 none;
+}
+
+.registerCon li s.rs3 {
+  background-position: 0 -50px;
+  width: 15px;
+  height: 20px;
+  margin-left: 2px;
+}
+.registerCon li.accAndPwd s.rs3 {
+  top: 10px;
+}
+.registerCon li.accAndPwd input.lVerify {
+  border-radius: 5px 5px 5px 5px;
+  width: 50%;
+  margin-top: 2px;
+}
+.registerCon li.accAndPwd .fog {
+  line-height: 35px;
+}
+.registerCon li.accAndPwd .fog img {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.grayBtn, .orgBtn {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+  color: #fff!important;
+  border-radius: 5px;
+  font-size: 18px;
+}
+a.orgBtn {
+  background: #f60;
+  border: 1px solid #ef6000;
+}
+.registerCon li input {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #ccc;
+  border-radius: 5px;
+  padding: 0 5px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  position: relative;
+  font-size: 16px;
+}
+.registerCon li.rSelect {
+  height: 20px;
+  line-height: 20px;
+  width: 200px;
+  margin: 20px auto 0;
+}
+.registerCon li.rSelect b {
+  display: inline-block;
+  height: 12px;
+  width: 1px;
+  background: #ddd;
+  margin: 0 20px;
+  position: relative;
+  top: 2px;
+}
+.registerCon li.rSelect a {
+  color: #999;
+}
+.registerCon li s.rs1 {
+  background-position: 0 0;
+  width: 13px;
+}
+.registerCon li input.rText {
+  padding-left: 30px;
+}
+.registerCon li input.rVerify {
+  padding-left: 30px;
+  width: 50%;
+}
+.registerCon li .fog img {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.registerCon li span em {
+  float: left;
+  background-repeat: no-repeat;
+  background-position: 0 -6px;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.registerCon li a {
+  color: #2af;
+}
+.terms p{
+    line-height: 30px;
+    text-indent: 2em;
+    color:#505050;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

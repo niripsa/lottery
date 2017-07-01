@@ -1,0 +1,60 @@
+{wc:fun:css("user.message")}
+{wc:fun:css("lottery.warp")}
+{wc:fun:css("lottery.skin")}
+{wc:fun:css("lottery")}
+{wc:fun:js("layer")}
+{wc:templates "index.header"}
+<script src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+    {wc:templates "user.left"}
+    <div class="game">
+    <div class="game-main" style="margin-left:180px;margin-top:10px;">
+     <div class="warp lotteryHistory" style="margin-top: 10px;">
+        <div class="lotteryHistoryBody"></div>
+        <div class="line">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>单号</th>
+                    <th>投注时间</th>
+                    <th>期号</th>
+                    <th>投注内容</th>
+                    <th>金额(元)</th>
+                    <th>奖励(积分)</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="order-history">
+               {wc:loop $buy_lists $v}
+                    <tr>
+                        <td>{wc:$v['order_sn']}</td>
+                        <td>{wc:$v['buy_time']}</td>
+                        <td>{wc:$v['stage_no']}</td>
+                        <td>{wc:$v['buy_content']}</td>
+                        <td>{wc:$v['buy_money']}元</td>
+                        <td>{wc:$v['award_points']}积分</td>
+                        {wc:if $v['status'] == 1}
+                     　     <td><a>撤单</a></td>
+                        {wc:elseif $v['status'] == 2}
+                            <td>已撤单</td>
+                        {wc:else}
+                            <td>已开奖</td>
+                        {wc:if:end}
+                    </tr>
+               {wc:loop:end}
+            </tbody>
+        </table>
+       </div>
+       </div>
+       </div>
+    </div>
+</div>
+
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+<script type="text/javascript">
+   
+</script>
+{wc:templates "index.footer"}

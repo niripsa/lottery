@@ -1,0 +1,96 @@
+{wc:fun:js("jquery.cmsapi")}
+{wc:templates "index.header_top"}
+<script type="text/javascript">
+    $.YunCmsApi.SetTopStyle({
+        "Title":"晒单",
+        "Member":true,
+        "Home":true
+    });
+</script>
+
+<div id="navBox" class="g-snav m_listNav">
+    <div id="div_share_1" class="g-snav-lst z-sgl-crt" state="-1"><a onclick="the_sun( 1 );" class="gray9">已晒单</a><b></b></div>
+    <div id="div_share_0" class="g-snav-lst" state="1"><a onclick="the_sun( 0 );" class="gray9">未晒单</a><b></b></div>
+</div>
+
+<!-- 已晒单 Start -->
+<span id="share" style="display: block;">
+{wc:if !$shareed}
+<section class="clearfix g-Record-lst"><!-- 无记录 -->
+    <ul class="z-minheight">
+        <div class="haveNot z-minheight"><s></s><p>暂无记录</p></div>
+        <div id="divGoodsLoading" class="loading" style="display:none;"><b></b>正在加载</div>
+        <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;">点击加载更多</a>
+    </ul>
+</section>
+{wc:else}
+<section id="divUnPost" class="clearfix g-Single-lst z-minheight"><!-- 有记录 -->
+    <ul>
+    {wc:loop $shareed $sd}
+    <li class="bornone" onclick="location.href='{WEB_PATH}/index/share/detail/{wc:$sd['sd_id']}'">
+    <a class="fl z-Limg" href="{WEB_PATH}/index/share/detail/{wc:$sd['sd_id']}">
+    <img width="40" alt="" src="{G_UPLOAD_PATH}/{wc:$sd['sd_thumbs']}" border="0">
+    </a>
+    <div class="u-sgl-r"><p class="z-sgl-tt">
+    <a class="gray6" href="{WEB_PATH}/index/share/detail/{wc:$sd['sd_id']}">​{wc:$sd['sd_title']}</a>
+    </p>
+    <p class="z-sgl-info gray9"><p>{wc:fun:_strcut($sd['sd_content'],50)}</p><p></p>
+    <p>晒单时间：{wc:fun:date('Y-m-d H:i:s',$sd['sd_time'])}</p></div><b class="z-arrow"></b>
+    </li>
+    {wc:loop:end}
+    </ul>
+</section>
+{wc:if:end}
+</span>
+<!-- 已晒单 End -->
+
+<!-- 未晒单 Start -->
+<span id="share_no" style="display: none;">
+{wc:if !$share}
+<section class="clearfix g-Record-lst"><!-- 无记录 -->
+    <ul class="z-minheight">
+        <div class="haveNot z-minheight"><s></s><p>暂无记录</p></div>
+        <div id="divGoodsLoading" class="loading" style="display: none;"><b></b>正在加载</div>
+        <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;">点击加载更多</a>
+    </ul>
+</section>
+{wc:else}
+<section class="clearfix g-Single-lst z-minheight"><!-- 有记录 -->
+    <ul>
+    {wc:loop $share $sd}
+    <li class="bornone" onclick="location.href='{WEB_PATH}/member/share/share_mobile/{wc:$sd['oid']}'">
+    <a class="fl z-Limg" href="#">
+    <img width="40" alt="" src="{G_UPLOAD_PATH}/{wc:$sd['g_thumb']}" border="0">
+    </a>
+    <div class="u-sgl-r"><p class="z-sgl-tt">
+    <a class="gray6" href="#">​{wc:$sd['sd_title']}</a>
+    </p>
+    <p class="z-sgl-info gray9"><p>{wc:fun:_strcut($sd['sd_content'],50)}</p><p></p>
+    <p>中奖时间：{wc:$sd['sd_time']}</p></div><b class="z-arrow"></b>
+    </li>
+    {wc:loop:end}
+    </ul>
+</section>
+{wc:if:end}
+</span>
+<!-- 未晒单 End -->
+<script type="text/javascript">
+    function the_sun( status )
+    {
+        if ( status == 1 )
+        {
+            $( '#div_share_0' ).removeClass( 'z-sgl-crt' );
+            $( '#div_share_1' ).addClass( 'z-sgl-crt' );
+            $( '#share_no' ).hide();
+            $( '#share' ).show();
+        }
+        else
+        {
+            $( '#div_share_0' ).addClass( 'z-sgl-crt' );
+            $( '#div_share_1' ).removeClass( 'z-sgl-crt' );
+            $( '#share_no' ).show();
+            $( '#share' ).hide();
+        }
+    }
+</script>
+{wc:templates "index.footer"}

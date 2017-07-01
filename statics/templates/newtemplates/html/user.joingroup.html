@@ -1,0 +1,36 @@
+{wc:fun:css("user.message")}
+{wc:templates "index.header"}
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+    {wc:templates "user.left"}
+    <!--个人中心中间 开始-->
+    <div class="R-content">
+        <div class="member-t">
+            <h2>加入的圈子</h2> <span id="spanCount" class="f12">({wc:fun:count($club)})</span>
+        </div>
+        <div class="groups-list clearfix">
+            {wc:if $club==null}
+            <div class="tips-con f12"><i></i>您还未有加入圈子哦</div>
+            {wc:else}
+            <ul id="ulGroupList">
+            {wc:loop $club $v}
+            <li class="">
+                <div class="groups-img"><a target="_blank" href="{WEB_PATH}/index/club/show/{wc:$v['cid']}" class="fl-img"><img src="{G_UPLOAD_PATH}/{wc:$v['img']}" border="0"></a></div>
+                <div class="groups-info">
+                    <p class="groups-name"><a target="_blank" href="{WEB_PATH}/index/club/show/{wc:$v['cid']}" rel="nofollow" class="blue"><b>{wc:$v['title']}</b></a></p>
+                    <p class="groups-class gray02">成员：{wc:$v['chengyuan']}&nbsp;&nbsp;&nbsp;&nbsp;话题：{wc:$v['tiezi']}</p>
+                    <p class="groups-intro gray02">{wc:$v['jianjie']}</p>
+                </div>
+            </li>
+            {wc:loop:end}
+            </ul>
+            {wc:if:end}
+        </div>
+        <div id="divPageNav" class="page_nav"></div>
+    </div>  
+    <!--个人中心中间 结束-->
+</div>
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+{wc:templates "index.footer"}

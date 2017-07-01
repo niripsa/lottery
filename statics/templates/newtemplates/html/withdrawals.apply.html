@@ -1,0 +1,44 @@
+{wc:fun:css("user.message")}
+{wc:templates "index.header"}
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+    {wc:templates "user.left"}
+<div class="R-content">
+
+<div class="member-t"><h2>申请提现</h2></div>
+<div class="info">
+    <form class="registerform" method="POST" action="">
+        <table border="0" cellpadding="0" cellspacing="8">
+            <tbody>
+            <tr>
+                <td align="right"><em><label>分销佣金：</label></em></td>
+                <td>
+                    <a href="#"> <?php echo $info['dis_money']; ?> </a>元
+                </td>
+            </tr>
+            <tr>
+                <td><em><label>提现金额：</label></em></td>
+                <td>
+                    <input type="text" name="money" class="txt gray" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><em><label>微信号：</label></em></td>
+                <td>
+                    <input type="text" name="card_num" class="txt gray" value="" />
+                </td>
+            </tr>
+            <tr> 
+                <td><em>&nbsp;</em></td>
+                <td><input name="submit" type="submit" class="bluebut" value="提交" /></td>
+            </tr>
+            </tbody>
+        </table>
+    </form> 
+    </div>
+</div>
+</div>
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+{wc:templates "index.footer"}

@@ -1,0 +1,12 @@
+<nav class="g-snav u-nav">
+    <div class="g-snav-lst"><a href="{WEB_PATH}/#a">首页</a></div>
+    <div class="g-snav-lst"><a href="{WEB_PATH}/cgoods_list#b">所有商品</a></div>
+    <div class="g-snav-lst"><a href="{WEB_PATH}/cgoods_lottery#c">最新揭晓</a></div>
+    <div class="g-snav-lst"><a href="{WEB_PATH}/index/share/init#d">晒单</a></div>
+    <div class="g-snav-lst"><a href="{WEB_PATH}/index/cloud_goods/search_view#e">搜索</a></div>
+    <script type="text/javascript">
+            location.hash = !location.hash ? '#a' : location.hash;
+            $("nav a").eq($.YunCmsApi.Navs[location.hash]).addClass("nav-crt");
+            $("nav div").eq($.YunCmsApi.Navs[location.hash]).append('<s class="z-arrowh"></s>');
+    </script>
+</nav>

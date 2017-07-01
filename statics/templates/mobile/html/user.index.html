@@ -1,0 +1,76 @@
+{wc:fun:js("jquery.cmsapi")}
+{wc:templates "index.header_top"}
+<script type="text/javascript">
+    $.YunCmsApi.SetTopStyle({
+        "Title":"个人中心",
+        "Home":true,
+        "Shop":true
+    });
+</script>
+<section class="clearfix g-member">
+    <div class="clearfix m-round m-name">
+        <div class="fl f-Himg">
+            {wc:if $user=login('bool')}
+            <a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" class="z-Himg">
+            <img src="{G_UPLOAD_PATH}/{wc:fun:Getuserimg($user['uid'])}" border=0/></a>
+            {wc:if:end}
+            </a>
+            <!-- <span class="z-class-icon0{wc:$dengji_1['groupid']} gray01"><s></s>{wc:$dengji_1['name']}</span> -->
+        </div>
+        <div class="m-name-info">
+        <p class="u-name">
+        <b class="z-name gray01">
+        {wc:if $member['username']!=null}
+        {wc:$member['username']}
+        {wc:elseif $member['mobile']!=null}
+        {wc:$member['mobile']}
+        {wc:else}
+        {wc:$member['email']}
+        {wc:if:end}
+        </b>
+        {wc:if $member['username']!=null}
+        (
+        {wc:if $member['mobile']!=null}
+        {wc:$member['mobile']}
+        {wc:else}
+        {wc:$member['email']}
+        {wc:if:end}
+        )
+        {wc:if:end}
+        </p>
+            <ul class="clearfix u-mbr-info">
+                <!-- <li>可用{wc:fun:L('cgoods.credit')} <span class="orange">{wc:$member['score']}</span></li> -->
+                <!-- <li>经验值 <span class="orange">{wc:$member['jingyan']}</span></li> -->
+                <li></li>
+                <li class="cz">可用{wc:fun:L('cgoods.currency')}<span class="orange">{wc:$member['money']}</span>
+                <a href="{WEB_PATH}/member/account/userrecharge" class="fr z-Recharge-btn">去充值</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="m-round m-member-nav">
+        <ul id="ulFun">
+            <li><a href="{WEB_PATH}/member/lottery/lottery_index"><b class="z-arrow"></b>彩票游戏</a></li>
+            <li><a href="{WEB_PATH}/member/shop/userbuylist"><b class="z-arrow"></b>我的{wc:fun:L('html.key')}记录</a></li>
+            <li><a href="{WEB_PATH}/member/shop/orderlist"><b class="z-arrow"></b>{wc:fun:L('html.key')}中奖商品</a></li>
+            <!-- <li><a href="{WEB_PATH}/member/shop/plaingoods"><b class="z-arrow"></b>购买的商品</a></li> -->
+            {wc:if $member['manage_rank'] > 0}
+            <!-- <li><a href="{WEB_PATH}/member/account/invitefriends"><b class="z-arrow"></b>邀请好友</a></li> -->
+            {wc:if:end}
+            <li><a href="{WEB_PATH}/member/share/sharelist"><b class="z-arrow"></b>我的晒单</a></li>
+            <li><a href="{WEB_PATH}/member/account/userbalance"><b class="z-arrow"></b>帐户明细</a></li>
+            <li><a href="{WEB_PATH}/member/home/useraddress"><b class="z-arrow"></b>收货地址</a></li>
+            <li><a href="{WEB_PATH}/member/home/modify"><b class="z-arrow"></b>个人资料</a></li>
+            <li><a href="{WEB_PATH}/member/home/userpassword"><b class="z-arrow"></b>密码修改</a></li>
+            <li><a href="{WEB_PATH}/member/distributor/apply"><b class="z-arrow"></b>申请分销</a></li>
+            <?php if ( is_distributor( $member['uid'] ) ) { ?>
+            <li><a href="{WEB_PATH}/member/distributor/distributor_info"><b class="z-arrow"></b>分销中心</a></li>
+            <li><a href="{WEB_PATH}/member/distributor/my_child"><b class="z-arrow"></b>我的下级</a></li>
+            <li><a href="{WEB_PATH}/member/distributor/money_log"><b class="z-arrow"></b>佣金记录</a></li>
+            <li><a href="{WEB_PATH}/member/distributor/withdrawals_apply"><b class="z-arrow"></b>申请提现</a></li>
+            <li><a href="{WEB_PATH}/member/distributor/withdrawals_log"><b class="z-arrow"></b>提现记录</a></li>
+            <li><a href="{WEB_PATH}/member/distributor/invitefriends"><b class="z-arrow"></b>邀请好友</a></li>
+            <?php } ?>
+        </ul>
+    </div>
+</section>
+{wc:templates "index.footer"}

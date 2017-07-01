@@ -1,0 +1,41 @@
+{wc:fun:css("user.message")}
+{wc:templates "index.header"}
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+{wc:templates "user.left"}
+<!--个人中心中间 开始-->
+<div class="R-content">
+    <div class="member-t"><h2>我的下级</h2></div>
+    <div class="last">
+        <ul>
+            <li><h3>您当前共有下级</h3><b class="c_red"> <?php echo $num; ?> </b>人</li>
+        </ul>
+    </div>
+    <div id="divList0" class="list-tab recordList f12">
+        <ul class="listTitle">
+            <li class="">UID</li>
+            <li class="">用户名</li>
+            <li class="">佣金余额</li>
+            <li class="">加入时间</li>
+            <li class="">操作</li>
+        </ul>
+    <?php if ( is_array( $list ) ) foreach ( $list as $at ): ?>
+    <ul>
+        <li class=""> <?php echo $at['uid']; ?> </li>
+        <li class=""> <?php echo $at['username']; ?> </li>
+        <li class=""> <?php echo $at['dis_money']; ?> </li>
+        <li class=""> <?php echo date( 'Y-m-d H:i:s', $at['add_time'] ); ?> </li>
+        <li class=""><a href="{WEB_PATH}/member/distributor/my_child&parent_id=<?php echo $at['uid']; ?>" class="blue" title="查看下级">查看下级</a></li>        
+    </ul>
+    <?php endforeach; ?>
+    </div>
+    {wc:if $total > $num}
+        <div class="pagesx">{wc:page:two}</div> 
+    {wc:if:end} 
+</div>  
+<!--个人中心中间 结束-->
+</div>
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+{wc:templates "index.footer"}

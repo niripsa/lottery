@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* CSS Document */
+/*border*/
+.b_red{border:solid 1px #db3752;}
+.br_red{border-right:solid 1px #db3752;}
+.b_gray{border: 1px solid #DFDFDF;}
+.bt_gray{border-top:solid 1px #DFDFDF}
+.bb_gray{border-bottom:solid 1px #DFDFDF}
+.br_gray{border-right:solid 1px #DFDFDF}
+.bl_gray{border-left:solid 1px #DFDFDF}
+.bb_eee{border-bottom:solid 1px #eee;}
+.b_pink{border:Solid 1px #FFD1D8;}
+.R-grtit h3{border-bottom:1px solid #db3752;}
+.button05{border:1px solid #db3752;}
+
+.b2_red{border:solid 2px #db3752;}
+.bt2_red{border-top:solid 2px #db3752;}
+.bt2_green{border-top:solid 2px #009999;}
+.bt2_orange{border-top:solid 2px #f60;}
+.bt_red{border-top:solid 1px #db3752}
+.bb2_red{border-bottom:solid 2px #db3752}
+.b_red1{border:solid 1px #ca1b38;}
+.b_red2{border: 1px solid #eed7d9;}
+.bb_pink{border-bottom: 1px solid #F9D8DD;}
+.button07{background:#db3752;border:1px solid #db3752;}
+.groups-head{border:1px solid #E9E9E9;border-top:1px solid #db3752;}
+.Topic-tab li.tabcur {border:1px solid #db3752;}
+.Topic-tab{border-bottom:1px solid #db3752;}
+/*background*/
+.bg_red{background: #db3752;}
+.bg_pink{background: #fbeef0;}
+.bg_yellow{background: #FFF60E;border: 1px solid #FFF60E;}
+.text_tel .orangebut{background:#db3752;}
+.text_email .orangebut{background:#db3752;}
+.button05{background:#db3752;}
+
+/*color*/
+.c_red{color: #db3752;}
+.c_black{color:#000;}
+.c_yellow{color:#FF9600;}
+.c_green{color:#009999;}
+.c_orange{color:#f60}
+.c_gray{color:#bbb;}
+.rmb{color:#f00}
+.m-joinNum span.tnum {color:#db3752}
+.blue{color:#2af}
+.gray01 {color: #666;}
+.gray02 {color: #999;}
+.gray03 {color: #bbb;}
+.bluebut{background: #db3752;border: 1px solid #db3752;}
+.login_Email_but{background: #db3752;border: 1px solid #db3752;}
+.m-ser #pServerTime{background: #db3752;color: #fff;padding: 5px;}
+
+
+
+/*hover*/
+a:hover{color:#db3752}
+.m_all_sort ul li:hover{border:solid 1px #db3752}
+.m_all_sort ul li a:hover{color:#db3752}
+.m_all_sort a.more:hover{border:solid 1px #db3752;color:#db3752;}
+.head_nav .nav_list li a:hover{background:#fff;color:#db3752;}
+.num a:hover{background:#db3752}
+.m_newsML a:hover{color:#db3752}
+.prin_pp ul li:hover{border-top:solid 1px #db3752;}
+.goods_hotR ul li .shop_buttom a:hover{background:#ca1b38}
+.get_ready ul li .shop_buttom a:hover{background:#ca1b38}
+.hot_list .list-block:hover,.get_ready .list-block:hover{border:solid 1px #db3752;
+height: 377px;
+z-index: 99;
+margin: -1px -1px 0 0;
+position: relative;
+}
+.catalog .fr a:hover {
+border: solid 1px #db3752;
+color:#db3752;
+text-decoration: none;
+}
+.head_top ul li a:hover{color:#db3752}
+.get_ready .list-block:hover{
+border:solid 1px #db3752;
+height: 400px;
+z-index: 99;
+margin: -1px -1px 0 0;
+position: relative;
+}
+
+.get_ready .list-blocka:hover{
+border:solid 1px #db3752;
+height: 345px;
+z-index: 99;
+margin: -1px -1px 0 0;
+position: relative;
+}
+.new_goods .list-block:hover{
+border:solid 1px #009999;
+height: 300px;
+z-index: 99;
+margin: -1px -1px 0 0;
+position: relative;
+}
+.new_goods .check_out a:hover{color:#009999;}
+.lottery_show .check_out a:hover{color:#f60;}
+.singleR a p:hover{color:#f60;}
+.topicAllL ul.column li h1:hover,.topicAllL ul.column li a:hover{color:#db3752}
+.topicAllL ul.columns .idea a:hover{background:#db3752;color:#fff}
+.g-guide dd a:hover {
+color: #db3752;
+text-decoration: underline;
+}
+.list_class dd a:hover {
+color: #db3752;
+}
+.list_Sort dd a:hover {
+color: #db3752;
+border:Solid 1px #db3752;
+}
+#Page_Ul li a:hover {
+background: #db3752;
+border: 1px solid #db3752;
+color: #FFF;
+text-decoration: none;
+}
+.show_Period .Period_list li a:hover {color: #db3752;}
+.Det_button .Det_Shopbut:hover,.My_RecordReg a.My_Signbut:hover {
+background: #ca1b38;
+color: #fff;
+text-decoration: none;
+}
+.Det_button .Det_Cart:hover,.w-goods-ing .shop_buttom1 a:hover{
+background: #f3d9dc;
+color: #db3752;
+text-decoration: none;
+}
+.My_RecordReg a.My_Regbut:hover {background:#14A1F9;text-decoration:none;}
+.jcarousel-clip ul li:hover{border:Solid 1px #db3752}
+.Result_LConduct .Result_LConductBut:hover{background:#ca1b38}
+.share-Conduct .getbut-a:hover{background:#db3752;color:#fff}
+.autoOld .autoOldMore a:hover ,.autoOld li.pInfo dt.title a:hover {color: #db3752;}
+.publishCen li.Cursor:hover {border: solid 1px #db3752;}
+.details .details-A:hover {text-decoration: none;background: #FCC0CA;}
+.autoOld ul.autoOldlist:hover{transition: all 0.8s;border:solid 1px #db3752;}
+.m_app ul li a:hover{color:#db3752;}
+.button07:hover{background:#EF5C74;}
+.goods_share_listC .share_list_content:hover{border:1px solid #db3752;transition: all 0.6s;}
+.text_tel .orangebut:hover{background:#E01F3F}
+.text_email .orangebut:hover{background:#E01F3F;}
+.login_Email_but:hover{background:#E01F3F}
+.bg_pink .bluebut:hover{color:#fff;background:#E01F3F;}
+.message .much i:hover{background-position:0px -84px;}
+.message .smile i:hover{background-position:0px -30px;}
+.message .smile:hover{color:#db3752;cursor:pointer;}
+.much a:hover{color:#db3752;}
+.button05:hover{background:#E01F3F;}
+
+.last li a:hover{
+    background: #ca1b38;
+    color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

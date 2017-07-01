@@ -1,0 +1,39 @@
+{wc:fun:css("user.message")}
+{wc:templates "index.header"}
+<div class="clear"></div>
+<!--商品 wrap 开始-->
+<div class="layout980 clearfix">
+    {wc:templates "user.left"}
+    <!--个人中心中间 开始-->
+    <div class="R-content">
+        <div class="subMenu">
+            <a id="linkRecharge" class="current">充值到{wc:fun:L('html.key')}账户</a>
+        </div>
+        <div class="total b_pink bg_pink f12">
+            <dt></dt>
+            <dd>佣金总余额：<b class="c_red">{wc:$total}</b>{wc:fun:L('cgoods.currency')}</dd>
+            <dd>活动佣金：<b class="orange">{wc:$cashouthdtotal}</b>{wc:fun:L('cgoods.currency')}</dd> 
+            <dd>正在佣金提现审核（冻结）：<b class="c_red">{wc:$cashoutdjtotal}</b>{wc:fun:L('cgoods.currency')}</dd>
+            <dd class=" " id="divTip">为确保您申请的金额能够正确无误的转入您的{wc:fun:L('html.key')}账户，请填写真实有效的账户信息，以下信息均为必填项！</dd>
+       </div>
+        <div id="divSQCZ" class="Apply-con recharge f12" style="display:block;">
+            <form name="form2" action="" method="post">
+                <dl>
+                    <dt>当前可充值金额：</dt>
+                    <dd><span id="spanBrokerage2" class="c_red">{wc:$cashouthdtotal}</span> {wc:fun:L('cgoods.currency')} <span class="gray02">当佣金余额满1{wc:fun:L('cgoods.currency')}即可充值</span></dd>
+                </dl>
+                <dl>
+                    <dt>申请充值金额：</dt>
+                    <dd><input id="txtCZMoney" name="txtCZMoney" type="text" onkeyup="value=value.replace(/\D/g,'')" class="inp-money txtAri" value="" tip="请输入充值金额"><b>{wc:fun:L('cgoods.currency')}</b>&nbsp;<span class="gray02" id="tip7">以整数为单位提取</span></dd>
+                </dl>   
+                <div class="Apply-button">
+                    <input type="submit" name="submit2" id="btnSQCZ" class="bluebut" title="充值" value="充值">
+                </div>                  
+            </form>
+        </div>
+    </div>
+    <!--个人中心中间 结束-->
+</div>
+<!--商品 wrap 结束-->
+<div class="clear"></div>
+{wc:templates "index.footer"}
